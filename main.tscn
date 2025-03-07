@@ -1,15 +1,29 @@
-
-[gd_scene load_steps=12 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=27 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
+[ext_resource type="Script" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://28stpxi8f5it" path="res://ui_closet.gd" id="2_vivmo"]
-[ext_resource type="Script" uid="uid://ddpc3guh275hc" path="res://coat_hanger.gd" id="3_7mycd"]
+[ext_resource type="Script" path="res://ui_closet.gd" id="2_vivmo"]
+[ext_resource type="Script" path="res://coat_hanger.gd" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
+[ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
+[ext_resource type="PackedScene" uid="uid://twh7e8iih2ys" path="res://Clothes Scenes/top_openbuttonup.tscn" id="6_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://b13brkulrr03" path="res://Clothes Scenes/bottom_pants.tscn" id="6_074og"]
+[ext_resource type="PackedScene" uid="uid://bc576clwibeve" path="res://Clothes Scenes/top_poofyshirt.tscn" id="7_0odxb"]
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
-[ext_resource type="Script" uid="uid://c1nsn7akupt5f" path="res://closet_shelves.gd" id="14_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_boots.tscn" id="7_cegan"]
+[ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_clogs.tscn" id="8_82xsv"]
+[ext_resource type="PackedScene" uid="uid://bd3ta75h2yfj8" path="res://Clothes Scenes/top_mouseyshirt.tscn" id="8_lswn8"]
+[ext_resource type="PackedScene" uid="uid://chsaoye1hyasr" path="res://Clothes Scenes/top_dress.tscn" id="9_getpj"]
+[ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
+[ext_resource type="PackedScene" uid="uid://dxekhdpmycd3x" path="res://Clothes Scenes/tops_poofybuttonup.tscn" id="13_getpj"]
+[ext_resource type="Script" path="res://closet_shelves.gd" id="14_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://tt1qwk4wku81" path="res://Clothes Scenes/fullbody_overalldress.tscn" id="14_getpj"]
+[ext_resource type="PackedScene" uid="uid://csjqukuo4dk44" path="res://Clothes Scenes/fullbody_overalls.tscn" id="15_ryguw"]
+[ext_resource type="PackedScene" uid="uid://btrm5egd1ms02" path="res://Clothes Scenes/shoe_crocs.tscn" id="16_d13ii"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -28,7 +42,6 @@ scale = Vector2(0.508705, 0.507667)
 texture = ExtResource("1_ig7tw")
 
 [node name="UI Closet" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 428.0
@@ -36,6 +49,11 @@ offset_top = 54.0
 offset_right = 948.0
 offset_bottom = 621.0
 script = ExtResource("2_vivmo")
+tops_list = Array[PackedScene]([ExtResource("9_getpj"), ExtResource("10_ryguw"), ExtResource("13_getpj"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("8_lswn8")])
+bottoms_list = Array[PackedScene]([ExtResource("6_074og"), ExtResource("5_yaehf"), ExtResource("4_2cqfq"), ExtResource("3_vivmo")])
+fulls_list = Array[PackedScene]([ExtResource("14_getpj"), ExtResource("15_ryguw")])
+shoes_list = Array[PackedScene]([ExtResource("7_cegan"), ExtResource("8_82xsv"), ExtResource("16_d13ii")])
+accessories_list = Array[PackedScene]([ExtResource("13_getpj"), ExtResource("9_getpj"), ExtResource("10_ryguw")])
 
 [node name="ClosetInside" type="Control" parent="UI Closet"]
 custom_minimum_size = Vector2(275, 280)
