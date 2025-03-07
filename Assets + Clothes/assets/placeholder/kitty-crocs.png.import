@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg01xfpcqq5w5"
-path="res://.godot/imported/kitty-miniskirt.png-573e1e500374505de88dad7d9c79ee70.ctex"
+path="res://.godot/imported/kitty-crocs.png-7daac3cbedc1f5b3db50fb98c3a0d170.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets + Clothes/assets/placeholder/kitty-miniskirt.png"
-dest_files=["res://.godot/imported/kitty-miniskirt.png-573e1e500374505de88dad7d9c79ee70.ctex"]
+source_file="res://Assets + Clothes/assets/placeholder/kitty-crocs.png"
+dest_files=["res://.godot/imported/kitty-crocs.png-7daac3cbedc1f5b3db50fb98c3a0d170.ctex"]
 
 [params]
 

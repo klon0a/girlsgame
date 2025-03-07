@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy5y14wa8uqak"]
+
+[ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_cdfnf"]
+[ext_resource type="Texture2D" uid="uid://c88gj1law1je6" path="res://Assets + Clothes/assets/placeholder/kitty-clogs.png" id="2_cdfnf"]
+
+[node name="Shoe" instance=ExtResource("1_cdfnf")]
+
+[node name="Kitty-clogs" parent="." index="0"]
+texture = ExtResource("2_cdfnf")
+
+[node name="Marker2D" parent="." index="1"]
+position = Vector2(72, 458)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bumqcvnvt37wm"]
+
+[ext_resource type="Script" uid="uid://bea5cqpdpm5bf" path="res://garment.gd" id="1_4r1vn"]
+
+[node name="Garment" type="Node2D" node_paths=PackedStringArray("hang_point")]
+script = ExtResource("1_4r1vn")
+hang_point = NodePath("Marker2D")
+
+[node name="Kitty-clogs" type="Sprite2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
