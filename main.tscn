@@ -1,19 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=12 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://28stpxi8f5it" path="res://ui_closet.gd" id="2_vivmo"]
 [ext_resource type="Script" uid="uid://ddpc3guh275hc" path="res://coat_hanger.gd" id="3_7mycd"]
-[ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
-[ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_boots.tscn" id="7_cegan"]
-[ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_clogs.tscn" id="8_82xsv"]
-[ext_resource type="PackedScene" uid="uid://chsaoye1hyasr" path="res://Clothes Scenes/top_blouse.tscn" id="9_getpj"]
-[ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
+[ext_resource type="Script" uid="uid://c1nsn7akupt5f" path="res://closet_shelves.gd" id="14_2cqfq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -27,18 +22,19 @@ size = Vector2(615.288, 978.988)
 [node name="Main" type="Node2D"]
 
 [node name="Ui-mockup" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(510.295, 383.25)
 scale = Vector2(0.508705, 0.507667)
 texture = ExtResource("1_ig7tw")
 
 [node name="UI Closet" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 428.0
 offset_top = 54.0
 offset_right = 948.0
 offset_bottom = 621.0
+script = ExtResource("2_vivmo")
 
 [node name="ClosetInside" type="Control" parent="UI Closet"]
 custom_minimum_size = Vector2(275, 280)
@@ -62,7 +58,6 @@ horizontal_scroll_mode = 3
 vertical_scroll_mode = 0
 script = ExtResource("2_h2yge")
 original_coathanger = NodePath("HBoxContainer/CoatHanger")
-clothes_list = Array[PackedScene]([ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("7_cegan"), ExtResource("8_82xsv"), ExtResource("9_getpj"), ExtResource("10_ryguw")])
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI Closet/ClosetInside/ClosetScroll"]
 layout_mode = 2
@@ -78,12 +73,61 @@ scale = Vector2(0.5, 1.5)
 texture = ExtResource("5_7mycd")
 offset = Vector2(64, 64)
 
+[node name="ClosetShelves" type="GridContainer" parent="UI Closet/ClosetInside"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_2cqfq")
+
 [node name="ColorButtons" type="Control" parent="UI Closet"]
 anchors_preset = 0
 offset_left = 125.0
 offset_top = 390.0
 offset_right = 401.0
 offset_bottom = 466.0
+
+[node name="TypeButtons" type="Control" parent="UI Closet"]
+anchors_preset = 0
+offset_left = 406.0
+offset_top = 101.0
+offset_right = 513.0
+offset_bottom = 425.0
+
+[node name="TopsCategory" type="Button" parent="UI Closet/TypeButtons"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 81.0
+offset_right = 82.0
+offset_bottom = 152.0
+text = "TOPS"
+
+[node name="BottomsCategory" type="Button" parent="UI Closet/TypeButtons"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 162.0
+offset_right = 88.0
+offset_bottom = 233.0
+text = "BOTTOMS"
+
+[node name="ShoesCategory" type="Button" parent="UI Closet/TypeButtons"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 241.0
+offset_right = 88.0
+offset_bottom = 312.0
+text = "SHOES
+"
+
+[node name="AccessoriesCategory" type="Button" parent="UI Closet/TypeButtons"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 87.0
+offset_bottom = 73.0
+text = "SWAG"
 
 [node name="Kitty" type="Node2D" parent="."]
 position = Vector2(293, 424)
@@ -102,3 +146,8 @@ texture = ExtResource("7_272bh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitty/Area2D"]
 position = Vector2(-73.7167, -67.958)
 shape = SubResource("RectangleShape2D_272bh")
+
+[connection signal="pressed" from="UI Closet/TypeButtons/TopsCategory" to="UI Closet" method="_on_tops_category_pressed"]
+[connection signal="pressed" from="UI Closet/TypeButtons/BottomsCategory" to="UI Closet" method="_on_bottoms_category_pressed"]
+[connection signal="pressed" from="UI Closet/TypeButtons/ShoesCategory" to="UI Closet" method="_on_shoes_category_pressed"]
+[connection signal="pressed" from="UI Closet/TypeButtons/AccessoriesCategory" to="UI Closet" method="_on_accessories_category_pressed"]
