@@ -1,0 +1,2 @@
+extends ScrollContainer
+class_name ClosetScroll

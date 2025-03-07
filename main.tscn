@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=8 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
+[ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(615.288, 978.988)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
+shader = ExtResource("4_lquwl")
+shader_parameter/from = Color(0.278431, 0.54902, 0.74902, 1)
+shader_parameter/to = Color(0.447038, 0.878595, 0.757865, 1)
+shader_parameter/tolerance = 0.157
 
 [node name="Main" type="Node2D"]
 
@@ -8,3 +21,34 @@
 position = Vector2(510.295, 383.25)
 scale = Vector2(0.508705, 0.507667)
 texture = ExtResource("1_ig7tw")
+
+[node name="ClosetScroll" type="ScrollContainer" parent="."]
+offset_left = 552.0
+offset_top = 158.0
+offset_right = 823.0
+offset_bottom = 439.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_h2yge")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ClosetScroll"]
+layout_mode = 2
+
+[node name="CoatHanger" type="Control" parent="ClosetScroll/HBoxContainer"]
+layout_mode = 2
+
+[node name="Kitty" type="Node2D" parent="."]
+position = Vector2(293, 424)
+scale = Vector2(0.508705, 0.507667)
+script = ExtResource("2_0xm2m")
+
+[node name="Area2D" type="Area2D" parent="Kitty"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kitty/Area2D"]
+position = Vector2(-73.7167, -67.958)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_5vw27")
+position = Vector2(1031, 419)
+texture = ExtResource("5_7mycd")
