@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chsaoye1hyasr"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_8o6w3"]
-[ext_resource type="Texture2D" uid="uid://dskf6kjgupdlh" path="res://Assets + Clothes/assets/placeholder/kitty-blousedress.png" id="2_8o6w3"]
+[ext_resource type="Texture2D" uid="uid://dskf6kjgupdlh" path="res://Assets + Clothes/assets/placeholder/kitty-dress.png" id="2_8o6w3"]
 
 [node name="Shoe" instance=ExtResource("1_8o6w3")]
 
