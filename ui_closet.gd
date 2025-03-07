@@ -54,16 +54,20 @@ var current_category : CATEGORY :
 
 
 func _on_tops_category_pressed() -> void:
+	current_category = CATEGORY.TOPS
 	pass # Replace with function body.
 
 
 func _on_bottoms_category_pressed() -> void:
+	current_category = CATEGORY.BOTTOMS
 	pass # Replace with function body.
 
 
 func _on_shoes_category_pressed() -> void:
+	current_category = CATEGORY.SHOES
 	pass # Replace with function body.
 
 
 func _on_accessories_category_pressed() -> void:
+	current_category = CATEGORY.ACCESSORIES
 	pass # Replace with function body.
