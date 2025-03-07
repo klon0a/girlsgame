@@ -22,15 +22,14 @@ var current_category : CATEGORY :
 		
 		# make the right ones visible
 		match _category:
-			Closet.CATEGORY.TOPS or Closet.CATEGORY.BOTTOMS:
+			Closet.CATEGORY.TOPS, Closet.CATEGORY.BOTTOMS:
 				closet_scroll.visible = true
 				closet_shelves.visible = false
 				pass
 			
-			Closet.CATEGORY.SHOES or Closet.CATEGORY.ACCESSORIES:
-				#closet_scroll.visible = false
-				closet_scroll.visible = true
-				#closet_shelves.visible = true
+			Closet.CATEGORY.SHOES, Closet.CATEGORY.ACCESSORIES:
+				closet_scroll.visible = false
+				closet_shelves.visible = true
 				pass
 		
 		match _category:
@@ -46,10 +45,10 @@ var current_category : CATEGORY :
 				pass
 			
 			Closet.CATEGORY.SHOES:
-				closet_scroll.populate_coathangers(shoes_list)
+				closet_shelves.populate_shelves(shoes_list)
 				pass
 			Closet.CATEGORY.ACCESSORIES:
-				closet_scroll.populate_coathangers(accessories_list)
+				closet_shelves.populate_shelves(accessories_list)
 				pass
 
 
