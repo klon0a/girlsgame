@@ -1,19 +1,23 @@
-[gd_scene load_steps=17 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=21 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://ddpc3guh275hc" path="res://coat_hanger.gd" id="3_7mycd"]
+[ext_resource type="Script" path="res://coat_hanger.gd" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
 [ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
+[ext_resource type="PackedScene" uid="uid://b13brkulrr03" path="res://Clothes Scenes/bottom_pants.tscn" id="6_074og"]
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_boots.tscn" id="7_cegan"]
 [ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_clogs.tscn" id="8_82xsv"]
 [ext_resource type="PackedScene" uid="uid://chsaoye1hyasr" path="res://Clothes Scenes/top_blouse.tscn" id="9_getpj"]
 [ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
+[ext_resource type="PackedScene" uid="uid://naxdoxnrrdvc" path="res://Clothes Scenes/accessory_necktie.tscn" id="11_cegan"]
+[ext_resource type="PackedScene" uid="uid://djgxxuuw8qqgu" path="res://Clothes Scenes/accessory_handbag.tscn" id="12_82xsv"]
+[ext_resource type="PackedScene" uid="uid://dxekhdpmycd3x" path="res://Clothes Scenes/tops_poofybuttonup.tscn" id="13_getpj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -62,7 +66,7 @@ horizontal_scroll_mode = 3
 vertical_scroll_mode = 0
 script = ExtResource("2_h2yge")
 original_coathanger = NodePath("HBoxContainer/CoatHanger")
-clothes_list = Array[PackedScene]([ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("7_cegan"), ExtResource("8_82xsv"), ExtResource("9_getpj"), ExtResource("10_ryguw")])
+clothes_list = Array[PackedScene]([ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og"), ExtResource("7_cegan"), ExtResource("8_82xsv"), ExtResource("9_getpj"), ExtResource("10_ryguw"), ExtResource("11_cegan"), ExtResource("12_82xsv"), ExtResource("13_getpj")])
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI Closet/ClosetInside/ClosetScroll"]
 layout_mode = 2
