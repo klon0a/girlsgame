@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=2 format=3 uid="uid://dl6klrmnq36k7"]
+
+[ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Ui-mockup" type="Sprite2D" parent="."]
+position = Vector2(510.295, 383.25)
+scale = Vector2(0.508705, 0.507667)
+texture = ExtResource("1_ig7tw")
