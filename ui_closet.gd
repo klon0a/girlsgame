@@ -25,7 +25,9 @@ var current_category : CATEGORY :
 		return _category
 	set(value): 
 		_category = value
-		
+		$ClosetTitle/Accessories.visible = false
+		$ClosetTitle/Bottoms.visible = false
+		$ClosetTitle/Tops.visible = false
 		# make the right ones visible
 		match _category:
 			Closet.CATEGORY.TOPS, Closet.CATEGORY.BOTTOMS:
@@ -44,18 +46,21 @@ var current_category : CATEGORY :
 				combined_tops_and_fulls.append_array(fulls_list.duplicate())
 				closet_scroll.populate_coathangers(combined_tops_and_fulls)
 				
+				$ClosetTitle/Tops.visible = true
+				
 			Closet.CATEGORY.BOTTOMS:
 				var combined_bottoms_and_fulls = bottoms_list.duplicate() 
 				combined_bottoms_and_fulls.append_array(fulls_list.duplicate())
 				closet_scroll.populate_coathangers(combined_bottoms_and_fulls)
-				pass
+				
+				$ClosetTitle/Bottoms.visible = true
 			
 			Closet.CATEGORY.SHOES:
 				closet_shelves.populate_shelves(shoes_list)
-				pass
+				
 			Closet.CATEGORY.ACCESSORIES:
 				closet_shelves.populate_shelves(accessories_list)
-				pass
+				$ClosetTitle/Accessories.visible = true
 
 
 func _on_tops_category_pressed() -> void:

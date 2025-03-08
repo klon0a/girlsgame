@@ -210,6 +210,7 @@ scale = Vector2(0.28998, 0.28998)
 texture = ExtResource("31_0rl1p")
 
 [node name="Orange" type="Button" parent="UI Closet/ColorButtons/ColorsParent"]
+modulate = Color(1, 1, 1, 0)
 offset_left = -458.652
 offset_top = -72.4187
 offset_right = -308.652
@@ -218,6 +219,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_ok6jj")
 
 [node name="Purple" type="Button" parent="UI Closet/ColorButtons/ColorsParent"]
+modulate = Color(1, 1, 1, 0)
 offset_left = -306.917
 offset_top = -72.4187
 offset_right = -156.917
@@ -226,6 +228,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_ok6jj")
 
 [node name="Green" type="Button" parent="UI Closet/ColorButtons/ColorsParent"]
+modulate = Color(1, 1, 1, 0)
 offset_left = -155.183
 offset_top = -75.8672
 offset_right = -5.1828
@@ -234,6 +237,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_ok6jj")
 
 [node name="Cyan" type="Button" parent="UI Closet/ColorButtons/ColorsParent"]
+modulate = Color(1, 1, 1, 0)
 offset_left = 4.43459e-05
 offset_top = -82.7642
 offset_right = 150.0
@@ -242,6 +246,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_ok6jj")
 
 [node name="Magenta" type="Button" parent="UI Closet/ColorButtons/ColorsParent"]
+modulate = Color(1, 1, 1, 0)
 offset_left = 155.183
 offset_top = -79.3157
 offset_right = 305.183
@@ -251,6 +256,7 @@ button_pressed = true
 button_group = SubResource("ButtonGroup_ok6jj")
 
 [node name="Yellow" type="Button" parent="UI Closet/ColorButtons/ColorsParent"]
+modulate = Color(1, 1, 1, 0)
 offset_left = 306.917
 offset_top = -68.9702
 offset_right = 456.917
@@ -318,7 +324,7 @@ position = Vector2(-73.7167, -67.958)
 shape = SubResource("RectangleShape2D_272bh")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(601, 359)
+position = Vector2(1095, 991)
 texture = ExtResource("5_7mycd")
 script = ExtResource("30_kq58d")
 scale_wobble = Vector2(0.25, 0.25)
