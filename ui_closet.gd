@@ -3,6 +3,12 @@ class_name Closet
 
 @onready var closet_scroll: ClosetScroll = $ClosetInside/ClosetScroll
 @onready var closet_shelves: ClosetShelves = $ClosetInside/ClosetShelves
+@onready var color_buttons: ColorSelector = $ColorButtons
+
+var tops_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MAGENTA
+var bottoms_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MAGENTA
+var shoes_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MAGENTA
+var accessories_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MAGENTA
 
 @export var tops_list : Array[PackedScene]
 @export var bottoms_list : Array[PackedScene]
@@ -54,19 +60,40 @@ var current_category : CATEGORY :
 
 func _on_tops_category_pressed() -> void:
 	current_category = CATEGORY.TOPS
+	color_buttons.chosen_option = tops_color
 	pass # Replace with function body.
 
 
 func _on_bottoms_category_pressed() -> void:
 	current_category = CATEGORY.BOTTOMS
+	color_buttons.chosen_option = bottoms_color
 	pass # Replace with function body.
 
 
 func _on_shoes_category_pressed() -> void:
 	current_category = CATEGORY.SHOES
+	color_buttons.chosen_option = shoes_color
 	pass # Replace with function body.
 
 
 func _on_accessories_category_pressed() -> void:
 	current_category = CATEGORY.ACCESSORIES
+	color_buttons.chosen_option = accessories_color
+	pass # Replace with function body.
+
+
+func _on_color_buttons_new_color_chosen() -> void:
+	var new_color = color_buttons.chosen_option
+	match _category:
+		Closet.CATEGORY.TOPS:
+			tops_color = new_color
+		
+		Closet.CATEGORY.BOTTOMS:
+			bottoms_color = new_color
+		
+		Closet.CATEGORY.SHOES:
+			shoes_color = new_color
+		
+		Closet.CATEGORY.ACCESSORIES:
+			accessories_color = new_color
 	pass # Replace with function body.
