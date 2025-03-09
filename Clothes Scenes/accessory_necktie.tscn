@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://naxdoxnrrdvc"]
+[gd_scene load_steps=3 format=3 uid="uid://kjx6uj8p2wn7"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_hwplr"]
 [ext_resource type="Texture2D" uid="uid://bjfx52rt5qo8p" path="res://Assets + Clothes/assets/placeholder/kitty-neckbandana.png" id="2_35q4c"]
 
 [node name="Garment" instance=ExtResource("1_hwplr")]
 position = Vector2(479, 266)
+type = 3
 
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_35q4c")

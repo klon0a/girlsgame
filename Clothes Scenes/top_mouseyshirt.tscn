@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd5savh3kom30" path="res://Assets + Clothes/assets/placeholder/kitty-mouseyshirt.png" id="2_tsi3c"]
 
 [node name="Garment" instance=ExtResource("1_w6b0v")]
+type = 2
 
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_tsi3c")

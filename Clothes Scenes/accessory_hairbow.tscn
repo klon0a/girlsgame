@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgutshe8a7fii"]
+[gd_scene load_steps=3 format=3 uid="uid://c6cf1elmqptn3"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_3asm3"]
 [ext_resource type="Texture2D" uid="uid://dve842cp8m4w1" path="res://Assets + Clothes/assets/placeholder/kitty-hairbow.png" id="2_3850i"]
 
 [node name="Garment" instance=ExtResource("1_3asm3")]
+type = 3
 
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_3850i")

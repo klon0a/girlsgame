@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bumqcvnvt37wm"]
+[gd_scene load_steps=4 format=3 uid="uid://bumqcvnvt37wm"]
 
 [ext_resource type="Script" uid="uid://bea5cqpdpm5bf" path="res://garment.gd" id="1_4r1vn"]
+[ext_resource type="Script" uid="uid://c4ybg3iqeg5ca" path="res://shadow.gd" id="2_8sh02"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4r1vn"]
+radius = 387.61
+height = 1024.0
 
 [node name="Garment" type="Node2D" node_paths=PackedStringArray("hang_point")]
 script = ExtResource("1_4r1vn")
@@ -8,4 +13,14 @@ hang_point = NodePath("Marker2D")
 
 [node name="Kitty-clogs" type="Sprite2D" parent="."]
 
+[node name="Shadow" type="Sprite2D" parent="Kitty-clogs"]
+script = ExtResource("2_8sh02")
+
 [node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+z_index = 20
+z_as_relative = false
+shape = SubResource("CapsuleShape2D_4r1vn")
+
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]

@@ -10,6 +10,11 @@ var bottoms_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MA
 var shoes_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MAGENTA
 var accessories_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTIONS.MAGENTA
 
+@export var top_material : Material
+@export var bottom_material : Material
+@export var accessory_material : Material
+@export var shoe_material : Material
+
 @export var tops_list : Array[PackedScene]
 @export var bottoms_list : Array[PackedScene]
 @export var fulls_list : Array[PackedScene]
