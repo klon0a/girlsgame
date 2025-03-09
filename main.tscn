@@ -133,6 +133,7 @@ stream = ExtResource("2_ywjan")
 
 [node name="KittysClawsetSong2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("3_m74q3")
+autoplay = true
 
 [node name="Backdrop" type="Node2D" parent="."]
 position = Vector2(392, 61)

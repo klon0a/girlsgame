@@ -15,9 +15,11 @@ var current_shoe : Garment
 #var current_eyes : Node2D 
 
 static var cursor_over_kitty = false
+static var global_garment_scale : float
 
 func _ready() -> void:
 	%Cursor.position = self.position
+	global_garment_scale = garment_parent.global_scale.x
 	pass
 
 func cycle_kitty_color():
@@ -41,6 +43,7 @@ func put_on(new_garment : Garment):
 	new_garment.prep_to_be_put_on()
 	new_garment.reparent(garment_parent)
 	new_garment.position = Vector2.ZERO
+	new_garment.rotation = 0.0
 	new_garment.scale = Vector2.ONE
 	
 	match new_garment.type:
