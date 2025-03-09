@@ -13,6 +13,8 @@ func set_garment(new_garment : PackedScene, _material : Material):
 	add_child(instantiated_garment)
 	instantiated_garment._cursor = Cursor.instance
 	instantiated_garment.scale = Vector2.ONE * item_scale
-	instantiated_garment.position = attach_point.global_position - instantiated_garment.hang_point.global_position
+	instantiated_garment._personal_coathanger = self
+	instantiated_garment.place_on_hanger()
+	
 	garment = instantiated_garment
 	garment.material = _material

@@ -32,6 +32,8 @@ func _process(delta: float) -> void:
 	if (held_garment != null) and Input.is_action_just_released("click"):
 		if %Kitty.cursor_over_kitty:
 			%Kitty.put_on(held_garment)
-			held_garment = null
-		pass
+		else:
+			held_garment.drop()
+		
+		held_garment = null
 	pass
