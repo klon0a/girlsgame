@@ -1,7 +1,8 @@
-[gd_scene load_steps=101 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=102 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
 [ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://28stpxi8f5it" path="res://ui_closet.gd" id="2_vivmo"]
@@ -112,6 +113,7 @@ shader_parameter/tolerance_feather = 0.0
 size = Vector2(615.288, 978.988)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_sn1fb")
 
 [node name="Backdrop" type="Node2D" parent="."]
 position = Vector2(392, 61)
