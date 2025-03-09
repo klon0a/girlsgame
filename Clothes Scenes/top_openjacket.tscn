@@ -8,20 +8,17 @@
 [node name="Garment" instance=ExtResource("1_tpmp1")]
 type = 2
 
-[node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_fca3i")
-
-[node name="TopBody" parent="." index="3"]
+[node name="TopBody" parent="." index="2"]
 visible = true
 texture = ExtResource("2_fca3i")
 
-[node name="TopL" parent="." index="4"]
+[node name="TopL" parent="." index="3"]
 visible = true
 texture = ExtResource("3_xosid")
 
-[node name="TopR" parent="." index="5"]
+[node name="TopR" parent="." index="4"]
 visible = true
 texture = ExtResource("5_3nbmf")
 
-[node name="Marker2D" parent="." index="9"]
-position = Vector2(-20, -160)
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(44, -167)

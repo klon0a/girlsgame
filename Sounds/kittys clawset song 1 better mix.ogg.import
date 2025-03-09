@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmhslga12q2yr"
+path="res://.godot/imported/kittys clawset song 1 better mix.ogg-2751241256ed5a53fa1bd750eaf41f37.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/kittys clawset song 1 better mix.ogg"
+dest_files=["res://.godot/imported/kittys clawset song 1 better mix.ogg-2751241256ed5a53fa1bd750eaf41f37.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

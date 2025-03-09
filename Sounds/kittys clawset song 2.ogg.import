@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fhpcapat6rra"
+path="res://.godot/imported/kittys clawset song 2.ogg-5213d652e1a1ae464ea1ce9eb421efd1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/kittys clawset song 2.ogg"
+dest_files=["res://.godot/imported/kittys clawset song 2.ogg-5213d652e1a1ae464ea1ce9eb421efd1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

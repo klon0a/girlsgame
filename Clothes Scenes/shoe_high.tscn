@@ -6,16 +6,13 @@
 
 [node name="Shoe" instance=ExtResource("1_cdfnf")]
 
-[node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_eoh44")
-
-[node name="ShoeL" parent="." index="7"]
+[node name="ShoeL" parent="." index="6"]
 visible = true
 texture = ExtResource("3_trqf6")
 
-[node name="ShoeR" parent="." index="8"]
+[node name="ShoeR" parent="." index="7"]
 visible = true
 texture = ExtResource("2_eoh44")
 
-[node name="Marker2D" parent="." index="9"]
-position = Vector2(72, 458)
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(78, 464)

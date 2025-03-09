@@ -9,12 +9,13 @@
 [node name="Shoe" instance=ExtResource("1_ngh7e")]
 type = 2
 
-[node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_8ngga")
-
-[node name="TopBody" parent="." index="3"]
+[node name="TopBody" parent="." index="2"]
 visible = true
 texture = ExtResource("2_8ngga")
+
+[node name="TopL" parent="." index="3"]
+visible = true
+texture = ExtResource("3_2t63w")
 
 [node name="ShirtDesign" type="Sprite2D" parent="." index="4"]
 z_index = 10
@@ -22,13 +23,9 @@ z_as_relative = false
 
 [node name="Shadow" parent="ShirtDesign" index="0" instance=ExtResource("4_um2yg")]
 
-[node name="TopL" parent="." index="5"]
-visible = true
-texture = ExtResource("3_2t63w")
-
-[node name="TopR" parent="." index="6"]
+[node name="TopR" parent="." index="5"]
 visible = true
 texture = ExtResource("5_ypvyd")
 
-[node name="Marker2D" parent="." index="10"]
-position = Vector2(42, -141)
+[node name="HangPoint" parent="." index="9"]
+position = Vector2(47, -191)

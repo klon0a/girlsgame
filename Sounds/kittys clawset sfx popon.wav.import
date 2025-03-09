@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dds3q10bno3oa"
+path="res://.godot/imported/kittys clawset sfx popon.wav-725c2d47fd45bc6d9ccb1993893ca0fc.sample"
+
+[deps]
+
+source_file="res://Sounds/kittys clawset sfx popon.wav"
+dest_files=["res://.godot/imported/kittys clawset sfx popon.wav-725c2d47fd45bc6d9ccb1993893ca0fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

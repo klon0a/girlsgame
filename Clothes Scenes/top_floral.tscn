@@ -8,29 +8,20 @@
 [node name="Shoe" instance=ExtResource("1_u0vuj")]
 type = 2
 
-[node name="Kitty-clogs" parent="." index="0"]
-use_parent_material = false
-texture = ExtResource("2_u0vuj")
-
-[node name="Shadow" parent="Kitty-clogs" index="0"]
-show_behind_parent = true
-position = Vector2(7, 25)
-texture = ExtResource("2_u0vuj")
-
-[node name="TopBody" parent="." index="3"]
+[node name="TopBody" parent="." index="2"]
 visible = true
 use_parent_material = false
 texture = ExtResource("2_u0vuj")
 
-[node name="TopL" parent="." index="4"]
+[node name="TopL" parent="." index="3"]
 visible = true
 use_parent_material = false
 texture = ExtResource("3_1nskn")
 
-[node name="TopR" parent="." index="5"]
+[node name="TopR" parent="." index="4"]
 visible = true
 use_parent_material = false
 texture = ExtResource("5_1evyn")
 
-[node name="Marker2D" parent="." index="9"]
-position = Vector2(42, -141)
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(53, -168)

@@ -8,16 +8,13 @@
 position = Vector2(479, 266)
 type = 3
 
-[node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_je6nj")
-
-[node name="AccessoryFront" parent="." index="1"]
+[node name="AccessoryFront" parent="." index="0"]
 visible = true
 texture = ExtResource("2_je6nj")
 
-[node name="AccessoryBack" parent="." index="2"]
+[node name="AccessoryBack" parent="." index="1"]
 visible = true
 texture = ExtResource("3_t8vgr")
 
-[node name="Marker2D" parent="." index="9"]
-position = Vector2(-8, -182)
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(-157, -171)

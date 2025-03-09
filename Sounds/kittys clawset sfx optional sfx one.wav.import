@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c53d4stb3q0u3"
+path="res://.godot/imported/kittys clawset sfx optional sfx one.wav-d61d2079d6925a54e77c58f99df66cd1.sample"
+
+[deps]
+
+source_file="res://Sounds/kittys clawset sfx optional sfx one.wav"
+dest_files=["res://.godot/imported/kittys clawset sfx optional sfx one.wav-d61d2079d6925a54e77c58f99df66cd1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

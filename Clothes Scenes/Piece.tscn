@@ -9,7 +9,7 @@ height = 1024.0
 
 [node name="Garment" type="Node2D" node_paths=PackedStringArray("hang_point")]
 script = ExtResource("1_4r1vn")
-hang_point = NodePath("Marker2D")
+hang_point = NodePath("HangPoint")
 
 [node name="AccessoryFront" type="Sprite2D" parent="."]
 visible = false
@@ -74,7 +74,7 @@ use_parent_material = true
 
 [node name="Shadow" parent="ShoeR" instance=ExtResource("2_8sh02")]
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="HangPoint" type="Marker2D" parent="."]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 z_index = 20

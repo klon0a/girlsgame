@@ -11,5 +11,5 @@ visible = true
 use_parent_material = false
 texture = ExtResource("2_ata18")
 
-[node name="Marker2D" parent="." index="8"]
-position = Vector2(-280, -760)
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(0, -682)

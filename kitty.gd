@@ -35,6 +35,7 @@ func _on_area_2d_mouse_exited() -> void:
 
 func put_on(new_garment : Garment):
 	#cycle_kitty_color() # placeholder!!!
+	new_garment.prep_to_be_put_on()
 	new_garment.reparent(garment_parent)
 	new_garment.position = Vector2.ZERO
 	new_garment.scale = Vector2.ONE
