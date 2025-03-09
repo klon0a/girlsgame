@@ -97,17 +97,17 @@ func _on_color_buttons_new_color_chosen() -> void:
 	match _category:
 		Closet.CATEGORY.TOPS:
 			tops_color = new_color
-			top_material.set_shader_parameter("to", tops_color)
+			top_material.set_shader_parameter("to", color_buttons.chosen_color)
 		
 		Closet.CATEGORY.BOTTOMS:
 			bottoms_color = new_color
-			bottom_material.set_shader_parameter("to", bottoms_color)
+			bottom_material.set_shader_parameter("to", color_buttons.chosen_color)
 		
 		Closet.CATEGORY.SHOES:
 			shoes_color = new_color
-			shoe_material.set_shader_parameter("to", shoes_color)
+			shoe_material.set_shader_parameter("to", color_buttons.chosen_color)
 		
 		Closet.CATEGORY.ACCESSORIES:
 			accessories_color = new_color
-			accessory_material.set_shader_parameter("to", accessories_color)
+			accessory_material.set_shader_parameter("to", color_buttons.chosen_color)
 	pass # Replace with function body.

@@ -12,6 +12,7 @@ script = ExtResource("1_4r1vn")
 hang_point = NodePath("Marker2D")
 
 [node name="Kitty-clogs" type="Sprite2D" parent="."]
+use_parent_material = true
 
 [node name="Shadow" type="Sprite2D" parent="Kitty-clogs"]
 script = ExtResource("2_8sh02")

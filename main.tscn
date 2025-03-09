@@ -8,11 +8,14 @@
 [ext_resource type="Material" uid="uid://de7kduehfwun4" path="res://top_material.tres" id="3_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
 [ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
+[ext_resource type="Material" uid="uid://cebh1e87bjhys" path="res://bottom_material.tres" id="4_4lmeg"]
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
+[ext_resource type="Material" uid="uid://b4s1smylcbcwo" path="res://accessory_material.tres" id="5_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
 [ext_resource type="PackedScene" uid="uid://twh7e8iih2ys" path="res://Clothes Scenes/top_openbuttonup.tscn" id="6_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://0ox40hvunk23" path="res://Clothes Scenes/bottom_pants.tscn" id="6_074og"]
+[ext_resource type="Material" uid="uid://drm8g23g0mul8" path="res://shoe_material.tres" id="6_d2t1y"]
 [ext_resource type="PackedScene" uid="uid://bc576clwibeve" path="res://Clothes Scenes/top_poofyshirt.tscn" id="7_0odxb"]
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_boots.tscn" id="7_cegan"]
@@ -38,24 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://b4lld0e7dxmnj" path="res://UI + Sprites/texties/colors-highres.png" id="31_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://cb42k4lx61c7e" path="res://UI + Sprites/button.png" id="31_ok6jj"]
 [ext_resource type="Script" uid="uid://cphx2mmw31aup" path="res://cursor.gd" id="37_facbu"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_come4"]
-shader = ExtResource("4_lquwl")
-shader_parameter/from = Color(0, 0, 0, 1)
-shader_parameter/to = Color(0, 0, 0, 1)
-shader_parameter/tolerance = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h8e4i"]
-shader = ExtResource("4_lquwl")
-shader_parameter/from = Color(0, 0, 0, 1)
-shader_parameter/to = Color(0, 0, 0, 1)
-shader_parameter/tolerance = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4lmeg"]
-shader = ExtResource("4_lquwl")
-shader_parameter/from = Color(0, 0, 0, 1)
-shader_parameter/to = Color(0, 0, 0, 1)
-shader_parameter/tolerance = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -104,9 +89,9 @@ offset_right = 948.0
 offset_bottom = 621.0
 script = ExtResource("2_vivmo")
 top_material = ExtResource("3_b1qrp")
-bottom_material = SubResource("ShaderMaterial_come4")
-accessory_material = SubResource("ShaderMaterial_h8e4i")
-shoe_material = SubResource("ShaderMaterial_4lmeg")
+bottom_material = ExtResource("4_4lmeg")
+accessory_material = ExtResource("5_0cp0l")
+shoe_material = ExtResource("6_d2t1y")
 tops_list = Array[PackedScene]([ExtResource("9_getpj"), ExtResource("10_ryguw"), ExtResource("13_getpj"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("8_lswn8")])
 bottoms_list = Array[PackedScene]([ExtResource("6_074og"), ExtResource("5_yaehf"), ExtResource("4_2cqfq"), ExtResource("3_vivmo")])
 fulls_list = Array[PackedScene]([ExtResource("14_getpj"), ExtResource("15_ryguw")])
