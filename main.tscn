@@ -544,21 +544,6 @@ texture = ExtResource("7_272bh")
 position = Vector2(-73.7167, -67.958)
 shape = SubResource("RectangleShape2D_272bh")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(1095, 991)
-texture = ExtResource("5_7mycd")
-script = ExtResource("30_kq58d")
-scale_wobble = Vector2(0.25, 0.25)
-scale_speed = 20.0
-pos_wobble = Vector2(50, 50)
-pos_speed = 5.0
-rot_wobble = 0.25
-rot_speed = 5.0
-
-[node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="Cursor" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("37_facbu")
