@@ -6,14 +6,10 @@
 [node name="Garment" instance=ExtResource("1_ata18")]
 type = 3
 
-[node name="Kitty-clogs" parent="." index="0"]
-use_parent_material = false
-texture = ExtResource("2_ata18")
-
-[node name="AccessoryFront" parent="." index="1"]
+[node name="AccessoryFront" parent="." index="0"]
 visible = true
 use_parent_material = false
 texture = ExtResource("2_ata18")
 
-[node name="Marker2D" parent="." index="9"]
+[node name="Marker2D" parent="." index="8"]
 position = Vector2(-280, -760)

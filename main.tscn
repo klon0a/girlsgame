@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=107 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -23,25 +23,30 @@
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_low.tscn" id="7_cegan"]
 [ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_high.tscn" id="8_82xsv"]
-[ext_resource type="PackedScene" uid="uid://bd3ta75h2yfj8" path="res://Clothes Scenes/top_mouseyshirt.tscn" id="8_lswn8"]
-[ext_resource type="PackedScene" uid="uid://du8xn6xua4gp" path="res://Clothes Scenes/top_blouse.tscn" id="9_getpj"]
 [ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
 [ext_resource type="PackedScene" uid="uid://dqk2wpoxfqufp" path="res://Clothes Scenes/top_buttonsweater.tscn" id="11_4w656"]
-[ext_resource type="PackedScene" uid="uid://clds73jy1rhwp" path="res://Clothes Scenes/top_dress.tscn" id="12_e71vb"]
 [ext_resource type="PackedScene" uid="uid://dsmrurximvm4r" path="res://Clothes Scenes/top_floral.tscn" id="13_rnkwl"]
 [ext_resource type="Script" uid="uid://c1nsn7akupt5f" path="res://closet_shelves.gd" id="14_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://c4uxlnnq04dro" path="res://Clothes Scenes/fullbody_overalldress.tscn" id="14_getpj"]
 [ext_resource type="PackedScene" uid="uid://b7ipug83q60h7" path="res://Clothes Scenes/fullbody_overalls.tscn" id="15_ryguw"]
 [ext_resource type="PackedScene" uid="uid://b6qsx53jd4sdk" path="res://Clothes Scenes/shoe_crocs.tscn" id="16_d13ii"]
+[ext_resource type="PackedScene" uid="uid://m7hxeoesas6i" path="res://Clothes Scenes/shirts/top_shirt_apple.tscn" id="18_5yh34"]
 [ext_resource type="PackedScene" uid="uid://cyc45degnd7ul" path="res://Clothes Scenes/top_sweater.tscn" id="18_vke2r"]
 [ext_resource type="PackedScene" uid="uid://bt4tbi5l5yk0r" path="res://Clothes Scenes/accessory_earpiercings.tscn" id="18_xuqvo"]
+[ext_resource type="PackedScene" uid="uid://ckt7rfth4dqde" path="res://Clothes Scenes/shirts/top_shirt_clover.tscn" id="19_pjuso"]
 [ext_resource type="PackedScene" uid="uid://c6cf1elmqptn3" path="res://Clothes Scenes/accessory_hairbow.tscn" id="19_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://dlsugsglh1lrg" path="res://Clothes Scenes/bottom_junepants.tscn" id="19_uit24"]
+[ext_resource type="PackedScene" uid="uid://dq68fs761thy8" path="res://Clothes Scenes/shirts/top_shirt_fish.tscn" id="20_23xmf"]
 [ext_resource type="PackedScene" uid="uid://rxydo71sn020" path="res://Clothes Scenes/accessory_handbag.tscn" id="20_kq58d"]
 [ext_resource type="PackedScene" uid="uid://kjx6uj8p2wn7" path="res://Clothes Scenes/accessory_necktie.tscn" id="21_seu75"]
+[ext_resource type="PackedScene" uid="uid://i6mq7xigumhd" path="res://Clothes Scenes/shirts/top_shirt_heart.tscn" id="21_swlj1"]
 [ext_resource type="Texture2D" uid="uid://cfoluhd4nvoaa" path="res://UI + Sprites/texties/accessories.png" id="22_4k2k6"]
+[ext_resource type="PackedScene" uid="uid://c5ltsdwna78hl" path="res://Clothes Scenes/shirts/top_shirt_nine.tscn" id="22_yysqy"]
 [ext_resource type="Texture2D" uid="uid://diqivu3sc01kj" path="res://UI + Sprites/texties/bottoms.png" id="23_0rl1p"]
+[ext_resource type="PackedScene" uid="uid://cgw25b8kyua5y" path="res://Clothes Scenes/shirts/top_shirt_skull.tscn" id="23_n5t1e"]
+[ext_resource type="PackedScene" uid="uid://bb1k3vblo2vq8" path="res://Clothes Scenes/shirts/top_shirt_tama.tscn" id="24_h6isl"]
 [ext_resource type="Texture2D" uid="uid://bxow5fwe7g3xi" path="res://UI + Sprites/texties/tops.png" id="24_ok6jj"]
+[ext_resource type="PackedScene" uid="uid://clds73jy1rhwp" path="res://Clothes Scenes/fullbody_dress.tscn" id="29_inymm"]
 [ext_resource type="Script" uid="uid://dls2vu18iaep1" path="res://color_buttons.gd" id="30_0rl1p"]
 [ext_resource type="Script" uid="uid://b5opoqkhehgfa" path="res://wibbler.gd" id="30_kq58d"]
 [ext_resource type="PackedScene" uid="uid://dlr14nkxp1xgd" path="res://Clothes Scenes/accessory_earringdots.tscn" id="30_ruth0"]
@@ -151,9 +156,9 @@ top_material = ExtResource("3_b1qrp")
 bottom_material = ExtResource("4_4lmeg")
 accessory_material = ExtResource("5_0cp0l")
 shoe_material = ExtResource("6_d2t1y")
-tops_list = Array[PackedScene]([ExtResource("9_getpj"), ExtResource("11_4w656"), ExtResource("12_e71vb"), ExtResource("13_rnkwl"), ExtResource("8_lswn8"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("10_ryguw"), ExtResource("18_vke2r")])
+tops_list = Array[PackedScene]([ExtResource("11_4w656"), ExtResource("13_rnkwl"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("18_vke2r"), ExtResource("10_ryguw"), ExtResource("18_5yh34"), ExtResource("19_pjuso"), ExtResource("20_23xmf"), ExtResource("21_swlj1"), ExtResource("22_yysqy"), ExtResource("23_n5t1e"), ExtResource("24_h6isl")])
 bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og")])
-fulls_list = Array[PackedScene]([ExtResource("14_getpj"), ExtResource("15_ryguw")])
+fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"), ExtResource("15_ryguw")])
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
 accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("31_rm4vd"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75")])
 
@@ -460,7 +465,6 @@ sprites = Array[Texture2D]([ExtResource("46_hrvbo"), ExtResource("69_wat4s"), Ex
 
 [node name="Shadow" parent="Kitty/Body/Head/Kitty-head" instance=ExtResource("3_gngh3")]
 position = Vector2(6.55255, -180.565)
-scale = Vector2(1, 1)
 
 [node name="Eyes" type="Node2D" parent="Kitty/Body/Head"]
 position = Vector2(16.3815, -226.526)

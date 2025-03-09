@@ -6,22 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://c5f6yqhya27q5" path="res://Assets + Clothes/assets/final/full-dress-r.png" id="5_6ojdx"]
 
 [node name="Shoe" instance=ExtResource("1_8o6w3")]
-type = 2
+type = 4
 
-[node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_vcx57")
-
-[node name="TopBody" parent="." index="3"]
+[node name="TopBody" parent="." index="2"]
 visible = true
 texture = ExtResource("2_vcx57")
 
-[node name="TopL" parent="." index="4"]
+[node name="TopL" parent="." index="3"]
 visible = true
 texture = ExtResource("3_lab1a")
 
-[node name="TopR" parent="." index="5"]
+[node name="TopR" parent="." index="4"]
 visible = true
 texture = ExtResource("5_6ojdx")
 
-[node name="Marker2D" parent="." index="9"]
+[node name="Marker2D" parent="." index="8"]
 position = Vector2(16, -162)

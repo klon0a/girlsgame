@@ -13,5 +13,5 @@ func _ready() -> void:
 	rotation = 0.0
 
 func _process(delta: float) -> void:
+	if !is_visible_in_tree(): return
 	global_position = parent.global_position +  shadow_drop
-	pass
