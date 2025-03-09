@@ -6,5 +6,5 @@
 shader = ExtResource("1_m2iha")
 shader_parameter/from = Color(0.988235, 0.168627, 0.435294, 1)
 shader_parameter/to = Color(0.98, 0.66444, 0.1568, 1)
-shader_parameter/tolerance_hue = 0.355
-shader_parameter/tolerance_feather = 0.0
+shader_parameter/tolerance_hue = 0.25
+shader_parameter/tolerance_feather = 0.5

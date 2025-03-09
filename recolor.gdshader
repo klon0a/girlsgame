@@ -32,12 +32,15 @@ vec3 hsv2rgb(vec3 c)
     vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
     return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
-
+float invLerp(float _from, float _to, float _value){
+  return (_value - _from) / (_to - _from);
+}
 
 void fragment()
 {
 	// we usually want more granularity the closer we are to the original color
 	float _tol = tolerance_hue * tolerance_hue;
+	float _feath = tolerance_feather * tolerance_feather;
 	
 	vec4 tex = texture(TEXTURE, UV);
 	vec3 source_hsv = rgb2hsv(tex.rgb);
@@ -48,12 +51,15 @@ void fragment()
 	
 	// the .r here represents HUE, .g is SATURATION, .b is LUMINANCE
 	float hue_distance = abs(hue - source_hsv.r);
+	hue_distance = 1.0 - abs(2.0 * hue_distance - 1.0); // this is a formula for /\ 
+	float mix_by = invLerp(_tol - _feath, _tol + _feath, hue_distance);
+	mix_by = clamp(mix_by, 0.0, 1.0);
 	//COLOR.rgb = vec3(abs(hue_distance));
-	if (hue - source_hsv.r >= -_tol && hue - source_hsv.r <= +_tol)
-	{
+	//if (hue - source_hsv.r >= -_tol && hue - source_hsv.r <= +_tol)
+	//{
 		vec3 final_hsv = source_hsv + hsv_shift;
-		tex.rgb = hsv2rgb(final_hsv);
-	}
+		tex.rgb = mix(hsv2rgb(final_hsv), tex.rgb, mix_by);
+	//}
 	
 	COLOR = tex;
 }

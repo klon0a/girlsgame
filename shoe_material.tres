@@ -4,7 +4,7 @@
 
 [resource]
 shader = ExtResource("1_cdu5i")
-shader_parameter/from = Color(0.792157, 0, 0.176471, 1)
-shader_parameter/to = Color(0.55, 0, 1, 1)
-shader_parameter/tolerance_hue = 0.495
-shader_parameter/tolerance_feather = 0.0
+shader_parameter/from = Color(0.988235, 0.168627, 0.435294, 1)
+shader_parameter/to = Color(0, 0, 0, 1)
+shader_parameter/tolerance_hue = 0.25
+shader_parameter/tolerance_feather = 0.5
