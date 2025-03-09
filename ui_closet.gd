@@ -71,25 +71,34 @@ var current_category : CATEGORY :
 func _ready() -> void:
 	_on_tops_category_pressed()
 
+@onready var drummy: AudioStreamPlayer = $"UI Sounds/Drummy"
+func play_drummy():
+	drummy.pitch_scale = randf_range(0.85, 1.15)
+	drummy.play()
+
 func _on_tops_category_pressed() -> void:
+	play_drummy()
 	current_category = CATEGORY.TOPS
 	color_buttons.chosen_option = tops_color
 	pass # Replace with function body.
 
 
 func _on_bottoms_category_pressed() -> void:
+	play_drummy()
 	current_category = CATEGORY.BOTTOMS
 	color_buttons.chosen_option = bottoms_color
 	pass # Replace with function body.
 
 
 func _on_shoes_category_pressed() -> void:
+	play_drummy()
 	current_category = CATEGORY.SHOES
 	color_buttons.chosen_option = shoes_color
 	pass # Replace with function body.
 
 
 func _on_accessories_category_pressed() -> void:
+	play_drummy()
 	current_category = CATEGORY.ACCESSORIES
 	color_buttons.chosen_option = accessories_color
 	pass # Replace with function body.
@@ -115,8 +124,9 @@ func _on_color_buttons_new_color_chosen() -> void:
 			accessory_material.set_shader_parameter("to", color_buttons.chosen_color)
 	pass # Replace with function body.
 
-
+@onready var rising: AudioStreamPlayer = $"UI Sounds/Rising"
 func _on_cycle_coat_pressed() -> void:
+	rising.play()
 	%Kitty.cycle_kitty_color()
 	pass # Replace with function body.
 

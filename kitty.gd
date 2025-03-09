@@ -1,6 +1,8 @@
 extends Node2D
 class_name Kitty
 
+@onready var wear_sound: AudioStreamPlayer = $WearSound
+
 @onready var body: Node2D = $Body
 @export var garment_parent : Node2D
 @export var kitty_parts : Array[KittyPart] 
@@ -34,6 +36,7 @@ func _on_area_2d_mouse_exited() -> void:
 	pass # Replace with function body.
 
 func put_on(new_garment : Garment):
+	wear_sound.play()
 	#cycle_kitty_color() # placeholder!!!
 	new_garment.prep_to_be_put_on()
 	new_garment.reparent(garment_parent)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=113 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -6,9 +6,11 @@
 [ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://28stpxi8f5it" path="res://ui_closet.gd" id="2_vivmo"]
+[ext_resource type="AudioStream" uid="uid://cmhslga12q2yr" path="res://Sounds/kittys clawset song 1 better mix.ogg" id="2_ywjan"]
 [ext_resource type="Script" uid="uid://ddpc3guh275hc" path="res://coat_hanger.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://de7kduehfwun4" path="res://top_material.tres" id="3_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="3_gngh3"]
+[ext_resource type="AudioStream" uid="uid://fhpcapat6rra" path="res://Sounds/kittys clawset song 2.ogg" id="3_m74q3"]
 [ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
 [ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
 [ext_resource type="Material" uid="uid://cebh1e87bjhys" path="res://bottom_material.tres" id="4_4lmeg"]
@@ -55,7 +57,10 @@
 [ext_resource type="PackedScene" uid="uid://bk7rfntyg1x0p" path="res://Clothes Scenes/accessory_gempurse.tscn" id="31_rm4vd"]
 [ext_resource type="Script" uid="uid://cphx2mmw31aup" path="res://cursor.gd" id="37_facbu"]
 [ext_resource type="Texture2D" uid="uid://dy88bjdjueufw" path="res://Assets + Clothes/assets/final/kitty-body.png" id="43_qnost"]
+[ext_resource type="AudioStream" uid="uid://b37bnpm7csm4x" path="res://Sounds/kittys clawset sfx eyes rise.wav" id="43_tko6h"]
 [ext_resource type="Texture2D" uid="uid://crgpsuoqgat1u" path="res://Assets + Clothes/assets/final/kitty-arm-l.png" id="44_wnkbs"]
+[ext_resource type="AudioStream" uid="uid://bjqq7wbp84n8m" path="res://Sounds/kittys clawset sfx drummy_first.wav" id="44_ywjan"]
+[ext_resource type="AudioStream" uid="uid://cceuwll4tolw3" path="res://Sounds/kittys clawset sfx eyes.wav" id="45_8dc3g"]
 [ext_resource type="Texture2D" uid="uid://dorl11al3jv1" path="res://Assets + Clothes/assets/final/kitty-arm-r.png" id="45_f6a44"]
 [ext_resource type="Texture2D" uid="uid://bratf2oc0y2wk" path="res://Assets + Clothes/assets/final/kitty-head.png" id="46_hrvbo"]
 [ext_resource type="Texture2D" uid="uid://b4hfbs4eof2pc" path="res://Assets + Clothes/assets/final/kitty-tail.png" id="47_uypp3"]
@@ -70,6 +75,7 @@
 [ext_resource type="Texture2D" uid="uid://brj0vackmdtsh" path="res://Assets + Clothes/kitty variation/IMG_2975.PNG" id="54_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://e228hiyxta35" path="res://Assets + Clothes/kitty variation/IMG_2942.PNG" id="56_jbvwl"]
 [ext_resource type="Texture2D" uid="uid://vxfp7fk10mw0" path="res://Assets + Clothes/kitty variation/IMG_2949.PNG" id="57_sn1fb"]
+[ext_resource type="AudioStream" uid="uid://dds3q10bno3oa" path="res://Sounds/kittys clawset sfx popon.wav" id="58_htgcl"]
 [ext_resource type="Texture2D" uid="uid://w2fln2owlgxi" path="res://Assets + Clothes/kitty variation/IMG_2956.PNG" id="58_yvsr8"]
 [ext_resource type="Texture2D" uid="uid://ceotm22q58l0j" path="res://Assets + Clothes/kitty variation/IMG_2963.PNG" id="59_vieuh"]
 [ext_resource type="Texture2D" uid="uid://1uiahti5ieew" path="res://Assets + Clothes/kitty variation/IMG_2970.PNG" id="60_yjja3"]
@@ -120,6 +126,14 @@ size = Vector2(615.288, 978.988)
 [node name="Main" type="Node2D"]
 script = ExtResource("1_sn1fb")
 
+[node name="Music" type="Node" parent="."]
+
+[node name="KittysClawsetSong1BetterMix" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("2_ywjan")
+
+[node name="KittysClawsetSong2" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("3_m74q3")
+
 [node name="Backdrop" type="Node2D" parent="."]
 position = Vector2(392, 61)
 
@@ -161,6 +175,14 @@ bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo
 fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"), ExtResource("15_ryguw")])
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
 accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("31_rm4vd"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75")])
+
+[node name="UI Sounds" type="Node" parent="UI Closet"]
+
+[node name="Rising" type="AudioStreamPlayer" parent="UI Closet/UI Sounds"]
+stream = ExtResource("43_tko6h")
+
+[node name="Drummy" type="AudioStreamPlayer" parent="UI Closet/UI Sounds"]
+stream = ExtResource("44_ywjan")
 
 [node name="ClosetTitle" type="Control" parent="UI Closet"]
 anchors_preset = 0
@@ -277,6 +299,9 @@ offset_bottom = 466.0
 script = ExtResource("30_0rl1p")
 button_group = SubResource("ButtonGroup_facbu")
 colors = Array[Color]([Color(1, 0.5, 0, 1), Color(0.8, 0, 1, 1), Color(0.664, 1, 0.04, 1), Color(0, 0.916667, 1, 1), Color(1, 0, 0.7, 1), Color(1, 0.983333, 0, 1)])
+
+[node name="WuiWu" type="AudioStreamPlayer" parent="UI Closet/ColorButtons"]
+stream = ExtResource("45_8dc3g")
 
 [node name="Selection" type="Node2D" parent="UI Closet/ColorButtons"]
 position = Vector2(216, 18)
@@ -410,6 +435,9 @@ scale = Vector2(0.508705, 0.507667)
 script = ExtResource("2_0xm2m")
 garment_parent = NodePath("BodyPlaceholder")
 kitty_parts = [NodePath("Body/Kitty-body"), NodePath("Body/ArmL/Kitty-arm-l"), NodePath("Body/ArmR/Kitty-arm-r"), NodePath("Body/Head/Kitty-head"), NodePath("Body/Tail/Kitty-tail"), NodePath("Body/LegL/Kitty-leg-l"), NodePath("Body/LegR/Kitty-leg-r")]
+
+[node name="WearSound" type="AudioStreamPlayer" parent="Kitty"]
+stream = ExtResource("58_htgcl")
 
 [node name="Body" type="Node2D" parent="Kitty"]
 position = Vector2(-43.2471, 74.8522)

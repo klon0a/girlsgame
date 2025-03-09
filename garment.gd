@@ -3,6 +3,8 @@ class_name Garment
 
 enum GARMENT_TYPE {SHOE, BOTTOM, TOP, ACCESSORY, FULL}
 
+@onready var grab_sound: AudioStreamPlayer = $GrabSound
+
 @export var hang_point : Marker2D
 @onready var hang_position : Vector2 = hang_point.position
 @export var type : GARMENT_TYPE
@@ -13,6 +15,8 @@ func _on_touch_screen_button_pressed() -> void:
 	#print("garment touched! " + name)
 	if Cursor.can_grab:
 		Cursor.instance.held_garment = self
+		grab_sound.pitch_scale = randf_range(0.85, 1.15)
+		grab_sound.play()
 	pass # Replace with function body.
 
 func take_off():
@@ -36,11 +40,13 @@ func place_on_hanger():
 		position = Vector2.ZERO
 		scale = _personal_coathanger.item_scale * Vector2.ONE
 		for child in get_children():
+			if not child is Node2D: continue
 			child.position = -hang_position
 		#position = _personal_coathanger.attach_point.global_position - hang_point.global_position
 	pass
 
 func prep_to_be_put_on():
 	for child in get_children():
-			child.position = Vector2.ZERO
+		if not child is Node2D: continue
+		child.position = Vector2.ZERO
 	pass

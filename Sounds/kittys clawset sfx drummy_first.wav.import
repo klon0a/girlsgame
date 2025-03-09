@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjqq7wbp84n8m"
+path="res://.godot/imported/kittys clawset sfx drummy_first.wav-dbeb8340039c0b84b320fb8e91ff7ab5.sample"
+
+[deps]
+
+source_file="res://Sounds/kittys clawset sfx drummy_first.wav"
+dest_files=["res://.godot/imported/kittys clawset sfx drummy_first.wav-dbeb8340039c0b84b320fb8e91ff7ab5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
