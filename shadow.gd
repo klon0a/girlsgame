@@ -9,6 +9,8 @@ func _ready() -> void:
 	texture = parent.texture
 	modulate = Color.BLACK
 	show_behind_parent = true
+	scale = Vector2.ONE
+	rotation = 0.0
 
 func _process(delta: float) -> void:
 	global_position = parent.global_position +  shadow_drop

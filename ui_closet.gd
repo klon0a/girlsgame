@@ -68,6 +68,9 @@ var current_category : CATEGORY :
 				$ClosetTitle/Accessories.visible = true
 
 
+func _ready() -> void:
+	_on_tops_category_pressed()
+
 func _on_tops_category_pressed() -> void:
 	current_category = CATEGORY.TOPS
 	color_buttons.chosen_option = tops_color

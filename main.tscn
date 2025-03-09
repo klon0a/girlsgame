@@ -1,11 +1,13 @@
-[gd_scene load_steps=49 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=51 format=3 uid="uid://dl6klrmnq36k7"]
 
+[ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://28stpxi8f5it" path="res://ui_closet.gd" id="2_vivmo"]
 [ext_resource type="Script" uid="uid://ddpc3guh275hc" path="res://coat_hanger.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://de7kduehfwun4" path="res://top_material.tres" id="3_b1qrp"]
+[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="3_gngh3"]
 [ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
 [ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
 [ext_resource type="Material" uid="uid://cebh1e87bjhys" path="res://bottom_material.tres" id="4_4lmeg"]
@@ -73,6 +75,24 @@ shader_parameter/tex_scale = Vector2(3, 3)
 size = Vector2(615.288, 978.988)
 
 [node name="Main" type="Node2D"]
+
+[node name="Backdrop" type="Node2D" parent="."]
+position = Vector2(392, 61)
+
+[node name="KittysClawsetTitle" type="Sprite2D" parent="Backdrop"]
+position = Vector2(-150, 16)
+scale = Vector2(0.308079, 0.308079)
+texture = ExtResource("1_d2t1y")
+script = ExtResource("30_kq58d")
+scale_speed = 1.0
+pos_wobble = Vector2(20, 20)
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="Shadow" parent="Backdrop/KittysClawsetTitle" instance=ExtResource("3_gngh3")]
+position = Vector2(486.889, -51.9348)
+scale = Vector2(3.24592, 3.24592)
 
 [node name="Ui-mockup" type="Sprite2D" parent="."]
 visible = false

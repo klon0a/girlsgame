@@ -3,7 +3,7 @@ class_name ColorSelector
 
 signal new_color_chosen
 
-@export var button_group : ButtonGroup 
+@export var button_group : ButtonGroup
 @onready var selection: Node2D = $Selection
 
 @export var colors : Array[Color]
@@ -14,21 +14,27 @@ var _chosen_option : COLOR_OPTIONS
 var chosen_option : COLOR_OPTIONS :
 	get:
 		return _chosen_option
-	set(value): 
+	set(value):
 		_chosen_option = value
 		match value:
 			ColorSelector.COLOR_OPTIONS.ORANGE:
 				$ColorsParent/Orange.button_pressed = true
+				color_chosen($ColorsParent/Orange)
 			ColorSelector.COLOR_OPTIONS.PURPLE:
 				$ColorsParent/Purple.button_pressed = true
+				color_chosen($ColorsParent/Purple)
 			ColorSelector.COLOR_OPTIONS.GREEN:
 				$ColorsParent/Green.button_pressed = true
+				color_chosen($ColorsParent/Green)
 			ColorSelector.COLOR_OPTIONS.CYAN:
 				$ColorsParent/Cyan.button_pressed = true
+				color_chosen($ColorsParent/Cyan)
 			ColorSelector.COLOR_OPTIONS.MAGENTA:
 				$ColorsParent/Magenta.button_pressed = true
+				color_chosen($ColorsParent/Magenta)
 			ColorSelector.COLOR_OPTIONS.YELLOW:
 				$ColorsParent/Yellow.button_pressed = true
+				color_chosen($ColorsParent/Yellow)
 
 var chosen_color : Color :
 	get:
@@ -57,6 +63,7 @@ func _ready() -> void:
 	button_group.pressed.connect(color_chosen)
 
 
+
 func color_chosen(button : BaseButton):
 	selection.global_position = button.global_position
 	match button.name:
@@ -72,6 +79,6 @@ func color_chosen(button : BaseButton):
 			_chosen_option = COLOR_OPTIONS.MAGENTA
 		"Yellow":
 			_chosen_option = COLOR_OPTIONS.YELLOW
-		
+	
 	emit_signal("new_color_chosen")
 	pass

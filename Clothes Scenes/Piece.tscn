@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bumqcvnvt37wm"]
 
 [ext_resource type="Script" uid="uid://bea5cqpdpm5bf" path="res://garment.gd" id="1_4r1vn"]
-[ext_resource type="Script" uid="uid://c4ybg3iqeg5ca" path="res://shadow.gd" id="2_8sh02"]
+[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="2_8sh02"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4r1vn"]
 radius = 387.61
@@ -14,8 +14,7 @@ hang_point = NodePath("Marker2D")
 [node name="Kitty-clogs" type="Sprite2D" parent="."]
 use_parent_material = true
 
-[node name="Shadow" type="Sprite2D" parent="Kitty-clogs"]
-script = ExtResource("2_8sh02")
+[node name="Shadow" parent="Kitty-clogs" instance=ExtResource("2_8sh02")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
