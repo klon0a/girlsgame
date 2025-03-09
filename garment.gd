@@ -11,9 +11,13 @@ enum GARMENT_TYPE {SHOE, BOTTOM, TOP, ACCESSORY, FULL}
 var _cursor : Cursor
 var _personal_coathanger : CoatHanger
 
+var on_kitty : bool = false
+
 func _on_touch_screen_button_pressed() -> void:
+	var click_inside_closet = Closet.inside_rect.has_point(get_global_mouse_position())
 	#print("garment touched! " + name)
-	if Cursor.can_grab:
+	if (click_inside_closet or on_kitty) and Cursor.can_grab:
+		on_kitty = false
 		Cursor.instance.held_garment = self
 		grab_sound.pitch_scale = randf_range(0.85, 1.15)
 		grab_sound.play()
@@ -24,6 +28,7 @@ func take_off():
 	pass
 
 func return_to_closet():
+	on_kitty = false
 	if is_instance_valid(_personal_coathanger):
 		place_on_hanger()
 	else:
@@ -46,6 +51,7 @@ func place_on_hanger():
 	pass
 
 func prep_to_be_put_on():
+	on_kitty = true
 	for child in get_children():
 		if not child is Node2D: continue
 		child.position = Vector2.ZERO

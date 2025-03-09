@@ -23,6 +23,8 @@ var accessories_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTION
 
 @export var accessories_list : Array[PackedScene]
 
+static var inside_rect : Rect2
+
 enum CATEGORY {TOPS, BOTTOMS, SHOES, ACCESSORIES}
 var _category : CATEGORY
 var current_category : CATEGORY :
@@ -69,6 +71,7 @@ var current_category : CATEGORY :
 
 
 func _ready() -> void:
+	inside_rect = $ClosetInside.get_global_rect()
 	_on_tops_category_pressed()
 
 @onready var drummy: AudioStreamPlayer = $"UI Sounds/Drummy"

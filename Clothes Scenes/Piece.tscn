@@ -78,7 +78,6 @@ use_parent_material = true
 [node name="HangPoint" type="Marker2D" parent="."]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-z_index = 20
 z_as_relative = false
 shape = SubResource("CapsuleShape2D_4r1vn")
 
