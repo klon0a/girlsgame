@@ -411,6 +411,8 @@ position = Vector2(-43.2471, 74.8522)
 scale = Vector2(0.6, 0.6)
 
 [node name="Kitty-body" type="Sprite2D" parent="Kitty/Body"]
+z_index = 8
+z_as_relative = false
 position = Vector2(-64.8706, -238.345)
 texture = ExtResource("43_qnost")
 script = ExtResource("48_e71vb")
@@ -422,6 +424,8 @@ sprites = Array[Texture2D]([ExtResource("43_qnost"), ExtResource("49_pjyto"), Ex
 position = Vector2(-209.683, -302.035)
 
 [node name="Kitty-arm-l" type="Sprite2D" parent="Kitty/Body/ArmL"]
+z_index = 11
+z_as_relative = false
 position = Vector2(144.157, 62.3769)
 texture = ExtResource("44_wnkbs")
 script = ExtResource("48_e71vb")
@@ -434,6 +438,8 @@ show_behind_parent = true
 position = Vector2(65.5258, -344.714)
 
 [node name="Kitty-arm-r" type="Sprite2D" parent="Kitty/Body/ArmR"]
+z_index = 6
+z_as_relative = false
 position = Vector2(-150.709, 101.773)
 texture = ExtResource("45_f6a44")
 script = ExtResource("48_e71vb")
@@ -445,6 +451,8 @@ sprites = Array[Texture2D]([ExtResource("45_f6a44"), ExtResource("63_inymm"), Ex
 position = Vector2(-62.2496, -407.091)
 
 [node name="Kitty-head" type="Sprite2D" parent="Kitty/Body/Head"]
+z_index = 13
+z_as_relative = false
 position = Vector2(-6.55261, 180.565)
 texture = ExtResource("46_hrvbo")
 script = ExtResource("48_e71vb")
@@ -458,6 +466,8 @@ scale = Vector2(1, 1)
 position = Vector2(16.3815, -226.526)
 
 [node name="Button" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
+z_index = 13
+z_as_relative = false
 position = Vector2(-163.815, 6.56598)
 texture = ExtResource("31_ok6jj")
 
@@ -468,6 +478,8 @@ position = Vector2(0.000450134, 16.4146)
 texture = ExtResource("31_ok6jj")
 
 [node name="Button2" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
+z_index = 13
+z_as_relative = false
 position = Vector2(160.538, -9.849)
 texture = ExtResource("31_ok6jj")
 
@@ -479,7 +491,9 @@ show_behind_parent = true
 position = Vector2(-137.604, 82.0748)
 
 [node name="Kitty-tail" type="Sprite2D" parent="Kitty/Body/Tail"]
-position = Vector2(75.3548, -318.45)
+z_index = 1
+z_as_relative = false
+position = Vector2(75.3545, -318.45)
 texture = ExtResource("47_uypp3")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("47_uypp3"), ExtResource("76_htgcl"), ExtResource("77_smeu8"), ExtResource("78_f3y11"), ExtResource("79_cpm2s"), ExtResource("80_u81y6"), ExtResource("81_rt5wr")])
@@ -491,6 +505,8 @@ show_behind_parent = true
 position = Vector2(-95.0125, 49.2449)
 
 [node name="Kitty-leg-l" type="Sprite2D" parent="Kitty/Body/LegL"]
+z_index = 4
+z_as_relative = false
 position = Vector2(26.2103, -288.903)
 texture = ExtResource("48_blkrb")
 script = ExtResource("48_e71vb")
@@ -503,6 +519,8 @@ show_behind_parent = true
 position = Vector2(117.947, 52.5279)
 
 [node name="Kitty-leg-r" type="Sprite2D" parent="Kitty/Body/LegR"]
+z_index = 2
+z_as_relative = false
 position = Vector2(-180.196, -285.62)
 texture = ExtResource("49_abqjc")
 script = ExtResource("48_e71vb")
