@@ -9,5 +9,9 @@ type = 1
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_gdfu1")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="Bottom" parent="." index="6"]
+visible = true
+texture = ExtResource("2_gdfu1")
+
+[node name="Marker2D" parent="." index="9"]
 position = Vector2(69, 197)

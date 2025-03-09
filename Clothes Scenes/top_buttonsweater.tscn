@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqk2wpoxfqufp"]
+[gd_scene load_steps=5 format=3 uid="uid://dqk2wpoxfqufp"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_uxxxc"]
 [ext_resource type="Texture2D" uid="uid://b6te8cpw4aqs2" path="res://Assets + Clothes/assets/final/top-buttonjacket-body.png" id="2_uxxxc"]
 [ext_resource type="Texture2D" uid="uid://c4rt5pn1o5pkr" path="res://Assets + Clothes/assets/final/top-sweater-l.png" id="3_bn1ue"]
-[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_gcckm"]
 [ext_resource type="Texture2D" uid="uid://dohfsbyk25bg3" path="res://Assets + Clothes/assets/final/top-sweater-r.png" id="5_q6j0d"]
 
 [node name="Garment" instance=ExtResource("1_uxxxc")]
@@ -12,18 +11,17 @@ type = 2
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_uxxxc")
 
-[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
-use_parent_material = true
+[node name="TopBody" parent="." index="3"]
+visible = true
+texture = ExtResource("2_uxxxc")
+
+[node name="TopL" parent="." index="4"]
+visible = true
 texture = ExtResource("3_bn1ue")
 
-[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_gcckm")]
-
-[node name="Kitty-clogs3" type="Sprite2D" parent="." index="2"]
-show_behind_parent = true
-use_parent_material = true
+[node name="TopR" parent="." index="5"]
+visible = true
 texture = ExtResource("5_q6j0d")
 
-[node name="Shadow" parent="Kitty-clogs3" index="0" instance=ExtResource("4_gcckm")]
-
-[node name="Marker2D" parent="." index="3"]
+[node name="Marker2D" parent="." index="9"]
 position = Vector2(-20, -160)

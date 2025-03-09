@@ -10,5 +10,10 @@ type = 3
 use_parent_material = false
 texture = ExtResource("2_ata18")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="AccessoryFront" parent="." index="1"]
+visible = true
+use_parent_material = false
+texture = ExtResource("2_ata18")
+
+[node name="Marker2D" parent="." index="9"]
 position = Vector2(-280, -760)

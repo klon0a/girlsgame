@@ -12,18 +12,23 @@ type = 2
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_8ngga")
 
-[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
-use_parent_material = true
+[node name="TopBody" parent="." index="3"]
+visible = true
+texture = ExtResource("2_8ngga")
+
+[node name="ShirtDesign" type="Sprite2D" parent="." index="4"]
+z_index = 10
+z_as_relative = false
+
+[node name="Shadow" parent="ShirtDesign" index="0" instance=ExtResource("4_um2yg")]
+
+[node name="TopL" parent="." index="5"]
+visible = true
 texture = ExtResource("3_2t63w")
 
-[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_um2yg")]
-
-[node name="Kitty-clogs3" type="Sprite2D" parent="." index="2"]
-show_behind_parent = true
-use_parent_material = true
+[node name="TopR" parent="." index="6"]
+visible = true
 texture = ExtResource("5_ypvyd")
 
-[node name="Shadow" parent="Kitty-clogs3" index="0" instance=ExtResource("4_um2yg")]
-
-[node name="Marker2D" parent="." index="3"]
+[node name="Marker2D" parent="." index="10"]
 position = Vector2(42, -141)

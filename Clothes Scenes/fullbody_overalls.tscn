@@ -10,5 +10,10 @@ type = 4
 use_parent_material = false
 texture = ExtResource("2_m8xce")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="TopBody" parent="." index="3"]
+visible = true
+use_parent_material = false
+texture = ExtResource("2_m8xce")
+
+[node name="Marker2D" parent="." index="9"]
 position = Vector2(-27, -171)

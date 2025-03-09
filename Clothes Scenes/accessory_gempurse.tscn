@@ -1,24 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk7rfntyg1x0p"]
+[gd_scene load_steps=4 format=3 uid="uid://bk7rfntyg1x0p"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_01ghn"]
 [ext_resource type="Texture2D" uid="uid://5g1gp71rhkmx" path="res://Assets + Clothes/assets/final/accessory-bag.png" id="2_wfhi4"]
 [ext_resource type="Texture2D" uid="uid://oy8tc7twetws" path="res://Assets + Clothes/assets/final/accessory-gempurse.png" id="3_wfhi4"]
-[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_rrhqw"]
 
 [node name="Garment" instance=ExtResource("1_01ghn")]
 type = 3
 
 [node name="Kitty-clogs" parent="." index="0"]
-visible = false
 texture = ExtResource("2_wfhi4")
 
-[node name="Marker2D" parent="." index="1"]
-position = Vector2(417, -122)
-
-[node name="Accessory-gempurse" type="Sprite2D" parent="." index="3"]
-use_parent_material = true
-position = Vector2(-100, 8.99998)
-rotation = -0.197258
+[node name="AccessoryFront" parent="." index="1"]
+visible = true
 texture = ExtResource("3_wfhi4")
 
-[node name="Shadow" parent="Accessory-gempurse" index="0" instance=ExtResource("4_rrhqw")]
+[node name="Marker2D" parent="." index="9"]
+position = Vector2(417, -122)

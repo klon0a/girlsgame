@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsmrurximvm4r"]
+[gd_scene load_steps=5 format=3 uid="uid://dsmrurximvm4r"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_u0vuj"]
 [ext_resource type="Texture2D" uid="uid://ccuywbeu3oy78" path="res://Assets + Clothes/assets/final/top-floral-body.png" id="2_u0vuj"]
 [ext_resource type="Texture2D" uid="uid://dyt6bdolp384x" path="res://Assets + Clothes/assets/final/top-floral-l.png" id="3_1nskn"]
-[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_rr8ax"]
 [ext_resource type="Texture2D" uid="uid://copnyrvcew8yg" path="res://Assets + Clothes/assets/final/top-floral-r.png" id="5_1evyn"]
 
 [node name="Shoe" instance=ExtResource("1_u0vuj")]
@@ -18,16 +17,20 @@ show_behind_parent = true
 position = Vector2(7, 25)
 texture = ExtResource("2_u0vuj")
 
-[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
+[node name="TopBody" parent="." index="3"]
+visible = true
+use_parent_material = false
+texture = ExtResource("2_u0vuj")
+
+[node name="TopL" parent="." index="4"]
+visible = true
+use_parent_material = false
 texture = ExtResource("3_1nskn")
 
-[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_rr8ax")]
-
-[node name="Kitty-clogs3" type="Sprite2D" parent="." index="2"]
-show_behind_parent = true
+[node name="TopR" parent="." index="5"]
+visible = true
+use_parent_material = false
 texture = ExtResource("5_1evyn")
 
-[node name="Shadow" parent="Kitty-clogs3" index="0" instance=ExtResource("4_rr8ax")]
-
-[node name="Marker2D" parent="." index="3"]
+[node name="Marker2D" parent="." index="9"]
 position = Vector2(42, -141)

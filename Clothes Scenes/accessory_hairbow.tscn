@@ -9,5 +9,9 @@ type = 3
 [node name="Kitty-clogs" parent="." index="0"]
 texture = ExtResource("2_3asm3")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="AccessoryFront" parent="." index="1"]
+visible = true
+texture = ExtResource("2_3asm3")
+
+[node name="Marker2D" parent="." index="9"]
 position = Vector2(-125, -677)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq68fs761thy8"]
+
+[ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="1_x7hdl"]
+[ext_resource type="Texture2D" uid="uid://ckjrhtjirwcup" path="res://Assets + Clothes/shirtDesigns/Untitled_Artwork-6.png" id="2_x7hdl"]
+
+[node name="Shoe" instance=ExtResource("1_x7hdl")]
+
+[node name="ShirtDesign" parent="." index="4"]
+texture = ExtResource("2_x7hdl")
