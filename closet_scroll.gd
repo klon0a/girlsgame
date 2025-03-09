@@ -19,7 +19,7 @@ func create_coat_hangers(count : int):
 		pass
 	pass
 
-func populate_coathangers(_clothes_to_spawn : Array[PackedScene]):
+func populate_coathangers(_clothes_to_spawn : Array[PackedScene], _material : Material):
 	for coathanger : CoatHanger in coathangers:
 		coathanger.queue_free()
 	coathangers = []
@@ -27,5 +27,5 @@ func populate_coathangers(_clothes_to_spawn : Array[PackedScene]):
 	create_coat_hangers(_clothes_to_spawn.size())
 	
 	for i in range(_clothes_to_spawn.size()):
-		coathangers[i].set_garment(_clothes_to_spawn[i])
+		coathangers[i].set_garment(_clothes_to_spawn[i], _material)
 	pass

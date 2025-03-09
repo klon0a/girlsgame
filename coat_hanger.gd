@@ -5,7 +5,7 @@ var garment : Node2D
 @export var attach_point : Node2D
 @export_range(0.0, 1.0) var item_scale : float
 
-func set_garment(new_garment : PackedScene):
+func set_garment(new_garment : PackedScene, _material : Material):
 	if garment != null:
 		garment.queue_free()
 	
@@ -15,3 +15,4 @@ func set_garment(new_garment : PackedScene):
 	instantiated_garment.scale = Vector2.ONE * item_scale
 	instantiated_garment.position = attach_point.global_position - instantiated_garment.hang_point.global_position
 	garment = instantiated_garment
+	garment.material = _material

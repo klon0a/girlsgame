@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://de7kduehfwun4"]
+
+[ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="1_m2iha"]
+
+[resource]
+shader = ExtResource("1_m2iha")
+shader_parameter/from = Color(0, 0, 0, 1)
+shader_parameter/to = Color(0, 0, 0, 1)
+shader_parameter/tolerance = 0.0

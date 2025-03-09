@@ -24,7 +24,7 @@ var accessories_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTION
 @export var accessories_list : Array[PackedScene]
 
 enum CATEGORY {TOPS, BOTTOMS, SHOES, ACCESSORIES}
-static var _category : CATEGORY
+var _category : CATEGORY
 var current_category : CATEGORY :
 	get:
 		return _category
@@ -49,22 +49,22 @@ var current_category : CATEGORY :
 			Closet.CATEGORY.TOPS:
 				var combined_tops_and_fulls = tops_list.duplicate() 
 				combined_tops_and_fulls.append_array(fulls_list.duplicate())
-				closet_scroll.populate_coathangers(combined_tops_and_fulls)
+				closet_scroll.populate_coathangers(combined_tops_and_fulls, top_material)
 				
 				$ClosetTitle/Tops.visible = true
 				
 			Closet.CATEGORY.BOTTOMS:
 				var combined_bottoms_and_fulls = bottoms_list.duplicate() 
 				combined_bottoms_and_fulls.append_array(fulls_list.duplicate())
-				closet_scroll.populate_coathangers(combined_bottoms_and_fulls)
+				closet_scroll.populate_coathangers(combined_bottoms_and_fulls, bottom_material)
 				
 				$ClosetTitle/Bottoms.visible = true
 			
 			Closet.CATEGORY.SHOES:
-				closet_shelves.populate_shelves(shoes_list)
+				closet_shelves.populate_shelves(shoes_list, shoe_material)
 				
 			Closet.CATEGORY.ACCESSORIES:
-				closet_shelves.populate_shelves(accessories_list)
+				closet_shelves.populate_shelves(accessories_list, accessory_material)
 				$ClosetTitle/Accessories.visible = true
 
 
@@ -97,13 +97,17 @@ func _on_color_buttons_new_color_chosen() -> void:
 	match _category:
 		Closet.CATEGORY.TOPS:
 			tops_color = new_color
+			top_material.set_shader_parameter("to", tops_color)
 		
 		Closet.CATEGORY.BOTTOMS:
 			bottoms_color = new_color
+			bottom_material.set_shader_parameter("to", bottoms_color)
 		
 		Closet.CATEGORY.SHOES:
 			shoes_color = new_color
+			shoe_material.set_shader_parameter("to", shoes_color)
 		
 		Closet.CATEGORY.ACCESSORIES:
 			accessories_color = new_color
+			accessory_material.set_shader_parameter("to", accessories_color)
 	pass # Replace with function body.

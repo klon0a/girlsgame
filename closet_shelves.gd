@@ -20,7 +20,7 @@ func create_items(count : int):
 		pass
 	pass
 
-func populate_shelves(_clothes_to_spawn : Array[PackedScene]):
+func populate_shelves(_clothes_to_spawn : Array[PackedScene], _material : Material):
 	for item : CoatHanger in shelf_items:
 		item.queue_free()
 	shelf_items = []
@@ -28,5 +28,5 @@ func populate_shelves(_clothes_to_spawn : Array[PackedScene]):
 	create_items(_clothes_to_spawn.size())
 	
 	for i in range(_clothes_to_spawn.size()):
-		shelf_items[i].set_garment(_clothes_to_spawn[i])
+		shelf_items[i].set_garment(_clothes_to_spawn[i], _material)
 	pass
