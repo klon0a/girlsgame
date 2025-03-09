@@ -114,3 +114,12 @@ func _on_color_buttons_new_color_chosen() -> void:
 			accessories_color = new_color
 			accessory_material.set_shader_parameter("to", color_buttons.chosen_color)
 	pass # Replace with function body.
+
+
+func _on_cycle_coat_pressed() -> void:
+	%Kitty.cycle_kitty_color()
+	pass # Replace with function body.
+
+
+func _on_cycle_eyes_pressed() -> void:
+	pass # Replace with function body.
