@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6cf1elmqptn3"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_3asm3"]
-[ext_resource type="Texture2D" uid="uid://dve842cp8m4w1" path="res://Assets + Clothes/assets/placeholder/kitty-hairbow.png" id="2_3850i"]
+[ext_resource type="Texture2D" uid="uid://g2u5txrj3ayv" path="res://Assets + Clothes/assets/final/accessory-bow.png" id="2_3asm3"]
 
 [node name="Garment" instance=ExtResource("1_3asm3")]
 type = 3
 
 [node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_3850i")
+texture = ExtResource("2_3asm3")
 
 [node name="Marker2D" parent="." index="1"]
 position = Vector2(-125, -677)

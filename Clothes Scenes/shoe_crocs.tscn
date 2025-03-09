@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://btrm5egd1ms02"]
+[gd_scene load_steps=5 format=3 uid="uid://b6qsx53jd4sdk"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_yhcwa"]
-[ext_resource type="Texture2D" uid="uid://dg01xfpcqq5w5" path="res://Assets + Clothes/assets/placeholder/kitty-crocs.png" id="2_x1ts3"]
+[ext_resource type="Texture2D" uid="uid://crle7lk7gfhjy" path="res://Assets + Clothes/assets/final/shoe-croc-r.png" id="2_h61gm"]
+[ext_resource type="Texture2D" uid="uid://bo64blidmwo2u" path="res://Assets + Clothes/assets/final/shoe-croc-l.png" id="3_edsis"]
+[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_51pqq"]
 
 [node name="Garment" instance=ExtResource("1_yhcwa")]
 
 [node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_x1ts3")
+texture = ExtResource("2_h61gm")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
+use_parent_material = true
+texture = ExtResource("3_edsis")
+
+[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_51pqq")]
+
+[node name="Marker2D" parent="." index="2"]
 position = Vector2(-81, 625)

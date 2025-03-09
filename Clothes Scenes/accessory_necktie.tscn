@@ -1,14 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://kjx6uj8p2wn7"]
+[gd_scene load_steps=5 format=3 uid="uid://kjx6uj8p2wn7"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_hwplr"]
-[ext_resource type="Texture2D" uid="uid://bjfx52rt5qo8p" path="res://Assets + Clothes/assets/placeholder/kitty-neckbandana.png" id="2_35q4c"]
+[ext_resource type="Texture2D" uid="uid://xnypuf1qp8k0" path="res://Assets + Clothes/assets/final/accessory-bandana-front.png" id="2_je6nj"]
+[ext_resource type="Texture2D" uid="uid://kwji3agy75j1" path="res://Assets + Clothes/assets/final/accessory-bandana-back.png" id="3_t8vgr"]
+[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_cchot"]
 
 [node name="Garment" instance=ExtResource("1_hwplr")]
 position = Vector2(479, 266)
 type = 3
 
 [node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_35q4c")
+texture = ExtResource("2_je6nj")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
+use_parent_material = true
+texture = ExtResource("3_t8vgr")
+
+[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_cchot")]
+
+[node name="Marker2D" parent="." index="2"]
 position = Vector2(-8, -182)

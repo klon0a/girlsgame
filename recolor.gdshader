@@ -8,7 +8,8 @@ shader_type canvas_item;
 
 uniform vec4 from : source_color;
 uniform vec4 to : source_color;
-uniform float tolerance: hint_range(0.0, 1.0);
+uniform float tolerance_hue: hint_range(0.0, 1.0);
+uniform float tolerance_feather : hint_range(0.0, 1.0);
 
 
 
@@ -36,7 +37,7 @@ vec3 hsv2rgb(vec3 c)
 void fragment()
 {
 	// we usually want more granularity the closer we are to the original color
-	float _tol = tolerance * tolerance;
+	float _tol = tolerance_hue * tolerance_hue;
 	
 	vec4 tex = texture(TEXTURE, UV);
 	vec3 source_hsv = rgb2hsv(tex.rgb);
@@ -46,6 +47,8 @@ void fragment()
 	float hue = initial_hsv.r;
 	
 	// the .r here represents HUE, .g is SATURATION, .b is LUMINANCE
+	float hue_distance = abs(hue - source_hsv.r);
+	//COLOR.rgb = vec3(abs(hue_distance));
 	if (hue - source_hsv.r >= -_tol && hue - source_hsv.r <= +_tol)
 	{
 		vec3 final_hsv = source_hsv + hsv_shift;

@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyc45degnd7ul"]
+
+[ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_3sebv"]
+[ext_resource type="Texture2D" uid="uid://bpnfvk3ksx1km" path="res://Assets + Clothes/assets/final/top-sweater-body.png" id="2_3sebv"]
+[ext_resource type="Texture2D" uid="uid://c4rt5pn1o5pkr" path="res://Assets + Clothes/assets/final/top-sweater-l.png" id="3_ci1at"]
+[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_ycrcj"]
+[ext_resource type="Texture2D" uid="uid://dohfsbyk25bg3" path="res://Assets + Clothes/assets/final/top-sweater-r.png" id="5_bh7dj"]
+
+[node name="Shoe" instance=ExtResource("1_3sebv")]
+type = 2
+
+[node name="Kitty-clogs" parent="." index="0"]
+texture = ExtResource("2_3sebv")
+
+[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
+use_parent_material = true
+texture = ExtResource("3_ci1at")
+
+[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_ycrcj")]
+
+[node name="Kitty-clogs3" type="Sprite2D" parent="." index="2"]
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource("5_bh7dj")
+
+[node name="Shadow" parent="Kitty-clogs3" index="0" instance=ExtResource("4_ycrcj")]
+
+[node name="Marker2D" parent="." index="3"]
+position = Vector2(42, -141)

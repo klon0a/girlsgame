@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbfrj4qsp7l7"]
+[gd_scene load_steps=3 format=3 uid="uid://cbfrj4qsp7l7"]
 
 [ext_resource type="Script" uid="uid://c4ybg3iqeg5ca" path="res://shadow.gd" id="1_6pqxc"]
+[ext_resource type="Material" uid="uid://x70fcvo08of4" path="res://dropshadow.tres" id="1_n2o5g"]
 
 [node name="Shadow" type="Sprite2D"]
+material = ExtResource("1_n2o5g")
 script = ExtResource("1_6pqxc")

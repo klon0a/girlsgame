@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4uxlnnq04dro"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_fx2lj"]
-[ext_resource type="Texture2D" uid="uid://bvmkqbj21nxng" path="res://Assets + Clothes/assets/placeholder/kitty-overalldress.png" id="2_1w5jn"]
+[ext_resource type="Texture2D" uid="uid://crocqlto757xb" path="res://Assets + Clothes/assets/final/full-strawberrydress.png" id="2_mkqta"]
 
 [node name="Garment" instance=ExtResource("1_fx2lj")]
 type = 4
 
 [node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_1w5jn")
+use_parent_material = false
+texture = ExtResource("2_mkqta")
 
 [node name="Marker2D" parent="." index="1"]
 position = Vector2(-49, -174)

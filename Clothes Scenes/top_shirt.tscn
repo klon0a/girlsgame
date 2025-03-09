@@ -1,13 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://pbfuehivb0cb"]
+[gd_scene load_steps=6 format=3 uid="uid://pbfuehivb0cb"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_ngh7e"]
-[ext_resource type="Texture2D" uid="uid://bpabmc6a5rbhs" path="res://Assets + Clothes/assets/placeholder/kitty-designshirt.png" id="2_ngh7e"]
+[ext_resource type="Texture2D" uid="uid://kuqq0okdo36t" path="res://Assets + Clothes/assets/final/top-shirt-body.png" id="2_8ngga"]
+[ext_resource type="Texture2D" uid="uid://cm4lww1d3lxbe" path="res://Assets + Clothes/assets/final/top-shirt-l.png" id="3_2t63w"]
+[ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_um2yg"]
+[ext_resource type="Texture2D" uid="uid://cuo2rxhfpj8k2" path="res://Assets + Clothes/assets/final/top-shirt-r.png" id="5_ypvyd"]
 
 [node name="Shoe" instance=ExtResource("1_ngh7e")]
 type = 2
 
 [node name="Kitty-clogs" parent="." index="0"]
-texture = ExtResource("2_ngh7e")
+texture = ExtResource("2_8ngga")
 
-[node name="Marker2D" parent="." index="1"]
+[node name="Kitty-clogs2" type="Sprite2D" parent="." index="1"]
+use_parent_material = true
+texture = ExtResource("3_2t63w")
+
+[node name="Shadow" parent="Kitty-clogs2" index="0" instance=ExtResource("4_um2yg")]
+
+[node name="Kitty-clogs3" type="Sprite2D" parent="." index="2"]
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource("5_ypvyd")
+
+[node name="Shadow" parent="Kitty-clogs3" index="0" instance=ExtResource("4_um2yg")]
+
+[node name="Marker2D" parent="." index="3"]
 position = Vector2(42, -141)

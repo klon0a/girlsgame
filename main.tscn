@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=60 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -15,23 +15,27 @@
 [ext_resource type="Material" uid="uid://b4s1smylcbcwo" path="res://accessory_material.tres" id="5_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
-[ext_resource type="PackedScene" uid="uid://twh7e8iih2ys" path="res://Clothes Scenes/top_openbuttonup.tscn" id="6_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://twh7e8iih2ys" path="res://Clothes Scenes/top_openjacket.tscn" id="6_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://0ox40hvunk23" path="res://Clothes Scenes/bottom_pants.tscn" id="6_074og"]
 [ext_resource type="Material" uid="uid://drm8g23g0mul8" path="res://shoe_material.tres" id="6_d2t1y"]
-[ext_resource type="PackedScene" uid="uid://bc576clwibeve" path="res://Clothes Scenes/top_poofyshirt.tscn" id="7_0odxb"]
+[ext_resource type="PackedScene" uid="uid://ccq2j2kkhhkte" path="res://Clothes Scenes/top_poofyshirt.tscn" id="7_0odxb"]
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_boots.tscn" id="7_cegan"]
-[ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_clogs.tscn" id="8_82xsv"]
+[ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_low.tscn" id="7_cegan"]
+[ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_high.tscn" id="8_82xsv"]
 [ext_resource type="PackedScene" uid="uid://bd3ta75h2yfj8" path="res://Clothes Scenes/top_mouseyshirt.tscn" id="8_lswn8"]
 [ext_resource type="PackedScene" uid="uid://du8xn6xua4gp" path="res://Clothes Scenes/top_blouse.tscn" id="9_getpj"]
 [ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
-[ext_resource type="PackedScene" uid="uid://dx0c1jfmn6ljt" path="res://Clothes Scenes/tops_poofybuttonup.tscn" id="13_getpj"]
+[ext_resource type="PackedScene" uid="uid://dqk2wpoxfqufp" path="res://Clothes Scenes/top_buttonsweater.tscn" id="11_4w656"]
+[ext_resource type="PackedScene" uid="uid://clds73jy1rhwp" path="res://Clothes Scenes/top_dress.tscn" id="12_e71vb"]
+[ext_resource type="PackedScene" uid="uid://dsmrurximvm4r" path="res://Clothes Scenes/top_floral.tscn" id="13_rnkwl"]
 [ext_resource type="Script" uid="uid://c1nsn7akupt5f" path="res://closet_shelves.gd" id="14_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://c4uxlnnq04dro" path="res://Clothes Scenes/fullbody_overalldress.tscn" id="14_getpj"]
 [ext_resource type="PackedScene" uid="uid://b7ipug83q60h7" path="res://Clothes Scenes/fullbody_overalls.tscn" id="15_ryguw"]
-[ext_resource type="PackedScene" path="res://Clothes Scenes/shoe_crocs.tscn" id="16_d13ii"]
+[ext_resource type="PackedScene" uid="uid://b6qsx53jd4sdk" path="res://Clothes Scenes/shoe_crocs.tscn" id="16_d13ii"]
+[ext_resource type="PackedScene" uid="uid://cyc45degnd7ul" path="res://Clothes Scenes/top_sweater.tscn" id="18_vke2r"]
 [ext_resource type="PackedScene" uid="uid://bt4tbi5l5yk0r" path="res://Clothes Scenes/accessory_earpiercings.tscn" id="18_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://c6cf1elmqptn3" path="res://Clothes Scenes/accessory_hairbow.tscn" id="19_qsp4k"]
+[ext_resource type="PackedScene" uid="uid://dlsugsglh1lrg" path="res://Clothes Scenes/bottom_junepants.tscn" id="19_uit24"]
 [ext_resource type="PackedScene" uid="uid://rxydo71sn020" path="res://Clothes Scenes/accessory_handbag.tscn" id="20_kq58d"]
 [ext_resource type="PackedScene" uid="uid://kjx6uj8p2wn7" path="res://Clothes Scenes/accessory_necktie.tscn" id="21_seu75"]
 [ext_resource type="Texture2D" uid="uid://cfoluhd4nvoaa" path="res://UI + Sprites/texties/accessories.png" id="22_4k2k6"]
@@ -39,8 +43,10 @@
 [ext_resource type="Texture2D" uid="uid://bxow5fwe7g3xi" path="res://UI + Sprites/texties/tops.png" id="24_ok6jj"]
 [ext_resource type="Script" uid="uid://dls2vu18iaep1" path="res://color_buttons.gd" id="30_0rl1p"]
 [ext_resource type="Script" uid="uid://b5opoqkhehgfa" path="res://wibbler.gd" id="30_kq58d"]
+[ext_resource type="PackedScene" uid="uid://dlr14nkxp1xgd" path="res://Clothes Scenes/accessory_earringdots.tscn" id="30_ruth0"]
 [ext_resource type="Texture2D" uid="uid://b4lld0e7dxmnj" path="res://UI + Sprites/texties/colors-highres.png" id="31_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://cb42k4lx61c7e" path="res://UI + Sprites/button.png" id="31_ok6jj"]
+[ext_resource type="PackedScene" uid="uid://bk7rfntyg1x0p" path="res://Clothes Scenes/accessory_gempurse.tscn" id="31_rm4vd"]
 [ext_resource type="Script" uid="uid://cphx2mmw31aup" path="res://cursor.gd" id="37_facbu"]
 [ext_resource type="Texture2D" uid="uid://dy88bjdjueufw" path="res://Assets + Clothes/assets/final/kitty-body.png" id="43_qnost"]
 [ext_resource type="Texture2D" uid="uid://crgpsuoqgat1u" path="res://Assets + Clothes/assets/final/kitty-arm-l.png" id="44_wnkbs"]
@@ -54,7 +60,8 @@
 shader = ExtResource("4_lquwl")
 shader_parameter/from = Color(0.278431, 0.54902, 0.74902, 1)
 shader_parameter/to = Color(0.447038, 0.878595, 0.757865, 1)
-shader_parameter/tolerance = 0.157
+shader_parameter/tolerance_hue = 0.0
+shader_parameter/tolerance_feather = 0.0
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_facbu"]
 
@@ -101,11 +108,11 @@ top_material = ExtResource("3_b1qrp")
 bottom_material = ExtResource("4_4lmeg")
 accessory_material = ExtResource("5_0cp0l")
 shoe_material = ExtResource("6_d2t1y")
-tops_list = Array[PackedScene]([ExtResource("9_getpj"), ExtResource("10_ryguw"), ExtResource("13_getpj"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("8_lswn8")])
-bottoms_list = Array[PackedScene]([ExtResource("6_074og"), ExtResource("5_yaehf"), ExtResource("4_2cqfq"), ExtResource("3_vivmo")])
+tops_list = Array[PackedScene]([ExtResource("9_getpj"), ExtResource("11_4w656"), ExtResource("12_e71vb"), ExtResource("13_rnkwl"), ExtResource("8_lswn8"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("10_ryguw"), ExtResource("18_vke2r")])
+bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og")])
 fulls_list = Array[PackedScene]([ExtResource("14_getpj"), ExtResource("15_ryguw")])
-shoes_list = Array[PackedScene]([ExtResource("7_cegan"), ExtResource("8_82xsv"), ExtResource("16_d13ii")])
-accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75")])
+shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
+accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("31_rm4vd"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75")])
 
 [node name="ClosetTitle" type="Control" parent="UI Closet"]
 anchors_preset = 0
@@ -345,7 +352,6 @@ position = Vector2(-209.683, -302.035)
 
 [node name="Kitty-arm-l" type="Sprite2D" parent="Kitty/Body/ArmL"]
 position = Vector2(144.157, 62.3769)
-scale = Vector2(1, 1)
 texture = ExtResource("44_wnkbs")
 
 [node name="ArmR" type="Node2D" parent="Kitty/Body"]
@@ -354,7 +360,6 @@ position = Vector2(65.5258, -344.714)
 
 [node name="Kitty-arm-r" type="Sprite2D" parent="Kitty/Body/ArmR"]
 position = Vector2(-150.709, 101.773)
-scale = Vector2(1, 1)
 texture = ExtResource("45_f6a44")
 
 [node name="Head" type="Node2D" parent="Kitty/Body"]
@@ -362,7 +367,6 @@ position = Vector2(-62.2496, -407.091)
 
 [node name="Kitty-head" type="Sprite2D" parent="Kitty/Body/Head"]
 position = Vector2(-6.55261, 180.565)
-scale = Vector2(1, 1)
 texture = ExtResource("46_hrvbo")
 
 [node name="Eyes" type="Node2D" parent="Kitty/Body/Head"]
@@ -370,12 +374,10 @@ position = Vector2(16.3815, -226.526)
 
 [node name="Button" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
 position = Vector2(-163.815, 6.56598)
-scale = Vector2(1, 1)
 texture = ExtResource("31_ok6jj")
 
 [node name="Button2" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
 position = Vector2(160.538, -9.849)
-scale = Vector2(1, 1)
 texture = ExtResource("31_ok6jj")
 
 [node name="Tail" type="Node2D" parent="Kitty/Body"]
@@ -384,7 +386,6 @@ position = Vector2(-137.604, 82.0748)
 
 [node name="Kitty-tail" type="Sprite2D" parent="Kitty/Body/Tail"]
 position = Vector2(75.3548, -318.45)
-scale = Vector2(1, 1)
 texture = ExtResource("47_uypp3")
 
 [node name="LegL" type="Node2D" parent="Kitty/Body"]
@@ -393,7 +394,6 @@ position = Vector2(-95.0125, 49.2449)
 
 [node name="Kitty-leg-l" type="Sprite2D" parent="Kitty/Body/LegL"]
 position = Vector2(26.2103, -288.903)
-scale = Vector2(1, 1)
 texture = ExtResource("48_blkrb")
 
 [node name="LegR" type="Node2D" parent="Kitty/Body"]
@@ -402,7 +402,6 @@ position = Vector2(117.947, 52.5279)
 
 [node name="Kitty-leg-r" type="Sprite2D" parent="Kitty/Body/LegR"]
 position = Vector2(-180.196, -285.62)
-scale = Vector2(1, 1)
 texture = ExtResource("49_abqjc")
 
 [node name="BodyPlaceholder" type="Sprite2D" parent="Kitty"]

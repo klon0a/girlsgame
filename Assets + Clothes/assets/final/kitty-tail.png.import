@@ -15,13 +15,13 @@ dest_files=["res://.godot/imported/kitty-tail.png-51f704ca6f411eaa745c9eae506348
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=0
-mipmaps/generate=false
+compress/channel_pack=1
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

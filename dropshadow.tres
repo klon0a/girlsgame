@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://x70fcvo08of4"]
+
+[ext_resource type="Shader" uid="uid://c08idtjq7hq2l" path="res://shadow.gdshader" id="1_6mxc4"]
+
+[resource]
+shader = ExtResource("1_6mxc4")
+shader_parameter/mult_color = Color(1, 0.400901, 0.565201, 1)
+shader_parameter/lod = 3.5
+shader_parameter/lod2 = 5.5

@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgicmg7dxudql"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_f511f"]
-[ext_resource type="Texture2D" uid="uid://dvgf4i20pcl4w" path="res://Assets + Clothes/assets/placeholder/kitty-keypants.png" id="2_f511f"]
+[ext_resource type="Texture2D" uid="uid://bno6scfqxfebc" path="res://Assets + Clothes/assets/final/bottom-keypants.png" id="2_f511f"]
 
 [node name="Shoe" instance=ExtResource("1_f511f")]
 type = 1
 
 [node name="Kitty-clogs" parent="." index="0"]
+use_parent_material = false
 texture = ExtResource("2_f511f")
 
 [node name="Marker2D" parent="." index="1"]
