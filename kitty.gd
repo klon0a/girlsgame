@@ -1,7 +1,7 @@
 extends Node2D
 class_name Kitty
 
-@onready var body: Sprite2D = $Body
+@onready var body: Node2D = $Body
 @export var garment_parent : Node2D
 
 var current_top : Garment 

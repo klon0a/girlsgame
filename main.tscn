@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=54 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -37,12 +37,18 @@
 [ext_resource type="Texture2D" uid="uid://cfoluhd4nvoaa" path="res://UI + Sprites/texties/accessories.png" id="22_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://diqivu3sc01kj" path="res://UI + Sprites/texties/bottoms.png" id="23_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://bxow5fwe7g3xi" path="res://UI + Sprites/texties/tops.png" id="24_ok6jj"]
-[ext_resource type="Shader" uid="uid://ckyxxmm1qet0u" path="res://lineboil.gdshader" id="28_qsp4k"]
 [ext_resource type="Script" uid="uid://dls2vu18iaep1" path="res://color_buttons.gd" id="30_0rl1p"]
 [ext_resource type="Script" uid="uid://b5opoqkhehgfa" path="res://wibbler.gd" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://b4lld0e7dxmnj" path="res://UI + Sprites/texties/colors-highres.png" id="31_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://cb42k4lx61c7e" path="res://UI + Sprites/button.png" id="31_ok6jj"]
 [ext_resource type="Script" uid="uid://cphx2mmw31aup" path="res://cursor.gd" id="37_facbu"]
+[ext_resource type="Texture2D" uid="uid://dy88bjdjueufw" path="res://Assets + Clothes/assets/final/kitty-body.png" id="43_qnost"]
+[ext_resource type="Texture2D" uid="uid://crgpsuoqgat1u" path="res://Assets + Clothes/assets/final/kitty-arm-l.png" id="44_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://dorl11al3jv1" path="res://Assets + Clothes/assets/final/kitty-arm-r.png" id="45_f6a44"]
+[ext_resource type="Texture2D" uid="uid://bratf2oc0y2wk" path="res://Assets + Clothes/assets/final/kitty-head.png" id="46_hrvbo"]
+[ext_resource type="Texture2D" uid="uid://b4hfbs4eof2pc" path="res://Assets + Clothes/assets/final/kitty-tail.png" id="47_uypp3"]
+[ext_resource type="Texture2D" uid="uid://ci7u3jnud1wle" path="res://Assets + Clothes/assets/final/kitty-leg-l.png" id="48_blkrb"]
+[ext_resource type="Texture2D" uid="uid://0l6s4jy4sctf" path="res://Assets + Clothes/assets/final/kitty-leg-r.png" id="49_abqjc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -53,23 +59,6 @@ shader_parameter/tolerance = 0.157
 [sub_resource type="ButtonGroup" id="ButtonGroup_facbu"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ok6jj"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_qsp4k"]
-noise_type = 3
-fractal_octaves = 1
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kq58d"]
-seamless = true
-seamless_blend_skirt = 0.335
-as_normal_map = true
-noise = SubResource("FastNoiseLite_qsp4k")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_seu75"]
-shader = ExtResource("28_qsp4k")
-shader_parameter/offset_amp = Vector2(0.05, 0.05)
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_kq58d")
-shader_parameter/fps = 5.0
-shader_parameter/tex_scale = Vector2(3, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
 size = Vector2(615.288, 978.988)
@@ -341,15 +330,86 @@ unique_name_in_owner = true
 position = Vector2(293, 424)
 scale = Vector2(0.508705, 0.507667)
 script = ExtResource("2_0xm2m")
-garment_parent = NodePath("Body")
+garment_parent = NodePath("BodyPlaceholder")
 
-[node name="Body" type="Sprite2D" parent="Kitty"]
-material = SubResource("ShaderMaterial_seu75")
-position = Vector2(-80.5968, -66.9731)
+[node name="Body" type="Node2D" parent="Kitty"]
+position = Vector2(-43.2471, 74.8522)
+scale = Vector2(0.6, 0.6)
+
+[node name="Kitty-body" type="Sprite2D" parent="Kitty/Body"]
+position = Vector2(-64.8706, -238.345)
+texture = ExtResource("43_qnost")
+
+[node name="ArmL" type="Node2D" parent="Kitty/Body"]
+position = Vector2(-209.683, -302.035)
+
+[node name="Kitty-arm-l" type="Sprite2D" parent="Kitty/Body/ArmL"]
+position = Vector2(144.157, 62.3769)
+scale = Vector2(1, 1)
+texture = ExtResource("44_wnkbs")
+
+[node name="ArmR" type="Node2D" parent="Kitty/Body"]
+show_behind_parent = true
+position = Vector2(65.5258, -344.714)
+
+[node name="Kitty-arm-r" type="Sprite2D" parent="Kitty/Body/ArmR"]
+position = Vector2(-150.709, 101.773)
+scale = Vector2(1, 1)
+texture = ExtResource("45_f6a44")
+
+[node name="Head" type="Node2D" parent="Kitty/Body"]
+position = Vector2(-62.2496, -407.091)
+
+[node name="Kitty-head" type="Sprite2D" parent="Kitty/Body/Head"]
+position = Vector2(-6.55261, 180.565)
+scale = Vector2(1, 1)
+texture = ExtResource("46_hrvbo")
+
+[node name="Eyes" type="Node2D" parent="Kitty/Body/Head"]
+position = Vector2(16.3815, -226.526)
+
+[node name="Button" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
+position = Vector2(-163.815, 6.56598)
+scale = Vector2(1, 1)
+texture = ExtResource("31_ok6jj")
+
+[node name="Button2" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
+position = Vector2(160.538, -9.849)
+scale = Vector2(1, 1)
+texture = ExtResource("31_ok6jj")
+
+[node name="Tail" type="Node2D" parent="Kitty/Body"]
+show_behind_parent = true
+position = Vector2(-137.604, 82.0748)
+
+[node name="Kitty-tail" type="Sprite2D" parent="Kitty/Body/Tail"]
+position = Vector2(75.3548, -318.45)
+scale = Vector2(1, 1)
+texture = ExtResource("47_uypp3")
+
+[node name="LegL" type="Node2D" parent="Kitty/Body"]
+show_behind_parent = true
+position = Vector2(-95.0125, 49.2449)
+
+[node name="Kitty-leg-l" type="Sprite2D" parent="Kitty/Body/LegL"]
+position = Vector2(26.2103, -288.903)
+scale = Vector2(1, 1)
+texture = ExtResource("48_blkrb")
+
+[node name="LegR" type="Node2D" parent="Kitty/Body"]
+show_behind_parent = true
+position = Vector2(117.947, 52.5279)
+
+[node name="Kitty-leg-r" type="Sprite2D" parent="Kitty/Body/LegR"]
+position = Vector2(-180.196, -285.62)
+scale = Vector2(1, 1)
+texture = ExtResource("49_abqjc")
+
+[node name="BodyPlaceholder" type="Sprite2D" parent="Kitty"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-80.5969, -66.9731)
 scale = Vector2(0.594129, 0.594129)
 texture = ExtResource("7_272bh")
-
-[node name="Top" type="Node2D" parent="Kitty/Body"]
 
 [node name="Area2D" type="Area2D" parent="Kitty"]
 
