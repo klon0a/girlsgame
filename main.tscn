@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=125 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -70,6 +70,7 @@
 [ext_resource type="Script" uid="uid://bmu2oihbrdl0n" path="res://kitty_part.gd" id="48_e71vb"]
 [ext_resource type="Texture2D" uid="uid://0l6s4jy4sctf" path="res://Assets + Clothes/assets/final/kitty-leg-r.png" id="49_abqjc"]
 [ext_resource type="Texture2D" uid="uid://cm3dj304rvka3" path="res://Assets + Clothes/kitty variation/IMG_2940.PNG" id="49_pjyto"]
+[ext_resource type="Texture2D" uid="uid://dgaj2vtpa4gnk" path="res://UI + Sprites/texties/shoes.png" id="49_vjgyh"]
 [ext_resource type="Texture2D" uid="uid://dfqybp2dlikc7" path="res://Assets + Clothes/kitty variation/IMG_2947.PNG" id="50_sm6fg"]
 [ext_resource type="Texture2D" uid="uid://iv1sqjjbt3lf" path="res://Assets + Clothes/kitty variation/IMG_2954.PNG" id="51_b17eg"]
 [ext_resource type="Texture2D" uid="uid://bxceysih85bx0" path="res://Assets + Clothes/kitty variation/IMG_2961.PNG" id="52_ntx8l"]
@@ -229,6 +230,14 @@ texture = ExtResource("24_ok6jj")
 
 [node name="Shadow" parent="UI Closet/ClosetTitle/Tops" instance=ExtResource("3_gngh3")]
 
+[node name="Shoes" type="Sprite2D" parent="UI Closet/ClosetTitle"]
+position = Vector2(195.031, 50.9916)
+rotation = -0.0237244
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("49_vjgyh")
+
+[node name="Shadow" parent="UI Closet/ClosetTitle/Shoes" instance=ExtResource("3_gngh3")]
+
 [node name="ClosetInside" type="Control" parent="UI Closet"]
 custom_minimum_size = Vector2(275, 280)
 layout_mode = 3
@@ -282,7 +291,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-columns = 2
+columns = 3
 script = ExtResource("14_2cqfq")
 original_shelf_item = NodePath("Shelf CoatHanger")
 

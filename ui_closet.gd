@@ -35,6 +35,8 @@ var current_category : CATEGORY :
 		$ClosetTitle/Accessories.visible = false
 		$ClosetTitle/Bottoms.visible = false
 		$ClosetTitle/Tops.visible = false
+		$ClosetTitle/Shoes.visible = false
+
 		# make the right ones visible
 		match _category:
 			Closet.CATEGORY.TOPS, Closet.CATEGORY.BOTTOMS:
@@ -64,6 +66,7 @@ var current_category : CATEGORY :
 			
 			Closet.CATEGORY.SHOES:
 				closet_shelves.populate_shelves(shoes_list, shoe_material)
+				$ClosetTitle/Shoes.visible = true
 				
 			Closet.CATEGORY.ACCESSORIES:
 				closet_shelves.populate_shelves(accessories_list, accessory_material)
