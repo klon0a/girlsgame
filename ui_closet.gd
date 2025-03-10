@@ -135,4 +135,6 @@ func _on_cycle_coat_pressed() -> void:
 
 
 func _on_cycle_eyes_pressed() -> void:
+	rising.play()
+	%Kitty.cycle_eyes()
 	pass # Replace with function body.

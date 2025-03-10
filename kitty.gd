@@ -6,8 +6,13 @@ class_name Kitty
 @onready var body: Node2D = $Body
 @export var garment_parent : Node2D
 @export var kitty_parts : Array[KittyPart] 
+@export var eyes : KittyPart
+@export var blink_eyes: Sprite2D
+
 @export var color_count : int = 7
+@export var eye_count : int = 7
 var current_kitty_color = 0
+var current_eyeset = 0
 var current_top : Garment 
 var current_bottom : Garment 
 var current_fullbody : Garment 
@@ -20,6 +25,7 @@ static var global_garment_scale : float
 func _ready() -> void:
 	%Cursor.position = self.position
 	global_garment_scale = garment_parent.global_scale.x
+	blink_loop()
 	pass
 
 func cycle_kitty_color():
@@ -27,6 +33,20 @@ func cycle_kitty_color():
 	for part : KittyPart in kitty_parts:
 		part.set_sprite_id(current_kitty_color)
 	pass
+
+func cycle_eyes():
+	current_eyeset = (current_eyeset + 1) % eye_count
+	eyes.set_sprite_id(current_eyeset)
+	pass
+
+func blink_loop():
+	while true:
+		await get_tree().create_timer(randfn(3.0, 5.0)).timeout
+		blink_eyes.visible = true
+		eyes.visible = false
+		await get_tree().create_timer(0.12).timeout
+		blink_eyes.visible = false
+		eyes.visible = true
 
 func _on_area_2d_mouse_entered() -> void:
 	cursor_over_kitty = true
