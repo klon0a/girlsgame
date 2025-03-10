@@ -1,22 +1,22 @@
-extends GridContainer
+extends Control
 class_name ClosetShelves
 
 @export var original_shelf_item : CoatHanger 
 
-@onready var item_parent: GridContainer = self
-
+@export var shelf_positions : Array[Control]
 
 var shelf_items = []
 
 func _ready() -> void:
-	item_parent.remove_child(original_shelf_item);
+	remove_child(original_shelf_item);
 	pass
 
 func create_items(count : int):
 	for i in range(count):
 		var item_duplicate = original_shelf_item.duplicate()
 		shelf_items.append(item_duplicate)
-		item_parent.add_child(item_duplicate)
+		shelf_positions[shelf_items.size()].add_child(item_duplicate)
+		item_duplicate.position = Vector2.ZERO
 		pass
 	pass
 

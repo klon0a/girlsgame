@@ -565,7 +565,7 @@ tops_list = Array[PackedScene]([ExtResource("11_4w656"), ExtResource("13_rnkwl")
 bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og")])
 fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"), ExtResource("15_ryguw")])
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
-accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("31_rm4vd"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75"), ExtResource("43_am8a1")])
+accessories_list = Array[PackedScene]([ExtResource("31_rm4vd"), ExtResource("20_kq58d"), ExtResource("19_qsp4k"), ExtResource("21_seu75"), ExtResource("43_am8a1"), ExtResource("18_xuqvo"), ExtResource("30_ruth0")])
 
 [node name="UI Sounds" type="Node" parent="UI Closet"]
 
@@ -671,7 +671,7 @@ custom_minimum_size = Vector2(50, 200)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="ClosetShelves" type="GridContainer" parent="UI Closet/ClosetInside" node_paths=PackedStringArray("original_shelf_item")]
+[node name="ClosetShelves" type="Control" parent="UI Closet/ClosetInside" node_paths=PackedStringArray("original_shelf_item", "shelf_positions")]
 clip_contents = true
 layout_direction = 2
 layout_mode = 1
@@ -681,13 +681,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-columns = 3
 script = ExtResource("14_2cqfq")
 original_shelf_item = NodePath("Shelf CoatHanger")
+shelf_positions = [NodePath("ShelfPosition"), NodePath("ShelfPosition7"), NodePath("ShelfPosition2"), NodePath("ShelfPosition8"), NodePath("ShelfPosition3"), NodePath("ShelfPosition4"), NodePath("ShelfPosition6"), NodePath("ShelfPosition5")]
 
 [node name="Shelf CoatHanger" type="Control" parent="UI Closet/ClosetInside/ClosetShelves" node_paths=PackedStringArray("attach_point")]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
 mouse_filter = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
@@ -702,6 +705,86 @@ offset = Vector2(64, 64)
 
 [node name="AttachPoint" type="Marker2D" parent="UI Closet/ClosetInside/ClosetShelves/Shelf CoatHanger"]
 position = Vector2(50, 50)
+
+[node name="ShelfPosition" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 307.0
+offset_right = 118.0
+offset_bottom = 407.0
+mouse_filter = 2
+
+[node name="ShelfPosition7" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 154.0
+offset_top = 308.0
+offset_right = 254.0
+offset_bottom = 408.0
+mouse_filter = 2
+
+[node name="ShelfPosition2" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 140.0
+offset_top = 216.0
+offset_right = 240.0
+offset_bottom = 316.0
+mouse_filter = 2
+
+[node name="ShelfPosition8" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 218.0
+offset_right = 123.0
+offset_bottom = 318.0
+mouse_filter = 2
+
+[node name="ShelfPosition3" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 19.0
+offset_top = 113.0
+offset_right = 119.0
+offset_bottom = 213.0
+mouse_filter = 2
+
+[node name="ShelfPosition4" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 154.0
+offset_top = 117.0
+offset_right = 254.0
+offset_bottom = 217.0
+mouse_filter = 2
+
+[node name="ShelfPosition6" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 141.0
+offset_top = 4.0
+offset_right = 241.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="ShelfPosition5" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 4.0
+offset_right = 123.0
+offset_bottom = 104.0
+mouse_filter = 2
 
 [node name="ColorButtons" type="Control" parent="UI Closet"]
 z_as_relative = false
