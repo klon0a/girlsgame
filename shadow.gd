@@ -6,7 +6,8 @@ extends Sprite2D
 const shadow_drop : Vector2 = Vector2.DOWN * 5.0
 
 func _ready() -> void:
-	texture = parent.texture
+	if texture == null : 
+		texture = parent.texture
 	modulate = Color.WHITE
 	show_behind_parent = true
 	scale = Vector2.ONE

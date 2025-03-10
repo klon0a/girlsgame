@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=170 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -23,57 +23,102 @@
 [ext_resource type="Material" uid="uid://drm8g23g0mul8" path="res://shoe_material.tres" id="6_d2t1y"]
 [ext_resource type="PackedScene" uid="uid://ccq2j2kkhhkte" path="res://Clothes Scenes/top_poofyshirt.tscn" id="7_0odxb"]
 [ext_resource type="Texture2D" uid="uid://dwrrufw2dercl" path="res://Assets + Clothes/assets/placeholder/fullbody-kitty-rainbow.png" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://b736kkpyjfnc0" path="res://Assets + Clothes/assets/room/bg airbrush.png" id="7_arf1h"]
 [ext_resource type="PackedScene" uid="uid://cuqvx7qto160y" path="res://Clothes Scenes/shoe_low.tscn" id="7_cegan"]
 [ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_high.tscn" id="8_82xsv"]
+[ext_resource type="Texture2D" uid="uid://chjufa2csehf0" path="res://Assets + Clothes/assets/room/bg credits.png" id="8_s0om5"]
+[ext_resource type="Texture2D" uid="uid://bx53as7s6w25x" path="res://Assets + Clothes/assets/room/bg.png" id="9_gkfde"]
+[ext_resource type="Texture2D" uid="uid://c1k08fp2xy4si" path="res://Assets + Clothes/assets/room/bgfloor.png" id="10_4qxq8"]
 [ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
 [ext_resource type="PackedScene" uid="uid://dqk2wpoxfqufp" path="res://Clothes Scenes/top_buttonsweater.tscn" id="11_4w656"]
+[ext_resource type="Texture2D" uid="uid://0p08jfhh56wj" path="res://Assets + Clothes/assets/room/clear quastion.png" id="11_ryg4g"]
+[ext_resource type="Texture2D" uid="uid://duf84e3jcinbr" path="res://Assets + Clothes/assets/room/closetbase.png" id="12_oy6td"]
 [ext_resource type="Material" uid="uid://di4p345kviou1" path="res://eye_material.tres" id="12_rt5wr"]
+[ext_resource type="Texture2D" uid="uid://csnbu7rwixfwv" path="res://Assets + Clothes/assets/room/closetbaseshadow.png" id="13_fe76k"]
 [ext_resource type="PackedScene" uid="uid://dsmrurximvm4r" path="res://Clothes Scenes/top_floral.tscn" id="13_rnkwl"]
 [ext_resource type="Script" uid="uid://c1nsn7akupt5f" path="res://closet_shelves.gd" id="14_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://c4uxlnnq04dro" path="res://Clothes Scenes/fullbody_overalldress.tscn" id="14_getpj"]
+[ext_resource type="Texture2D" uid="uid://6ab5god4xb4p" path="res://Assets + Clothes/assets/room/closetdoors.png" id="14_p5pln"]
+[ext_resource type="Texture2D" uid="uid://daibnt6p65xyy" path="res://Assets + Clothes/assets/room/closetdoorshadow.png" id="15_oiuw5"]
 [ext_resource type="PackedScene" uid="uid://b7ipug83q60h7" path="res://Clothes Scenes/fullbody_overalls.tscn" id="15_ryguw"]
 [ext_resource type="PackedScene" uid="uid://b6qsx53jd4sdk" path="res://Clothes Scenes/shoe_crocs.tscn" id="16_d13ii"]
+[ext_resource type="Texture2D" uid="uid://1o1qhdvoie3t" path="res://Assets + Clothes/assets/room/closetinside.png" id="16_mldrc"]
 [ext_resource type="PackedScene" uid="uid://m7hxeoesas6i" path="res://Clothes Scenes/shirts/top_shirt_apple.tscn" id="18_5yh34"]
 [ext_resource type="PackedScene" uid="uid://cyc45degnd7ul" path="res://Clothes Scenes/top_sweater.tscn" id="18_vke2r"]
 [ext_resource type="PackedScene" uid="uid://bt4tbi5l5yk0r" path="res://Clothes Scenes/accessory_earpiercings.tscn" id="18_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://ckt7rfth4dqde" path="res://Clothes Scenes/shirts/top_shirt_clover.tscn" id="19_pjuso"]
 [ext_resource type="PackedScene" uid="uid://c6cf1elmqptn3" path="res://Clothes Scenes/accessory_hairbow.tscn" id="19_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://dlsugsglh1lrg" path="res://Clothes Scenes/bottom_junepants.tscn" id="19_uit24"]
+[ext_resource type="Texture2D" uid="uid://dk6qccgtugm2j" path="res://Assets + Clothes/assets/room/credits_art.png" id="19_wghq8"]
 [ext_resource type="PackedScene" uid="uid://dq68fs761thy8" path="res://Clothes Scenes/shirts/top_shirt_fish.tscn" id="20_23xmf"]
+[ext_resource type="Texture2D" uid="uid://b65fq1i25nnkc" path="res://Assets + Clothes/assets/room/credits_ashk.png" id="20_k08w7"]
 [ext_resource type="PackedScene" uid="uid://rxydo71sn020" path="res://Clothes Scenes/accessory_handbag.tscn" id="20_kq58d"]
+[ext_resource type="Texture2D" uid="uid://wfuum0ghec6w" path="res://Assets + Clothes/assets/room/credits_cmykeyz.png" id="21_hp4ct"]
 [ext_resource type="PackedScene" uid="uid://kjx6uj8p2wn7" path="res://Clothes Scenes/accessory_necktie.tscn" id="21_seu75"]
 [ext_resource type="PackedScene" uid="uid://i6mq7xigumhd" path="res://Clothes Scenes/shirts/top_shirt_heart.tscn" id="21_swlj1"]
 [ext_resource type="Texture2D" uid="uid://cfoluhd4nvoaa" path="res://UI + Sprites/texties/accessories.png" id="22_4k2k6"]
+[ext_resource type="Texture2D" uid="uid://bavq882j01s8x" path="res://Assets + Clothes/assets/room/credits_code.png" id="22_suf1q"]
 [ext_resource type="PackedScene" uid="uid://c5ltsdwna78hl" path="res://Clothes Scenes/shirts/top_shirt_nine.tscn" id="22_yysqy"]
 [ext_resource type="Texture2D" uid="uid://diqivu3sc01kj" path="res://UI + Sprites/texties/bottoms.png" id="23_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://d1th7gbo2ofxl" path="res://Assets + Clothes/assets/room/credits_design.png" id="23_lxb2r"]
 [ext_resource type="PackedScene" uid="uid://cgw25b8kyua5y" path="res://Clothes Scenes/shirts/top_shirt_skull.tscn" id="23_n5t1e"]
+[ext_resource type="Texture2D" uid="uid://dpgnaa6rdjnxd" path="res://Assets + Clothes/assets/room/credits_juneauvert.png" id="24_ceu5l"]
 [ext_resource type="PackedScene" uid="uid://bb1k3vblo2vq8" path="res://Clothes Scenes/shirts/top_shirt_tama.tscn" id="24_h6isl"]
 [ext_resource type="Texture2D" uid="uid://bxow5fwe7g3xi" path="res://UI + Sprites/texties/tops.png" id="24_ok6jj"]
+[ext_resource type="Texture2D" uid="uid://3vr158v5t28d" path="res://Assets + Clothes/assets/room/credits_replayplaceholder.png" id="25_lv1ug"]
+[ext_resource type="Texture2D" uid="uid://dhxcv1l8agh8i" path="res://Assets + Clothes/assets/room/credits_saveplaceholder.png" id="26_mofpq"]
+[ext_resource type="Texture2D" uid="uid://ch0mlh7kowfpm" path="res://Assets + Clothes/assets/room/credits_sound.png" id="27_6kttw"]
+[ext_resource type="Texture2D" uid="uid://70mk7otbvvkg" path="res://Assets + Clothes/assets/room/credits_toadtype.png" id="28_oqmj5"]
 [ext_resource type="PackedScene" uid="uid://clds73jy1rhwp" path="res://Clothes Scenes/fullbody_dress.tscn" id="29_inymm"]
+[ext_resource type="Texture2D" uid="uid://bvl8mf7rb2ghs" path="res://Assets + Clothes/assets/room/dialogue_box.png" id="29_uor2d"]
 [ext_resource type="Script" uid="uid://dls2vu18iaep1" path="res://color_buttons.gd" id="30_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://b6pap1fe5u3yj" path="res://Assets + Clothes/assets/room/dialogue_outline1.png" id="30_bdw5g"]
 [ext_resource type="Script" uid="uid://b5opoqkhehgfa" path="res://wibbler.gd" id="30_kq58d"]
 [ext_resource type="PackedScene" uid="uid://dlr14nkxp1xgd" path="res://Clothes Scenes/accessory_earringdots.tscn" id="30_ruth0"]
 [ext_resource type="Texture2D" uid="uid://b4lld0e7dxmnj" path="res://UI + Sprites/texties/colors-highres.png" id="31_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://cr7t3aoner0ea" path="res://Assets + Clothes/assets/room/dialogue_outline2.png" id="31_j6smb"]
+[ext_resource type="Texture2D" uid="uid://ywleandtk4bb" path="res://Assets + Clothes/assets/room/closetshelves_glitter.png" id="31_nycv6"]
 [ext_resource type="Texture2D" uid="uid://cb42k4lx61c7e" path="res://UI + Sprites/button.png" id="31_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://bk7rfntyg1x0p" path="res://Clothes Scenes/accessory_gempurse.tscn" id="31_rm4vd"]
+[ext_resource type="Texture2D" uid="uid://b57t8an767dnf" path="res://Assets + Clothes/assets/room/dialogue_shadow.png" id="32_xp7cv"]
+[ext_resource type="Texture2D" uid="uid://ddhfhlujau3j8" path="res://Assets + Clothes/assets/room/frame.png" id="33_6ff2c"]
+[ext_resource type="Texture2D" uid="uid://nchbus2d5d7t" path="res://Assets + Clothes/assets/room/nah.png" id="35_s0u5n"]
+[ext_resource type="Texture2D" uid="uid://bbls2t5tbfpsq" path="res://Assets + Clothes/assets/room/random quastion.png" id="36_8lrju"]
+[ext_resource type="Texture2D" uid="uid://b6au4up2fgnc4" path="res://Assets + Clothes/assets/room/sticker_acc.png" id="37_5kegx"]
 [ext_resource type="Script" uid="uid://cphx2mmw31aup" path="res://cursor.gd" id="37_facbu"]
+[ext_resource type="Texture2D" uid="uid://b3i1jndg63ups" path="res://Assets + Clothes/assets/room/sticker_accshadow.png" id="38_afgqn"]
+[ext_resource type="Texture2D" uid="uid://2yre2torvl3k" path="res://Assets + Clothes/assets/room/sticker_bottoms.png" id="39_jvn2n"]
+[ext_resource type="Texture2D" uid="uid://6704mep5edvg" path="res://Assets + Clothes/assets/room/sticker_bottomshadow.png" id="40_jegnu"]
+[ext_resource type="Texture2D" uid="uid://cxyqa6a2jvaoq" path="res://Assets + Clothes/assets/room/sticker_coat.png" id="41_rx6mv"]
+[ext_resource type="Texture2D" uid="uid://bcy5c042ogw5s" path="res://Assets + Clothes/assets/room/sticker_coatshadow.png" id="42_31js7"]
+[ext_resource type="Texture2D" uid="uid://kpf0vu51un1i" path="res://Assets + Clothes/assets/room/sticker_eye.png" id="43_0a4i0"]
 [ext_resource type="PackedScene" uid="uid://dy8ueuqc1lw6n" path="res://Clothes Scenes/accessory_earringfish.tscn" id="43_am8a1"]
 [ext_resource type="Texture2D" uid="uid://dy88bjdjueufw" path="res://Assets + Clothes/assets/final/kitty-body.png" id="43_qnost"]
 [ext_resource type="AudioStream" uid="uid://b37bnpm7csm4x" path="res://Sounds/kittys clawset sfx eyes rise.wav" id="43_tko6h"]
+[ext_resource type="Texture2D" uid="uid://0p8j2o0hord5" path="res://Assets + Clothes/assets/room/sticker_eyeshadow.png" id="44_i0xsp"]
 [ext_resource type="Texture2D" uid="uid://crgpsuoqgat1u" path="res://Assets + Clothes/assets/final/kitty-arm-l.png" id="44_wnkbs"]
 [ext_resource type="AudioStream" uid="uid://bjqq7wbp84n8m" path="res://Sounds/kittys clawset sfx drummy_first.wav" id="44_ywjan"]
 [ext_resource type="AudioStream" uid="uid://cceuwll4tolw3" path="res://Sounds/kittys clawset sfx eyes.wav" id="45_8dc3g"]
 [ext_resource type="Texture2D" uid="uid://dorl11al3jv1" path="res://Assets + Clothes/assets/final/kitty-arm-r.png" id="45_f6a44"]
+[ext_resource type="Texture2D" uid="uid://b53oihil0rkeo" path="res://Assets + Clothes/assets/room/sticker_eyecolor.png" id="45_kll2q"]
+[ext_resource type="Texture2D" uid="uid://bdxiianv8iuci" path="res://Assets + Clothes/assets/room/sticker_eyecolorshadow.png" id="46_ft875"]
 [ext_resource type="Texture2D" uid="uid://bratf2oc0y2wk" path="res://Assets + Clothes/assets/final/kitty-head.png" id="46_hrvbo"]
+[ext_resource type="Texture2D" uid="uid://b184p41sra8td" path="res://Assets + Clothes/assets/room/sticker_music.png" id="47_6hmxt"]
 [ext_resource type="Texture2D" uid="uid://b4hfbs4eof2pc" path="res://Assets + Clothes/assets/final/kitty-tail.png" id="47_uypp3"]
 [ext_resource type="Texture2D" uid="uid://ci7u3jnud1wle" path="res://Assets + Clothes/assets/final/kitty-leg-l.png" id="48_blkrb"]
 [ext_resource type="Script" uid="uid://bmu2oihbrdl0n" path="res://kitty_part.gd" id="48_e71vb"]
+[ext_resource type="Texture2D" uid="uid://bjkhfxg7gscvb" path="res://Assets + Clothes/assets/room/sticker_musicshadow.png" id="48_rhlye"]
 [ext_resource type="Texture2D" uid="uid://0l6s4jy4sctf" path="res://Assets + Clothes/assets/final/kitty-leg-r.png" id="49_abqjc"]
 [ext_resource type="Texture2D" uid="uid://cm3dj304rvka3" path="res://Assets + Clothes/kitty variation/IMG_2940.PNG" id="49_pjyto"]
+[ext_resource type="Texture2D" uid="uid://d11k1tx4liyh1" path="res://Assets + Clothes/assets/room/sticker_shoes.png" id="49_pqvsh"]
 [ext_resource type="Texture2D" uid="uid://dgaj2vtpa4gnk" path="res://UI + Sprites/texties/shoes.png" id="49_vjgyh"]
+[ext_resource type="Texture2D" uid="uid://cph2jfwqvtd2n" path="res://Assets + Clothes/assets/room/sticker_shoeshadow.png" id="50_3qj4k"]
 [ext_resource type="Texture2D" uid="uid://dfqybp2dlikc7" path="res://Assets + Clothes/kitty variation/IMG_2947.PNG" id="50_sm6fg"]
 [ext_resource type="Texture2D" uid="uid://iv1sqjjbt3lf" path="res://Assets + Clothes/kitty variation/IMG_2954.PNG" id="51_b17eg"]
+[ext_resource type="Texture2D" uid="uid://brskwfar6m5la" path="res://Assets + Clothes/assets/room/sticker_tops.png" id="51_mo8hc"]
+[ext_resource type="Texture2D" uid="uid://da8vcoaje0iwd" path="res://Assets + Clothes/assets/room/sticker_topshadow.png" id="52_gbg58"]
 [ext_resource type="Texture2D" uid="uid://bxceysih85bx0" path="res://Assets + Clothes/kitty variation/IMG_2961.PNG" id="52_ntx8l"]
+[ext_resource type="Texture2D" uid="uid://dj22t5dd0hoqf" path="res://Assets + Clothes/assets/room/yay.png" id="53_le5wj"]
 [ext_resource type="Texture2D" uid="uid://cfiohxd1ub1y5" path="res://Assets + Clothes/kitty variation/IMG_2968.PNG" id="53_uatky"]
 [ext_resource type="Texture2D" uid="uid://brj0vackmdtsh" path="res://Assets + Clothes/kitty variation/IMG_2975.PNG" id="54_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://e228hiyxta35" path="res://Assets + Clothes/kitty variation/IMG_2942.PNG" id="56_jbvwl"]
@@ -150,10 +195,105 @@ stream = ExtResource("3_m74q3")
 autoplay = true
 
 [node name="Backdrop" type="Node2D" parent="."]
-position = Vector2(392, 61)
+
+[node name="GameplayBackground" type="Node2D" parent="Backdrop"]
+position = Vector2(512, 384)
+
+[node name="Bg" type="Sprite2D" parent="Backdrop/GameplayBackground"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_gkfde")
+
+[node name="BgAirbrush" type="Sprite2D" parent="Backdrop/GameplayBackground"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_arf1h")
+
+[node name="Bgfloor" type="Sprite2D" parent="Backdrop/GameplayBackground"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_4qxq8")
+
+[node name="CreditsBackground" type="Node2D" parent="Backdrop"]
+visible = false
+position = Vector2(512, 384)
+
+[node name="Bg" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_gkfde")
+
+[node name="BgCredits" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_s0om5")
+
+[node name="Bgfloor" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_4qxq8")
+
+[node name="CreditsArt" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_wghq8")
+
+[node name="CreditsAshk" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_k08w7")
+
+[node name="CreditsCmykeyz" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("21_hp4ct")
+
+[node name="CreditsCode" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("22_suf1q")
+
+[node name="CreditsDesign" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("23_lxb2r")
+
+[node name="CreditsJuneauvert" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_ceu5l")
+
+[node name="CreditsReplayplaceholder" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("25_lv1ug")
+
+[node name="CreditsSaveplaceholder" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("26_mofpq")
+
+[node name="CreditsSound" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("27_6kttw")
+
+[node name="CreditsToadtype" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+visible = false
+position = Vector2(-1013, -35)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("28_oqmj5")
+
+[node name="Frame" type="Sprite2D" parent="Backdrop"]
+position = Vector2(512, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("33_6ff2c")
 
 [node name="KittysClawsetTitle" type="Sprite2D" parent="Backdrop"]
-position = Vector2(-150, 16)
+position = Vector2(241, 79)
 scale = Vector2(0.308079, 0.308079)
 texture = ExtResource("1_d2t1y")
 script = ExtResource("30_kq58d")
@@ -166,6 +306,176 @@ rot_speed = 1.0
 [node name="Shadow" parent="Backdrop/KittysClawsetTitle" instance=ExtResource("3_gngh3")]
 position = Vector2(486.889, -51.9348)
 scale = Vector2(3.24592, 3.24592)
+
+[node name="Closet" type="Node2D" parent="Backdrop"]
+position = Vector2(699, 338)
+
+[node name="Closetinside" type="Sprite2D" parent="Backdrop/Closet"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_mldrc")
+
+[node name="ClosetBar" type="Sprite2D" parent="Backdrop/Closet"]
+visible = false
+position = Vector2(10, -226)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("31_nycv6")
+region_enabled = true
+region_rect = Rect2(0, 0, 1375, 380)
+
+[node name="Closetshelves" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(2, 21)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("31_nycv6")
+region_rect = Rect2(0, 0, 1375, 380)
+
+[node name="Closetbase" type="Sprite2D" parent="Backdrop/Closet"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_oy6td")
+
+[node name="Shadow" parent="Backdrop/Closet/Closetbase" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(0, 16)
+texture = ExtResource("13_fe76k")
+
+[node name="Closetdoors" type="Sprite2D" parent="Backdrop/Closet"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_p5pln")
+
+[node name="Shadow" parent="Backdrop/Closet/Closetdoors" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-4, 28)
+texture = ExtResource("15_oiuw5")
+
+[node name="StickerCoat" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(-202, -169)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("41_rx6mv")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerCoat" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+texture = ExtResource("42_31js7")
+
+[node name="StickerEye" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(-202, 19)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("43_0a4i0")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerEye" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-4, 2)
+texture = ExtResource("44_i0xsp")
+
+[node name="StickerEyecolor" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(-183, -69)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("45_kll2q")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerEyecolor" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-2, 6)
+texture = ExtResource("46_ft875")
+
+[node name="StickerMusic" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(-191, 110)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("47_6hmxt")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerMusic" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-4, 2)
+texture = ExtResource("48_rhlye")
+
+[node name="StickerTops" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(179, -171)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("51_mo8hc")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerTops" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-2, 4)
+texture = ExtResource("52_gbg58")
+
+[node name="StickerBottoms" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(184, -62)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("39_jvn2n")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerBottoms" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-10, -2)
+texture = ExtResource("40_jegnu")
+
+[node name="StickerShoes" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(203, 19)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("49_pqvsh")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerShoes" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(-2, 6)
+texture = ExtResource("50_3qj4k")
+
+[node name="StickerAcc" type="Sprite2D" parent="Backdrop/Closet"]
+position = Vector2(190, 109)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("37_5kegx")
+
+[node name="Shadow" parent="Backdrop/Closet/StickerAcc" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+position = Vector2(4, 2)
+texture = ExtResource("38_afgqn")
+
+[node name="Confirmation" type="Node2D" parent="."]
+z_index = 15
+position = Vector2(512, 384)
+
+[node name="DialogueBox" type="Sprite2D" parent="Confirmation"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("29_uor2d")
+
+[node name="Shadow" parent="Confirmation/DialogueBox" instance=ExtResource("3_gngh3")]
+show_behind_parent = true
+material = null
+texture = ExtResource("32_xp7cv")
+
+[node name="DialogueOutline2" type="Sprite2D" parent="Confirmation/DialogueBox"]
+show_behind_parent = true
+texture = ExtResource("31_j6smb")
+
+[node name="DialogueOutline1" type="Sprite2D" parent="Confirmation/DialogueBox"]
+show_behind_parent = true
+texture = ExtResource("30_bdw5g")
+
+[node name="Nah" type="Sprite2D" parent="Confirmation/DialogueBox"]
+position = Vector2(234, 84)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("35_s0u5n")
+
+[node name="Shadow" parent="Confirmation/DialogueBox/Nah" instance=ExtResource("3_gngh3")]
+
+[node name="RandomQuastion" type="Sprite2D" parent="Confirmation/DialogueBox"]
+texture = ExtResource("36_8lrju")
+
+[node name="ClearQuastion" type="Sprite2D" parent="Confirmation/DialogueBox"]
+visible = false
+texture = ExtResource("11_ryg4g")
+
+[node name="Yay" type="Sprite2D" parent="Confirmation/DialogueBox"]
+position = Vector2(-258, -102)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("53_le5wj")
+
+[node name="Shadow" parent="Confirmation/DialogueBox/Yay" instance=ExtResource("3_gngh3")]
 
 [node name="Ui-mockup" type="Sprite2D" parent="."]
 visible = false
@@ -559,7 +869,6 @@ texture = ExtResource("95_off2o")
 modulate = Color(1, 1, 1, 0.466667)
 show_behind_parent = true
 position = Vector2(0.000450134, 16.4146)
-texture = ExtResource("31_ok6jj")
 
 [node name="Eyes" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
 z_index = 13
@@ -573,7 +882,6 @@ sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), Ex
 modulate = Color(1, 1, 1, 0.466667)
 show_behind_parent = true
 position = Vector2(0.000450134, 16.4146)
-texture = ExtResource("31_ok6jj")
 
 [node name="Tail" type="Node2D" parent="Kitty/Body"]
 show_behind_parent = true
@@ -626,6 +934,7 @@ texture = ExtResource("7_272bh")
 [node name="Area2D" type="Area2D" parent="Kitty"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitty/Area2D"]
+visible = false
 position = Vector2(-73.7167, -67.958)
 shape = SubResource("RectangleShape2D_272bh")
 
