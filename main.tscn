@@ -1097,8 +1097,8 @@ sprites = Array[Texture2D]([ExtResource("49_abqjc"), ExtResource("89_off2o"), Ex
 
 [node name="BodyPlaceholder" type="Sprite2D" parent="Kitty"]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(-80.5969, -66.9731)
-scale = Vector2(0.594129, 0.594129)
+position = Vector2(-94.357, -21.668)
+scale = Vector2(0.609, 0.609)
 
 [node name="Area2D" type="Area2D" parent="Kitty"]
 
