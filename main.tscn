@@ -205,15 +205,13 @@ z_index = -15
 position = Vector2(512, 384)
 
 [node name="Bg" type="Sprite2D" parent="Backdrop/GameplayBackground"]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_gkfde")
 
 [node name="BgAirbrush" type="Sprite2D" parent="Backdrop/GameplayBackground"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.91, 0.91)
 texture = ExtResource("7_arf1h")
 
 [node name="Bgfloor" type="Sprite2D" parent="Backdrop/GameplayBackground"]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_4qxq8")
 
 [node name="CreditsBackground" type="Node2D" parent="Backdrop"]
@@ -294,7 +292,6 @@ texture = ExtResource("28_oqmj5")
 
 [node name="Frame" type="Sprite2D" parent="Backdrop"]
 position = Vector2(512, 384)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("33_6ff2c")
 
 [node name="KittysClawsetTitle" type="Sprite2D" parent="Backdrop"]
@@ -314,18 +311,18 @@ position = Vector2(486.889, -51.9348)
 scale = Vector2(3.24592, 3.24592)
 
 [node name="Closet" type="Node2D" parent="Backdrop"]
-position = Vector2(699, 338)
+position = Vector2(700, 345)
 
 [node name="Closetinside" type="Sprite2D" parent="Backdrop/Closet"]
 z_index = -15
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.625, 0.625)
 texture = ExtResource("16_mldrc")
 
 [node name="ClosetBar" type="Sprite2D" parent="Backdrop/Closet"]
 visible = false
 z_index = -15
 position = Vector2(10, -226)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.625, 0.625)
 texture = ExtResource("31_nycv6")
 region_enabled = true
 region_rect = Rect2(0, 0, 1375, 380)
@@ -333,12 +330,12 @@ region_rect = Rect2(0, 0, 1375, 380)
 [node name="Closetshelves" type="Sprite2D" parent="Backdrop/Closet"]
 z_index = -15
 position = Vector2(2, 21)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.625, 0.625)
 texture = ExtResource("31_nycv6")
 region_rect = Rect2(0, 0, 1375, 380)
 
 [node name="Closetbase" type="Sprite2D" parent="Backdrop/Closet"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.625, 0.625)
 texture = ExtResource("12_oy6td")
 
 [node name="Shadow" parent="Backdrop/Closet/Closetbase" instance=ExtResource("3_gngh3")]
@@ -348,7 +345,7 @@ position = Vector2(0, 16)
 texture = ExtResource("13_fe76k")
 
 [node name="Closetdoors" type="Sprite2D" parent="Backdrop/Closet"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.625, 0.625)
 texture = ExtResource("14_p5pln")
 
 [node name="Shadow" parent="Backdrop/Closet/Closetdoors" instance=ExtResource("3_gngh3")]
@@ -558,10 +555,10 @@ texture = ExtResource("53_le5wj")
 z_index = -15
 layout_mode = 3
 anchors_preset = 0
-offset_left = 428.0
-offset_top = 54.0
-offset_right = 948.0
-offset_bottom = 621.0
+offset_left = 429.0
+offset_top = 61.0
+offset_right = 949.0
+offset_bottom = 628.0
 script = ExtResource("2_vivmo")
 top_material = ExtResource("3_b1qrp")
 bottom_material = ExtResource("4_4lmeg")
