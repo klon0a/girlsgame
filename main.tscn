@@ -293,6 +293,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("33_6ff2c")
 
 [node name="KittysClawsetTitle" type="Sprite2D" parent="Backdrop"]
+z_index = 15
 position = Vector2(241, 79)
 scale = Vector2(0.308079, 0.308079)
 texture = ExtResource("1_d2t1y")

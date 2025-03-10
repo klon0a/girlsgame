@@ -65,27 +65,30 @@ func put_on(new_garment : Garment):
 			current_shoe = new_garment
 			
 		Garment.GARMENT_TYPE.TOP:
-			if (current_top != null):
-				current_top.take_off()
-			if (current_fullbody != null):
-				current_fullbody.take_off()
-			current_top = new_garment
+			#if (current_top != null):
+				#current_top.take_off()
+			#if (current_fullbody != null):
+				#current_fullbody.take_off()
+			#current_top = new_garment
+			pass
 
 		Garment.GARMENT_TYPE.BOTTOM:
-			if (current_bottom != null):
-				current_bottom.take_off()
-			if (current_fullbody != null):
-				current_fullbody.take_off()
-			current_bottom = new_garment
+			#if (current_bottom != null):
+				#current_bottom.take_off()
+			#if (current_fullbody != null):
+				#current_fullbody.take_off()
+			#current_bottom = new_garment
+			pass
 			
 		Garment.GARMENT_TYPE.FULL:
-			if (current_fullbody != null):
-				current_fullbody.take_off()
-			if (current_top != null):
-				current_top.take_off()
-			if (current_bottom != null):
-				current_bottom.take_off()
-			current_fullbody = new_garment
+			#if (current_fullbody != null):
+				#current_fullbody.take_off()
+			#if (current_top != null):
+				#current_top.take_off()
+			#if (current_bottom != null):
+				#current_bottom.take_off()
+			#current_fullbody = new_garment
+			pass
 			
 		Garment.GARMENT_TYPE.ACCESSORY:
 			# i think multiple accessories are swag actually
