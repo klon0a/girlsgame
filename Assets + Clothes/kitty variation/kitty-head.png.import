@@ -2,33 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dve842cp8m4w1"
-path="res://.godot/imported/kitty-hairbow.png-05ef188b4854e404429f3bc8baeb4ef1.ctex"
+uid="uid://bratf2oc0y2wk"
+path="res://.godot/imported/kitty-head.png-8f282e85a8922d20f42a102dce127426.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets + Clothes/assets/placeholder/kitty-hairbow.png"
-dest_files=["res://.godot/imported/kitty-hairbow.png-05ef188b4854e404429f3bc8baeb4ef1.ctex"]
+source_file="res://Assets + Clothes/kitty variation/kitty-head.png"
+dest_files=["res://.godot/imported/kitty-head.png-8f282e85a8922d20f42a102dce127426.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
-compress/channel_pack=0
-mipmaps/generate=false
+compress/normal_map=2
+compress/channel_pack=1
+mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=1
 roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=1020
 detect_3d/compress_to=1

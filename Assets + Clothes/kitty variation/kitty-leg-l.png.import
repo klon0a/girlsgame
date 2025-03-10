@@ -2,33 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwjang66psi6b"
-path="res://.godot/imported/kitty-boots.png-e89115e0ae8fb906bff3720a30f2f121.ctex"
+uid="uid://ci7u3jnud1wle"
+path="res://.godot/imported/kitty-leg-l.png-45447cf657681f6de38ab45b7869d5c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets + Clothes/assets/placeholder/kitty-boots.png"
-dest_files=["res://.godot/imported/kitty-boots.png-e89115e0ae8fb906bff3720a30f2f121.ctex"]
+source_file="res://Assets + Clothes/kitty variation/kitty-leg-l.png"
+dest_files=["res://.godot/imported/kitty-leg-l.png-45447cf657681f6de38ab45b7869d5c7.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
-compress/channel_pack=0
-mipmaps/generate=false
+compress/normal_map=2
+compress/channel_pack=1
+mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=1
 roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=1020
 detect_3d/compress_to=1
