@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=170 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
 [ext_resource type="Material" uid="uid://cebh1e87bjhys" path="res://bottom_material.tres" id="4_4lmeg"]
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
+[ext_resource type="AudioStream" uid="uid://c6oo1h7iykplk" path="res://Sounds/kittys clawset sfx startrup.wav" id="4_nycv6"]
 [ext_resource type="Material" uid="uid://b4s1smylcbcwo" path="res://accessory_material.tres" id="5_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
@@ -191,6 +192,10 @@ stream = ExtResource("2_ywjan")
 
 [node name="KittysClawsetSong2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("3_m74q3")
+autoplay = true
+
+[node name="KittysClawsetSfxStartrup" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("4_nycv6")
 autoplay = true
 
 [node name="Backdrop" type="Node2D" parent="."]

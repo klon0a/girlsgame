@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clwjmyo3cdgb"
+path="res://.godot/imported/kittys clawset menu opt.wav-8127fa8ac7d6ce4eff73f984acb1c016.sample"
+
+[deps]
+
+source_file="res://Sounds/kittys clawset menu opt.wav"
+dest_files=["res://.godot/imported/kittys clawset menu opt.wav-8127fa8ac7d6ce4eff73f984acb1c016.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
