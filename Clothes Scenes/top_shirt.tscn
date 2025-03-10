@@ -19,7 +19,6 @@ texture = ExtResource("3_2t63w")
 
 [node name="ShirtDesign" type="Sprite2D" parent="." index="4"]
 z_index = 10
-z_as_relative = false
 
 [node name="Shadow" parent="ShirtDesign" index="0" instance=ExtResource("4_um2yg")]
 
