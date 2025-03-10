@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=115 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -94,6 +94,7 @@
 [ext_resource type="Texture2D" uid="uid://cst5rlct2iqt" path="res://Assets + Clothes/kitty variation/IMG_2938.PNG" id="76_htgcl"]
 [ext_resource type="Texture2D" uid="uid://dy2yak8aa13v8" path="res://Assets + Clothes/kitty variation/IMG_2945.PNG" id="77_smeu8"]
 [ext_resource type="Texture2D" uid="uid://kv77wtwuwi5a" path="res://Assets + Clothes/kitty variation/IMG_2952.PNG" id="78_f3y11"]
+[ext_resource type="Texture2D" uid="uid://dy2imdt7pv0rb" path="res://Assets + Clothes/kitty variation/IMG_2957.PNG" id="78_tko6h"]
 [ext_resource type="Texture2D" uid="uid://ewfv14vnkqpn" path="res://Assets + Clothes/kitty variation/IMG_2959.PNG" id="79_cpm2s"]
 [ext_resource type="Texture2D" uid="uid://cwaxo3boropi7" path="res://Assets + Clothes/kitty variation/IMG_2966.PNG" id="80_u81y6"]
 [ext_resource type="Texture2D" uid="uid://3q63w4cbrfmf" path="res://Assets + Clothes/kitty variation/IMG_2973.PNG" id="81_rt5wr"]
@@ -108,6 +109,7 @@
 [ext_resource type="Texture2D" uid="uid://cutea5ax5nug2" path="res://Assets + Clothes/kitty variation/IMG_2958.PNG" id="92_g5xqc"]
 [ext_resource type="Texture2D" uid="uid://gi7wq5a7f51l" path="res://Assets + Clothes/kitty variation/IMG_2965.PNG" id="93_s4o1y"]
 [ext_resource type="Texture2D" uid="uid://t3l132nfpp85" path="res://Assets + Clothes/kitty variation/IMG_2972.PNG" id="94_7mmqq"]
+[ext_resource type="Texture2D" uid="uid://bgm6hb77wqd58" path="res://Assets + Clothes/kitty variation/IMG_2967.PNG" id="100_am8a1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -243,7 +245,7 @@ original_coathanger = NodePath("HBoxContainer/CoatHanger")
 layout_mode = 2
 
 [node name="CoatHanger" type="Control" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer" node_paths=PackedStringArray("attach_point")]
-custom_minimum_size = Vector2(50, 200)
+custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
@@ -257,7 +259,7 @@ texture = ExtResource("5_7mycd")
 offset = Vector2(64, 64)
 
 [node name="AttachPoint" type="Marker2D" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer/CoatHanger"]
-position = Vector2(31, 4)
+position = Vector2(50, 25)
 
 [node name="ClosetShelves" type="GridContainer" parent="UI Closet/ClosetInside" node_paths=PackedStringArray("original_shelf_item")]
 clip_contents = true
@@ -477,7 +479,7 @@ z_as_relative = false
 position = Vector2(-150.709, 101.773)
 texture = ExtResource("45_f6a44")
 script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("45_f6a44"), ExtResource("63_inymm"), ExtResource("64_jcxqu"), ExtResource("65_0arob"), ExtResource("65_0arob"), ExtResource("66_dij0e"), ExtResource("67_k1udn")])
+sprites = Array[Texture2D]([ExtResource("45_f6a44"), ExtResource("63_inymm"), ExtResource("64_jcxqu"), ExtResource("65_0arob"), ExtResource("78_tko6h"), ExtResource("66_dij0e"), ExtResource("67_k1udn")])
 
 [node name="Shadow" parent="Kitty/Body/ArmR/Kitty-arm-r" instance=ExtResource("3_gngh3")]
 
@@ -543,7 +545,7 @@ z_as_relative = false
 position = Vector2(26.2103, -288.903)
 texture = ExtResource("48_blkrb")
 script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("48_blkrb"), ExtResource("83_mnw77"), ExtResource("84_vjgyh"), ExtResource("85_d5iia"), ExtResource("86_asu84"), ExtResource("87_qwt6e"), ExtResource("87_qwt6e")])
+sprites = Array[Texture2D]([ExtResource("48_blkrb"), ExtResource("83_mnw77"), ExtResource("84_vjgyh"), ExtResource("85_d5iia"), ExtResource("86_asu84"), ExtResource("100_am8a1"), ExtResource("87_qwt6e")])
 
 [node name="Shadow" parent="Kitty/Body/LegL/Kitty-leg-l" instance=ExtResource("3_gngh3")]
 
