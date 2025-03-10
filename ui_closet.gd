@@ -142,3 +142,11 @@ func _on_cycle_eyes_pressed() -> void:
 	rising.play()
 	%Kitty.cycle_eyes()
 	pass # Replace with function body.
+
+
+func _on_cycle_eye_color_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_toggle_music_pressed() -> void:
+	pass # Replace with function body.
