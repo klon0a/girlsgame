@@ -68,12 +68,15 @@ func pick_up():
 	Cursor.instance.held_garment = self
 	grab_sound.pitch_scale = randf_range(0.85, 1.15)
 	grab_sound.play()
+	move_children_to(-hang_position)
 	pass
 
 func _on_touch_screen_button_pressed() -> void:
 	var click_inside_closet = Closet.inside_rect.has_point(get_global_mouse_position())
 	#print("garment touched! " + name)
 	if (click_inside_closet or on_kitty) and Cursor.can_grab:
+		if on_kitty:
+			Kitty.instance.remove_picked_up_garment(self)
 		pick_up()
 	pass # Replace with function body.
 
@@ -99,16 +102,17 @@ func place_on_hanger():
 		reparent(_personal_coathanger)
 		position = Vector2.ZERO
 		base_scale = _personal_coathanger.item_scale
-		for child in get_children():
-			if not child is Node2D: continue
-			child.position = -hang_position
+		move_children_to(-hang_position)
 		#position = _personal_coathanger.attach_point.global_position - hang_point.global_position
 	pass
 
 func prep_to_be_put_on():
 	z_index = 0
 	on_kitty = true
-	for child in get_children():
-		if not child is Node2D: continue
-		child.position = Vector2.ZERO
+	move_children_to(Vector2.ZERO)
 	pass
+
+func move_children_to(_position : Vector2):
+	for child in get_children():
+			if not child is Node2D: continue
+			child.position = _position

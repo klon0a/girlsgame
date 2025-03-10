@@ -21,11 +21,13 @@ var current_shoe : Garment
 
 static var cursor_over_kitty = false
 static var global_garment_scale : float
+static var instance : Kitty
 
 func _ready() -> void:
 	%Cursor.position = self.position
 	global_garment_scale = garment_parent.global_scale.x
 	blink_loop()
+	instance = self
 	pass
 
 func cycle_kitty_color():
@@ -100,3 +102,14 @@ func put_on(new_garment : Garment):
 			pass
 			
 	pass
+
+func remove_picked_up_garment(removed_garment : Garment):
+	if current_shoe == removed_garment:
+		current_shoe = null
+	if current_top == removed_garment:
+		current_top = null
+	if current_bottom == removed_garment:
+		current_bottom = null
+	if current_fullbody == removed_garment:
+		current_fullbody = null
+	
