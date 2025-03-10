@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=116 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -56,6 +56,7 @@
 [ext_resource type="Texture2D" uid="uid://cb42k4lx61c7e" path="res://UI + Sprites/button.png" id="31_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://bk7rfntyg1x0p" path="res://Clothes Scenes/accessory_gempurse.tscn" id="31_rm4vd"]
 [ext_resource type="Script" uid="uid://cphx2mmw31aup" path="res://cursor.gd" id="37_facbu"]
+[ext_resource type="PackedScene" uid="uid://dy8ueuqc1lw6n" path="res://Clothes Scenes/accessory_earringfish.tscn" id="43_am8a1"]
 [ext_resource type="Texture2D" uid="uid://dy88bjdjueufw" path="res://Assets + Clothes/assets/final/kitty-body.png" id="43_qnost"]
 [ext_resource type="AudioStream" uid="uid://b37bnpm7csm4x" path="res://Sounds/kittys clawset sfx eyes rise.wav" id="43_tko6h"]
 [ext_resource type="Texture2D" uid="uid://crgpsuoqgat1u" path="res://Assets + Clothes/assets/final/kitty-arm-l.png" id="44_wnkbs"]
@@ -177,7 +178,7 @@ tops_list = Array[PackedScene]([ExtResource("11_4w656"), ExtResource("13_rnkwl")
 bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og")])
 fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"), ExtResource("15_ryguw")])
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
-accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("31_rm4vd"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75")])
+accessories_list = Array[PackedScene]([ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("31_rm4vd"), ExtResource("19_qsp4k"), ExtResource("20_kq58d"), ExtResource("21_seu75"), ExtResource("43_am8a1")])
 
 [node name="UI Sounds" type="Node" parent="UI Closet"]
 
@@ -291,7 +292,7 @@ texture = ExtResource("5_7mycd")
 offset = Vector2(64, 64)
 
 [node name="AttachPoint" type="Marker2D" parent="UI Closet/ClosetInside/ClosetShelves/Shelf CoatHanger"]
-position = Vector2(50, 0)
+position = Vector2(50, 50)
 
 [node name="ColorButtons" type="Control" parent="UI Closet"]
 anchors_preset = 0
