@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=124 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cy5y14wa8uqak" path="res://Clothes Scenes/shoe_high.tscn" id="8_82xsv"]
 [ext_resource type="PackedScene" uid="uid://pbfuehivb0cb" path="res://Clothes Scenes/top_shirt.tscn" id="10_ryguw"]
 [ext_resource type="PackedScene" uid="uid://dqk2wpoxfqufp" path="res://Clothes Scenes/top_buttonsweater.tscn" id="11_4w656"]
+[ext_resource type="Material" uid="uid://di4p345kviou1" path="res://eye_material.tres" id="12_rt5wr"]
 [ext_resource type="PackedScene" uid="uid://dsmrurximvm4r" path="res://Clothes Scenes/top_floral.tscn" id="13_rnkwl"]
 [ext_resource type="Script" uid="uid://c1nsn7akupt5f" path="res://closet_shelves.gd" id="14_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://c4uxlnnq04dro" path="res://Clothes Scenes/fullbody_overalldress.tscn" id="14_getpj"]
@@ -125,6 +126,8 @@ shader_parameter/from = Color(0.278431, 0.54902, 0.74902, 1)
 shader_parameter/to = Color(0.447038, 0.878595, 0.757865, 1)
 shader_parameter/tolerance_hue = 0.0
 shader_parameter/tolerance_feather = 0.0
+shader_parameter/greyscale_amount = 0.3
+shader_parameter/greyscale = false
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_facbu"]
 
@@ -422,6 +425,14 @@ offset_right = 87.0
 offset_bottom = 73.0
 text = "SWAG"
 
+[node name="EyeColorCategory" type="Button" parent="UI Closet/TypeButtons"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 318.0
+offset_right = 95.0
+offset_bottom = 389.0
+text = "eyecolor"
+
 [node name="CycleCoat" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
 offset_left = -382.0
@@ -438,6 +449,14 @@ offset_right = -294.0
 offset_bottom = 159.0
 text = "EYES
 "
+
+[node name="CycleEyes2" type="Button" parent="UI Closet/TypeButtons"]
+layout_mode = 0
+offset_left = -383.0
+offset_top = 267.0
+offset_right = -297.0
+offset_bottom = 338.0
+text = "MUSIC"
 
 [node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes")]
 unique_name_in_owner = true
@@ -514,6 +533,7 @@ position = Vector2(16.3815, -226.526)
 visible = false
 z_index = 13
 z_as_relative = false
+material = ExtResource("12_rt5wr")
 position = Vector2(-22.9341, 407.091)
 scale = Vector2(1, 1)
 texture = ExtResource("95_off2o")
@@ -602,7 +622,9 @@ script = ExtResource("37_facbu")
 [connection signal="pressed" from="UI Closet/TypeButtons/BottomsCategory" to="UI Closet" method="_on_bottoms_category_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/ShoesCategory" to="UI Closet" method="_on_shoes_category_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/AccessoriesCategory" to="UI Closet" method="_on_accessories_category_pressed"]
+[connection signal="pressed" from="UI Closet/TypeButtons/EyeColorCategory" to="UI Closet" method="_on_accessories_category_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/CycleCoat" to="UI Closet" method="_on_cycle_coat_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/CycleEyes" to="UI Closet" method="_on_cycle_eyes_pressed"]
+[connection signal="pressed" from="UI Closet/TypeButtons/CycleEyes2" to="UI Closet" method="_on_cycle_eyes_pressed"]
 [connection signal="mouse_entered" from="Kitty/Area2D" to="Kitty" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Kitty/Area2D" to="Kitty" method="_on_area_2d_mouse_exited"]

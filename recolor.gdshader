@@ -11,6 +11,10 @@ uniform vec4 to : source_color;
 uniform float tolerance_hue: hint_range(0.0, 1.0);
 uniform float tolerance_feather : hint_range(0.0, 1.0);
 
+//uniform float contrast = 1.0;
+//uniform float balance = 0.0;
+uniform float greyscale_amount = 0.3;
+uniform bool greyscale = false;
 
 
 // Color space conversion from https://godotshaders.com/shader/color-range-swap/
@@ -61,5 +65,7 @@ void fragment()
 		tex.rgb = mix(hsv2rgb(final_hsv), tex.rgb, mix_by);
 	//}
 	
+	//tex.rgb = mix(vec3(0.5), tex.rgb + vec3(balance), contrast);
+	tex.rgb = mix(tex.rgb, vec3(tex.r * 0.3 + tex.g * 0.6 + tex.b * 0.1),  step(0.5, float(greyscale))* greyscale_amount);
 	COLOR = tex;
 }
