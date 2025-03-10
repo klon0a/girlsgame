@@ -553,7 +553,6 @@ z_index = 13
 z_as_relative = false
 material = ExtResource("12_rt5wr")
 position = Vector2(-22.9341, 407.091)
-scale = Vector2(1, 1)
 texture = ExtResource("95_off2o")
 
 [node name="Shadow" parent="Kitty/Body/Head/Eyes/EyesBlink" instance=ExtResource("3_gngh3")]
@@ -566,7 +565,6 @@ texture = ExtResource("31_ok6jj")
 z_index = 13
 z_as_relative = false
 position = Vector2(-22.9341, 407.091)
-scale = Vector2(1, 1)
 texture = ExtResource("89_rt5wr")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), ExtResource("91_vjgyh"), ExtResource("92_d5iia"), ExtResource("93_asu84"), ExtResource("94_qwt6e"), ExtResource("95_off2o")])
@@ -631,6 +629,10 @@ texture = ExtResource("7_272bh")
 position = Vector2(-73.7167, -67.958)
 shape = SubResource("RectangleShape2D_272bh")
 
+[node name="BlinkTimer" type="Timer" parent="Kitty"]
+wait_time = 5.0
+autostart = true
+
 [node name="Cursor" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("37_facbu")
@@ -646,3 +648,4 @@ script = ExtResource("37_facbu")
 [connection signal="pressed" from="UI Closet/TypeButtons/ToggleMusic" to="UI Closet" method="_on_toggle_music_pressed"]
 [connection signal="mouse_entered" from="Kitty/Area2D" to="Kitty" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Kitty/Area2D" to="Kitty" method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="Kitty/BlinkTimer" to="Kitty" method="_on_blink_timer_timeout"]

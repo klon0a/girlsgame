@@ -26,7 +26,6 @@ static var instance : Kitty
 func _ready() -> void:
 	%Cursor.position = self.position
 	global_garment_scale = garment_parent.global_scale.x
-	blink_loop()
 	instance = self
 	pass
 
@@ -40,15 +39,6 @@ func cycle_eyes():
 	current_eyeset = (current_eyeset + 1) % eye_count
 	eyes.set_sprite_id(current_eyeset)
 	pass
-
-func blink_loop():
-	while true:
-		await get_tree().create_timer(randfn(3.0, 5.0)).timeout
-		blink_eyes.visible = true
-		eyes.visible = false
-		await get_tree().create_timer(0.12).timeout
-		blink_eyes.visible = false
-		eyes.visible = true
 
 func _on_area_2d_mouse_entered() -> void:
 	cursor_over_kitty = true
@@ -113,3 +103,12 @@ func remove_picked_up_garment(removed_garment : Garment):
 	if current_fullbody == removed_garment:
 		current_fullbody = null
 	
+
+
+func _on_blink_timer_timeout() -> void:
+	$BlinkTimer.wait_time = randf_range(4.0, 8.0)
+	blink_eyes.visible = true
+	eyes.visible = false
+	await get_tree().create_timer(0.12).timeout
+	blink_eyes.visible = false
+	eyes.visible = true
