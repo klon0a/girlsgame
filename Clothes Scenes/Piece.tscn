@@ -1,12 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://bumqcvnvt37wm"]
+[gd_scene load_steps=9 format=3 uid="uid://bumqcvnvt37wm"]
 
 [ext_resource type="Script" uid="uid://bea5cqpdpm5bf" path="res://garment.gd" id="1_4r1vn"]
 [ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="2_8sh02"]
 [ext_resource type="AudioStream" uid="uid://ckuhfivli4i88" path="res://Sounds/kittys clawset sfx pop.wav" id="3_ky07n"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ky07n"]
+radius = 321.79
+height = 905.44
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4r1vn"]
-radius = 387.61
-height = 1024.0
+radius = 263.27
+height = 846.92
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t04pl"]
+radius = 292.53
+height = 751.84
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vorh7"]
+radius = 305.35
+height = 867.96
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0t52v"]
+radius = 222.69
+height = 775.48
 
 [node name="Garment" type="Node2D" node_paths=PackedStringArray("hang_point")]
 z_as_relative = false
@@ -70,11 +86,45 @@ use_parent_material = true
 
 [node name="HangPoint" type="Marker2D" parent="."]
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+[node name="DontMoveTheButtons" type="Node2D" parent="."]
+
+[node name="TopsButton" type="TouchScreenButton" parent="DontMoveTheButtons"]
+visible = false
 z_as_relative = false
+position = Vector2(0, 84)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_ky07n")
+
+[node name="ShoesButton" type="TouchScreenButton" parent="DontMoveTheButtons"]
+visible = false
+z_as_relative = false
+position = Vector2(0, 612)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_4r1vn")
+
+[node name="BottomsButton" type="TouchScreenButton" parent="DontMoveTheButtons"]
+visible = false
+z_as_relative = false
+position = Vector2(0, 399)
+shape = SubResource("CapsuleShape2D_t04pl")
+
+[node name="FullsButton" type="TouchScreenButton" parent="DontMoveTheButtons"]
+visible = false
+z_as_relative = false
+position = Vector2(0, 182)
+shape = SubResource("CapsuleShape2D_vorh7")
+
+[node name="AccessoryButton" type="TouchScreenButton" parent="DontMoveTheButtons"]
+visible = false
+z_as_relative = false
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0t52v")
 
 [node name="GrabSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ky07n")
 
-[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="DontMoveTheButtons/TopsButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="DontMoveTheButtons/ShoesButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="DontMoveTheButtons/BottomsButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="DontMoveTheButtons/FullsButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="DontMoveTheButtons/AccessoryButton" to="." method="_on_touch_screen_button_pressed"]

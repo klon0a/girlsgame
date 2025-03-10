@@ -25,3 +25,6 @@ texture = ExtResource("5_1evyn")
 
 [node name="HangPoint" parent="." index="8"]
 position = Vector2(53, -168)
+
+[node name="TopsButton" parent="DontMoveTheButtons" index="0"]
+visible = true

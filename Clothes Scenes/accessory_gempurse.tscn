@@ -12,3 +12,8 @@ texture = ExtResource("3_wfhi4")
 
 [node name="HangPoint" parent="." index="8"]
 position = Vector2(573, -41)
+
+[node name="AccessoryButton" parent="DontMoveTheButtons" index="4"]
+visible = true
+position = Vector2(574, 194)
+rotation = 3.14159

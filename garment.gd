@@ -68,7 +68,7 @@ func pick_up():
 	Cursor.instance.held_garment = self
 	grab_sound.pitch_scale = randf_range(0.85, 1.15)
 	grab_sound.play()
-	move_children_to(-hang_position)
+	global_position -= move_children_to(-hang_position)
 	pass
 
 func _on_touch_screen_button_pressed() -> void:
@@ -112,7 +112,9 @@ func prep_to_be_put_on():
 	move_children_to(Vector2.ZERO)
 	pass
 
-func move_children_to(_position : Vector2):
+func move_children_to(_position : Vector2) -> Vector2:
+	var prev_child_gp = get_child(0).global_position
 	for child in get_children():
 			if not child is Node2D: continue
 			child.position = _position
+	return get_child(0).global_position - prev_child_gp

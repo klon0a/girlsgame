@@ -22,3 +22,7 @@ texture = ExtResource("5_dydjs")
 
 [node name="HangPoint" parent="." index="8"]
 position = Vector2(45, -205)
+
+[node name="TopsButton" parent="DontMoveTheButtons" index="0"]
+visible = true
+position = Vector2(8, 55)
