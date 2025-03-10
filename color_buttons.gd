@@ -9,7 +9,7 @@ signal new_color_chosen
 @export var colors : Array[Color]
 
 
-enum COLOR_OPTIONS {ORANGE, PURPLE, GREEN, CYAN, MAGENTA, YELLOW}
+enum COLOR_OPTIONS {ORANGE, PURPLE, GREEN, CYAN, WHITE, MAGENTA, YELLOW}
 var _chosen_option : COLOR_OPTIONS
 var chosen_option : COLOR_OPTIONS :
 	get:
@@ -37,6 +37,11 @@ var chosen_option : COLOR_OPTIONS :
 				$ColorsParent/Cyan.button_pressed = true
 				skip_color_sound = true
 				color_chosen($ColorsParent/Cyan)
+			ColorSelector.COLOR_OPTIONS.WHITE:
+				skip_color_sound = true
+				$ColorsParent/White.button_pressed = true
+				skip_color_sound = true
+				color_chosen($ColorsParent/White)
 			ColorSelector.COLOR_OPTIONS.MAGENTA:
 				skip_color_sound = true
 				$ColorsParent/Magenta.button_pressed = true
@@ -59,12 +64,14 @@ var chosen_color : Color :
 				return colors[2]
 			ColorSelector.COLOR_OPTIONS.CYAN:
 				return colors[3]
+			ColorSelector.COLOR_OPTIONS.WHITE:
+				return colors[4]
 			ColorSelector.COLOR_OPTIONS.MAGENTA:
-				return colors[4]
-			ColorSelector.COLOR_OPTIONS.YELLOW:
 				return colors[5]
+			ColorSelector.COLOR_OPTIONS.YELLOW:
+				return colors[6]
 			_:
-				return colors[4]
+				return colors[5]
 
 
 func _ready() -> void:
@@ -95,6 +102,8 @@ func color_chosen(button : BaseButton):
 			_chosen_option = COLOR_OPTIONS.GREEN
 		"Cyan":
 			_chosen_option = COLOR_OPTIONS.CYAN
+		"White":
+			_chosen_option = COLOR_OPTIONS.WHITE
 		"Magenta":
 			_chosen_option = COLOR_OPTIONS.MAGENTA
 		"Yellow":
