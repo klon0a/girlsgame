@@ -100,7 +100,7 @@ func place_on_hanger():
 	z_index = 0
 	if (is_instance_valid(_personal_coathanger)):
 		reparent(_personal_coathanger)
-		position = Vector2.ZERO
+		position = _personal_coathanger.attach_point.position
 		base_scale = _personal_coathanger.item_scale
 		move_children_to(-hang_position)
 		#position = _personal_coathanger.attach_point.global_position - hang_point.global_position

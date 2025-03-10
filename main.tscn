@@ -1,7 +1,6 @@
-[gd_scene load_steps=170 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=169 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
-[ext_resource type="Texture2D" uid="uid://725v5mub0h7y" path="res://UI + Sprites/ui-mockup.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
 [ext_resource type="Script" uid="uid://codila2y246ek" path="res://kitty.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://c2l851gwr26t8" path="res://closet_scroll.gd" id="2_h2yge"]
@@ -197,6 +196,7 @@ autoplay = true
 [node name="Backdrop" type="Node2D" parent="."]
 
 [node name="GameplayBackground" type="Node2D" parent="Backdrop"]
+z_index = -15
 position = Vector2(512, 384)
 
 [node name="Bg" type="Sprite2D" parent="Backdrop/GameplayBackground"]
@@ -311,11 +311,13 @@ scale = Vector2(3.24592, 3.24592)
 position = Vector2(699, 338)
 
 [node name="Closetinside" type="Sprite2D" parent="Backdrop/Closet"]
+z_index = -15
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("16_mldrc")
 
 [node name="ClosetBar" type="Sprite2D" parent="Backdrop/Closet"]
 visible = false
+z_index = -15
 position = Vector2(10, -226)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("31_nycv6")
@@ -323,6 +325,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1375, 380)
 
 [node name="Closetshelves" type="Sprite2D" parent="Backdrop/Closet"]
+z_index = -15
 position = Vector2(2, 21)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("31_nycv6")
@@ -344,98 +347,166 @@ texture = ExtResource("14_p5pln")
 
 [node name="Shadow" parent="Backdrop/Closet/Closetdoors" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
+z_as_relative = false
 material = null
 position = Vector2(-4, 28)
 texture = ExtResource("15_oiuw5")
 
-[node name="StickerCoat" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="CoatWibbler" type="Node2D" parent="Backdrop/Closet"]
+z_as_relative = false
 position = Vector2(-202, -169)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerCoat" type="Sprite2D" parent="Backdrop/Closet/CoatWibbler"]
 texture = ExtResource("41_rx6mv")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerCoat" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/CoatWibbler/StickerCoat" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 texture = ExtResource("42_31js7")
 
-[node name="StickerEye" type="Sprite2D" parent="Backdrop/Closet"]
-position = Vector2(-202, 19)
+[node name="EyeWibbler" type="Node2D" parent="Backdrop/Closet"]
+z_as_relative = false
+position = Vector2(-195, -60)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerEye" type="Sprite2D" parent="Backdrop/Closet/EyeWibbler"]
 texture = ExtResource("43_0a4i0")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerEye" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/EyeWibbler/StickerEye" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(-4, 2)
 texture = ExtResource("44_i0xsp")
 
-[node name="StickerEyecolor" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="EyeColorWibbler" type="Node2D" parent="Backdrop/Closet"]
+visible = false
+z_as_relative = false
 position = Vector2(-183, -69)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerEyecolor" type="Sprite2D" parent="Backdrop/Closet/EyeColorWibbler"]
 texture = ExtResource("45_kll2q")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerEyecolor" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/EyeColorWibbler/StickerEyecolor" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(-2, 6)
 texture = ExtResource("46_ft875")
 
-[node name="StickerMusic" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="MusicWibbler" type="Node2D" parent="Backdrop/Closet"]
+visible = false
+z_as_relative = false
 position = Vector2(-191, 110)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerMusic" type="Sprite2D" parent="Backdrop/Closet/MusicWibbler"]
 texture = ExtResource("47_6hmxt")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerMusic" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/MusicWibbler/StickerMusic" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(-4, 2)
 texture = ExtResource("48_rhlye")
 
-[node name="StickerTops" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="TopWibbler" type="Node2D" parent="Backdrop/Closet"]
+z_as_relative = false
 position = Vector2(179, -171)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerTops" type="Sprite2D" parent="Backdrop/Closet/TopWibbler"]
 texture = ExtResource("51_mo8hc")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerTops" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/TopWibbler/StickerTops" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(-2, 4)
 texture = ExtResource("52_gbg58")
 
-[node name="StickerBottoms" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="BottomWibbler" type="Node2D" parent="Backdrop/Closet"]
+z_as_relative = false
 position = Vector2(184, -62)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerBottoms" type="Sprite2D" parent="Backdrop/Closet/BottomWibbler"]
 texture = ExtResource("39_jvn2n")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerBottoms" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/BottomWibbler/StickerBottoms" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(-10, -2)
 texture = ExtResource("40_jegnu")
 
-[node name="StickerShoes" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="ShoeWibbler" type="Node2D" parent="Backdrop/Closet"]
+z_as_relative = false
 position = Vector2(203, 19)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerShoes" type="Sprite2D" parent="Backdrop/Closet/ShoeWibbler"]
 texture = ExtResource("49_pqvsh")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerShoes" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/ShoeWibbler/StickerShoes" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(-2, 6)
 texture = ExtResource("50_3qj4k")
 
-[node name="StickerAcc" type="Sprite2D" parent="Backdrop/Closet"]
+[node name="AccessoryWibbler" type="Node2D" parent="Backdrop/Closet"]
+z_as_relative = false
 position = Vector2(190, 109)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("30_kq58d")
+scale_speed = 1.5
+pos_speed = 1.0
+rot_wobble = 0.2
+rot_speed = 1.0
+
+[node name="StickerAcc" type="Sprite2D" parent="Backdrop/Closet/AccessoryWibbler"]
 texture = ExtResource("37_5kegx")
 
-[node name="Shadow" parent="Backdrop/Closet/StickerAcc" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Backdrop/Closet/AccessoryWibbler/StickerAcc" instance=ExtResource("3_gngh3")]
 show_behind_parent = true
 material = null
 position = Vector2(4, 2)
 texture = ExtResource("38_afgqn")
 
 [node name="Confirmation" type="Node2D" parent="."]
+visible = false
 z_index = 15
 position = Vector2(512, 384)
 
@@ -477,13 +548,8 @@ texture = ExtResource("53_le5wj")
 
 [node name="Shadow" parent="Confirmation/DialogueBox/Yay" instance=ExtResource("3_gngh3")]
 
-[node name="Ui-mockup" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(510.295, 383.25)
-scale = Vector2(0.508705, 0.507667)
-texture = ExtResource("1_ig7tw")
-
 [node name="UI Closet" type="Control" parent="."]
+z_index = -15
 layout_mode = 3
 anchors_preset = 0
 offset_left = 428.0
@@ -509,59 +575,63 @@ stream = ExtResource("43_tko6h")
 [node name="Drummy" type="AudioStreamPlayer" parent="UI Closet/UI Sounds"]
 stream = ExtResource("44_ywjan")
 
-[node name="ClosetTitle" type="Control" parent="UI Closet"]
-anchors_preset = 0
-offset_left = 68.0
-offset_top = 18.0
-offset_right = 436.0
-offset_bottom = 99.0
-
-[node name="Accessories" type="Sprite2D" parent="UI Closet/ClosetTitle"]
-position = Vector2(193.031, 42.9916)
+[node name="ClosetTitle" type="Node2D" parent="UI Closet"]
+z_as_relative = false
+position = Vector2(276, 467)
 rotation = -0.0280386
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("22_4k2k6")
-
-[node name="Shadow" parent="UI Closet/ClosetTitle/Accessories" instance=ExtResource("3_gngh3")]
+script = ExtResource("30_kq58d")
+scale_speed = 0.5
+pos_speed = 1.0
+rot_wobble = 0.1
+rot_speed = 1.0
 
 [node name="Bottoms" type="Sprite2D" parent="UI Closet/ClosetTitle"]
-position = Vector2(194.031, 47.9916)
-rotation = -0.0271282
-scale = Vector2(0.4, 0.4)
+position = Vector2(2.14856, 12.5652)
+rotation = 0.000910403
 texture = ExtResource("23_0rl1p")
 
 [node name="Shadow" parent="UI Closet/ClosetTitle/Bottoms" instance=ExtResource("3_gngh3")]
 
 [node name="Tops" type="Sprite2D" parent="UI Closet/ClosetTitle"]
-position = Vector2(195.031, 50.9916)
-rotation = -0.0237244
-scale = Vector2(0.4, 0.4)
+position = Vector2(4.43738, 20.1323)
+rotation = 0.0043142
 texture = ExtResource("24_ok6jj")
 
 [node name="Shadow" parent="UI Closet/ClosetTitle/Tops" instance=ExtResource("3_gngh3")]
 
 [node name="Shoes" type="Sprite2D" parent="UI Closet/ClosetTitle"]
-position = Vector2(195.031, 50.9916)
-rotation = -0.0237244
-scale = Vector2(0.2, 0.2)
+position = Vector2(-5.4886, 17.3529)
+rotation = 0.038457
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("49_vjgyh")
 
 [node name="Shadow" parent="UI Closet/ClosetTitle/Shoes" instance=ExtResource("3_gngh3")]
+
+[node name="Accessories" type="Sprite2D" parent="UI Closet/ClosetTitle"]
+position = Vector2(-25.5508, 19.2913)
+rotation = -0.018424
+scale = Vector2(0.746274, 0.746274)
+texture = ExtResource("22_4k2k6")
+
+[node name="Shadow" parent="UI Closet/ClosetTitle/Accessories" instance=ExtResource("3_gngh3")]
 
 [node name="ClosetInside" type="Control" parent="UI Closet"]
 custom_minimum_size = Vector2(275, 280)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 124.0
-offset_top = 104.0
-offset_right = 124.0
-offset_bottom = 104.0
+offset_left = 128.0
+offset_top = 55.0
+offset_right = 403.0
+offset_bottom = 457.0
 
 [node name="ClosetScroll" type="ScrollContainer" parent="UI Closet/ClosetInside" node_paths=PackedStringArray("original_coathanger")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -573,6 +643,11 @@ original_coathanger = NodePath("HBoxContainer/CoatHanger")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI Closet/ClosetInside/ClosetScroll"]
 layout_mode = 2
+
+[node name="PaddingInitial" type="Control" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+mouse_filter = 2
 
 [node name="CoatHanger" type="Control" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer" node_paths=PackedStringArray("attach_point")]
 custom_minimum_size = Vector2(100, 200)
@@ -589,7 +664,12 @@ texture = ExtResource("5_7mycd")
 offset = Vector2(64, 64)
 
 [node name="AttachPoint" type="Marker2D" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer/CoatHanger"]
-position = Vector2(50, 25)
+position = Vector2(50, 75)
+
+[node name="PaddingFinal" type="Control" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer"]
+custom_minimum_size = Vector2(50, 200)
+layout_mode = 2
+mouse_filter = 2
 
 [node name="ClosetShelves" type="GridContainer" parent="UI Closet/ClosetInside" node_paths=PackedStringArray("original_shelf_item")]
 clip_contents = true
@@ -624,11 +704,13 @@ offset = Vector2(64, 64)
 position = Vector2(50, 50)
 
 [node name="ColorButtons" type="Control" parent="UI Closet"]
+z_as_relative = false
 anchors_preset = 0
-offset_left = 125.0
-offset_top = 390.0
-offset_right = 401.0
-offset_bottom = 466.0
+offset_left = 158.0
+offset_top = 505.0
+offset_right = 434.0
+offset_bottom = 581.0
+scale = Vector2(0.829482, 0.829482)
 script = ExtResource("30_0rl1p")
 button_group = SubResource("ButtonGroup_facbu")
 colors = Array[Color]([Color(1, 0.5, 0, 1), Color(0.8, 0, 1, 1), Color(0.664, 1, 0.04, 1), Color(0, 0.916667, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 0.7, 1), Color(1, 0.983333, 0, 1)])
@@ -637,6 +719,7 @@ colors = Array[Color]([Color(1, 0.5, 0, 1), Color(0.8, 0, 1, 1), Color(0.664, 1,
 stream = ExtResource("45_8dc3g")
 
 [node name="Selection" type="Node2D" parent="UI Closet/ColorButtons"]
+modulate = Color(0.16, 0.16, 0.16, 1)
 position = Vector2(233, 15)
 
 [node name="Button" type="Sprite2D" parent="UI Closet/ColorButtons/Selection"]
@@ -714,6 +797,8 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_ok6jj")
 
 [node name="TypeButtons" type="Control" parent="UI Closet"]
+modulate = Color(1, 1, 1, 0)
+z_as_relative = false
 anchors_preset = 0
 offset_left = 406.0
 offset_top = 101.0
@@ -722,68 +807,69 @@ offset_bottom = 425.0
 
 [node name="TopsCategory" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 81.0
-offset_right = 82.0
-offset_bottom = 152.0
+offset_left = -14.0
+offset_top = -38.0
+offset_right = 118.0
+offset_bottom = 70.0
 text = "TOPS"
 
 [node name="BottomsCategory" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 162.0
-offset_right = 88.0
-offset_bottom = 233.0
+offset_left = -8.0
+offset_top = 73.0
+offset_right = 119.0
+offset_bottom = 166.0
 text = "BOTTOMS"
 
 [node name="ShoesCategory" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 241.0
-offset_right = 88.0
-offset_bottom = 312.0
+offset_left = -3.0
+offset_top = 169.0
+offset_right = 120.0
+offset_bottom = 250.0
 text = "SHOES
 "
 
 [node name="AccessoriesCategory" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 87.0
-offset_bottom = 73.0
+offset_top = 254.0
+offset_right = 124.0
+offset_bottom = 344.0
 text = "SWAG"
-
-[node name="CycleEyeColor" type="Button" parent="UI Closet/TypeButtons"]
-layout_mode = 0
-offset_left = -382.0
-offset_top = 174.0
-offset_right = -296.0
-offset_bottom = 245.0
-text = "eyecolor"
 
 [node name="CycleCoat" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = -382.0
-offset_top = 3.0
-offset_right = -296.0
-offset_bottom = 74.0
+offset_left = -393.0
+offset_top = -35.0
+offset_right = -264.0
+offset_bottom = 71.0
 text = "COAT"
+
+[node name="CycleEyeColor" type="Button" parent="UI Closet/TypeButtons"]
+visible = false
+layout_mode = 0
+offset_left = -396.0
+offset_top = 77.0
+offset_right = -265.0
+offset_bottom = 155.0
+text = "eyecolor"
 
 [node name="CycleEyes" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = -380.0
-offset_top = 88.0
-offset_right = -294.0
-offset_bottom = 159.0
+offset_left = -393.0
+offset_top = 76.0
+offset_right = -268.0
+offset_bottom = 174.0
 text = "EYES
 "
 
 [node name="ToggleMusic" type="Button" parent="UI Closet/TypeButtons"]
+visible = false
 layout_mode = 0
-offset_left = -383.0
-offset_top = 267.0
-offset_right = -297.0
-offset_bottom = 338.0
+offset_left = -391.0
+offset_top = 250.0
+offset_right = -271.0
+offset_bottom = 351.0
 text = "MUSIC"
 
 [node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes")]
@@ -951,8 +1037,8 @@ script = ExtResource("37_facbu")
 [connection signal="pressed" from="UI Closet/TypeButtons/BottomsCategory" to="UI Closet" method="_on_bottoms_category_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/ShoesCategory" to="UI Closet" method="_on_shoes_category_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/AccessoriesCategory" to="UI Closet" method="_on_accessories_category_pressed"]
-[connection signal="pressed" from="UI Closet/TypeButtons/CycleEyeColor" to="UI Closet" method="_on_cycle_eye_color_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/CycleCoat" to="UI Closet" method="_on_cycle_coat_pressed"]
+[connection signal="pressed" from="UI Closet/TypeButtons/CycleEyeColor" to="UI Closet" method="_on_cycle_eye_color_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/CycleEyes" to="UI Closet" method="_on_cycle_eyes_pressed"]
 [connection signal="pressed" from="UI Closet/TypeButtons/ToggleMusic" to="UI Closet" method="_on_toggle_music_pressed"]
 [connection signal="mouse_entered" from="Kitty/Area2D" to="Kitty" method="_on_area_2d_mouse_entered"]

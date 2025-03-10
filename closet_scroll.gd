@@ -16,6 +16,7 @@ func create_coat_hangers(count : int):
 		var coat_hanger_duplicate = original_coathanger.duplicate()
 		coathangers.append(coat_hanger_duplicate)
 		coathanger_parent.add_child(coat_hanger_duplicate)
+		coathanger_parent.move_child(coat_hanger_duplicate, i + 1)
 		pass
 	pass
 
