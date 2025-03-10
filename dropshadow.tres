@@ -6,4 +6,4 @@
 shader = ExtResource("1_6mxc4")
 shader_parameter/mult_color = Color(0.43, 0.172, 0.2408, 0.545098)
 shader_parameter/lod = 3.5
-shader_parameter/lod2 = 5.5
+shader_parameter/lod2 = 2.5
