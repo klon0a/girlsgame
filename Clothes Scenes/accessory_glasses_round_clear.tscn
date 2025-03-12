@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr2nd8abygsnw"]
+
+[ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_bqc5r"]
+[ext_resource type="Texture2D" uid="uid://6x1mwcf3xy6s" path="res://Assets + Clothes/assets/final/accessory-glasses-round.png" id="2_bqc5r"]
+
+[node name="Garment" instance=ExtResource("1_bqc5r")]
+type = 3
+
+[node name="AccessoryFront" parent="." index="0"]
+visible = true
+texture = ExtResource("2_bqc5r")
+
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(0, -389.163)
+
+[node name="AccessoryButton" parent="DontMoveTheButtons" index="4"]
+visible = true
+position = Vector2(-6.14564e-11, -394.089)

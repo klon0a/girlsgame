@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ngdoboe7tlo"]
+
+[ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_6mfpi"]
+[ext_resource type="Texture2D" uid="uid://bgr10cdlyhkdc" path="res://Assets + Clothes/assets/final/accessory-teardrop.png" id="2_6mfpi"]
+
+[node name="Garment" instance=ExtResource("1_6mfpi")]
+type = 3
+
+[node name="AccessoryFront" parent="." index="0"]
+visible = true
+use_parent_material = false
+texture = ExtResource("2_6mfpi")
+
+[node name="HangPoint" parent="." index="8"]
+position = Vector2(231.527, -213.465)
+
+[node name="AccessoryButton" parent="DontMoveTheButtons" index="4"]
+visible = true
+position = Vector2(231.527, -221.675)
+rotation = 3.14159
+scale = Vector2(0.509472, 0.509472)
