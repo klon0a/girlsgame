@@ -5,6 +5,7 @@ signal new_color_chosen
 
 @export var button_group : ButtonGroup
 @onready var selection: Node2D = $Selection
+@onready var selection_scale: ScaleTargeter = $SelectionScale
 
 @export var colors : Array[Color]
 
@@ -80,6 +81,7 @@ func _ready() -> void:
 			child.button_group = button_group
 	
 	button_group.pressed.connect(color_chosen)
+	selection_scale.target_scale = Vector2.ONE * 0.315
 
 
 @onready var wui_wu: AudioStreamPlayer = $"WuiWu"
@@ -91,6 +93,9 @@ func color_chosen(button : BaseButton):
 	else: 
 		wui_wu.pitch_scale = randf_range(0.85, 1.15)
 		wui_wu.play()
+	
+	selection_scale.scale = 0.7 * selection_scale.target_scale
+	selection_scale.scale_speed += Vector2.ONE * 2.0
 	
 	selection.global_position = button.global_position
 	match button.name:

@@ -629,7 +629,7 @@ update_rotation = false
 update_scale = false
 script = ExtResource("89_nycv6")
 stiffness = 30.0
-enthusiasm = 0.01
+enthusiasm = 0.005
 damping = 0.005
 
 [node name="Bottoms" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
@@ -640,7 +640,7 @@ update_position = false
 update_rotation = false
 update_scale = false
 script = ExtResource("89_nycv6")
-stiffness = 20.0
+stiffness = 30.0
 enthusiasm = 0.005
 damping = 0.005
 
@@ -652,7 +652,7 @@ update_position = false
 update_rotation = false
 update_scale = false
 script = ExtResource("89_nycv6")
-stiffness = 20.0
+stiffness = 30.0
 enthusiasm = 0.005
 damping = 0.005
 
@@ -664,7 +664,7 @@ update_position = false
 update_rotation = false
 update_scale = false
 script = ExtResource("89_nycv6")
-stiffness = 20.0
+stiffness = 30.0
 enthusiasm = 0.005
 damping = 0.005
 
@@ -899,12 +899,22 @@ script = ExtResource("30_0rl1p")
 button_group = SubResource("ButtonGroup_facbu")
 colors = Array[Color]([Color(1, 0.5, 0, 1), Color(0.8, 0, 1, 1), Color(0.664, 1, 0.04, 1), Color(0, 0.916667, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 0.7, 1), Color(1, 0.983333, 0, 1)])
 
+[node name="SelectionScale" type="RemoteTransform2D" parent="UI Closet/ColorButtons"]
+remote_path = NodePath("../Selection/Button")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 40.0
+enthusiasm = 0.003
+damping = 0.005
+
 [node name="WuiWu" type="AudioStreamPlayer" parent="UI Closet/ColorButtons"]
 stream = ExtResource("45_8dc3g")
 
 [node name="Selection" type="Node2D" parent="UI Closet/ColorButtons"]
 modulate = Color(0.16, 0.16, 0.16, 1)
-position = Vector2(233, 15)
 
 [node name="Button" type="Sprite2D" parent="UI Closet/ColorButtons/Selection"]
 position = Vector2(21, 22)
