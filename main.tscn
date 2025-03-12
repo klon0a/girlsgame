@@ -1,4 +1,4 @@
-[gd_scene load_steps=170 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=175 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
@@ -150,16 +150,21 @@
 [ext_resource type="Texture2D" uid="uid://da7q8cvyreai5" path="res://Assets + Clothes/kitty variation/IMG_2953.PNG" id="85_d5iia"]
 [ext_resource type="Texture2D" uid="uid://2gwtfjqoynm4" path="res://Assets + Clothes/kitty variation/IMG_2960.PNG" id="86_asu84"]
 [ext_resource type="Texture2D" uid="uid://d0bnoibe20rdg" path="res://Assets + Clothes/kitty variation/IMG_2974.PNG" id="87_qwt6e"]
+[ext_resource type="PackedScene" uid="uid://caaairehcj587" path="res://Clothes Scenes/accessory_glasses_round.tscn" id="89_4qxq8"]
 [ext_resource type="Script" uid="uid://dn1r62ctgjodn" path="res://scaleTargeter.gd" id="89_nycv6"]
 [ext_resource type="Texture2D" uid="uid://ce7gaiqg70ayr" path="res://Assets + Clothes/kitty variation/IMG_2937.PNG" id="89_off2o"]
 [ext_resource type="Texture2D" uid="uid://k15mxu7ksi6s" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-1.png" id="89_rt5wr"]
 [ext_resource type="Texture2D" uid="uid://deuegaksumv2f" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-2.png" id="90_mnw77"]
+[ext_resource type="PackedScene" uid="uid://cr2nd8abygsnw" path="res://Clothes Scenes/accessory_glasses_round_clear.tscn" id="90_ryg4g"]
 [ext_resource type="Texture2D" uid="uid://bqi3wwgdb71ji" path="res://Assets + Clothes/kitty variation/IMG_2944.PNG" id="90_tttfs"]
 [ext_resource type="Texture2D" uid="uid://bsx536ajafnyv" path="res://Assets + Clothes/kitty variation/IMG_2951.PNG" id="91_1iygd"]
+[ext_resource type="PackedScene" uid="uid://dlsub87j3mma7" path="res://Clothes Scenes/accessory_glasses_square.tscn" id="91_oy6td"]
 [ext_resource type="Texture2D" uid="uid://dr52m8y7bnnoi" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-3.png" id="91_vjgyh"]
 [ext_resource type="Texture2D" uid="uid://croggb61u78xh" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-4.png" id="92_d5iia"]
+[ext_resource type="PackedScene" uid="uid://ddtp54v5msb8v" path="res://Clothes Scenes/accessory_glasses_square_clear.tscn" id="92_fe76k"]
 [ext_resource type="Texture2D" uid="uid://cutea5ax5nug2" path="res://Assets + Clothes/kitty variation/IMG_2958.PNG" id="92_g5xqc"]
 [ext_resource type="Texture2D" uid="uid://ctqi1a4k1ejpo" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-5.png" id="93_asu84"]
+[ext_resource type="PackedScene" uid="uid://ngdoboe7tlo" path="res://Clothes Scenes/accessory_teardrop.tscn" id="93_p5pln"]
 [ext_resource type="Texture2D" uid="uid://gi7wq5a7f51l" path="res://Assets + Clothes/kitty variation/IMG_2965.PNG" id="93_s4o1y"]
 [ext_resource type="Texture2D" uid="uid://t3l132nfpp85" path="res://Assets + Clothes/kitty variation/IMG_2972.PNG" id="94_7mmqq"]
 [ext_resource type="Texture2D" uid="uid://ccrh16j6jq3r2" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-6.png" id="94_qwt6e"]
@@ -568,7 +573,7 @@ tops_list = Array[PackedScene]([ExtResource("11_4w656"), ExtResource("13_rnkwl")
 bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og")])
 fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"), ExtResource("15_ryguw")])
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
-accessories_list = Array[PackedScene]([ExtResource("31_rm4vd"), ExtResource("20_kq58d"), ExtResource("19_qsp4k"), ExtResource("21_seu75"), ExtResource("43_am8a1"), ExtResource("18_xuqvo"), ExtResource("30_ruth0")])
+accessories_list = Array[PackedScene]([ExtResource("31_rm4vd"), ExtResource("20_kq58d"), ExtResource("19_qsp4k"), ExtResource("21_seu75"), ExtResource("43_am8a1"), ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("89_4qxq8"), ExtResource("90_ryg4g"), ExtResource("91_oy6td"), ExtResource("92_fe76k"), ExtResource("93_p5pln")])
 
 [node name="ButtonScalers" type="Node2D" parent="UI Closet"]
 
@@ -784,7 +789,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("14_2cqfq")
 original_shelf_item = NodePath("Shelf CoatHanger")
-shelf_positions = [NodePath("ShelfPosition"), NodePath("ShelfPosition7"), NodePath("ShelfPosition2"), NodePath("ShelfPosition8"), NodePath("ShelfPosition3"), NodePath("ShelfPosition4"), NodePath("ShelfPosition6"), NodePath("ShelfPosition5")]
+shelf_positions = [NodePath("ShelfPosition0"), NodePath("ShelfPosition1"), NodePath("ShelfPosition2"), NodePath("ShelfPosition3"), NodePath("ShelfPosition4"), NodePath("ShelfPosition5"), NodePath("ShelfPosition6"), NodePath("ShelfPosition7"), NodePath("ShelfPosition8"), NodePath("ShelfPosition9"), NodePath("ShelfPosition10"), NodePath("ShelfPosition11")]
 
 [node name="Shelf CoatHanger" type="Control" parent="UI Closet/ClosetInside/ClosetShelves" node_paths=PackedStringArray("attach_point")]
 custom_minimum_size = Vector2(100, 100)
@@ -795,7 +800,7 @@ offset_bottom = 100.0
 mouse_filter = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
-item_scale = 0.25
+item_scale = 0.2
 
 [node name="Icon" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetShelves/Shelf CoatHanger"]
 visible = false
@@ -807,84 +812,124 @@ offset = Vector2(64, 64)
 [node name="AttachPoint" type="Marker2D" parent="UI Closet/ClosetInside/ClosetShelves/Shelf CoatHanger"]
 position = Vector2(50, 50)
 
-[node name="ShelfPosition" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+[node name="ShelfPosition0" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 17.0
-offset_top = 280.0
-offset_right = 117.0
-offset_bottom = 380.0
+offset_left = 11.0
+offset_top = 291.0
+offset_right = 111.0
+offset_bottom = 391.0
 mouse_filter = 2
 
-[node name="ShelfPosition7" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+[node name="ShelfPosition1" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 153.0
-offset_top = 281.0
-offset_right = 253.0
-offset_bottom = 381.0
+offset_left = 86.0
+offset_top = 292.0
+offset_right = 186.0
+offset_bottom = 392.0
 mouse_filter = 2
 
 [node name="ShelfPosition2" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 140.0
-offset_top = 216.0
-offset_right = 240.0
-offset_bottom = 316.0
-mouse_filter = 2
-
-[node name="ShelfPosition8" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-anchors_preset = 0
-offset_left = 23.0
-offset_top = 218.0
-offset_right = 123.0
-offset_bottom = 318.0
+offset_left = 175.0
+offset_top = 319.0
+offset_right = 275.0
+offset_bottom = 419.0
 mouse_filter = 2
 
 [node name="ShelfPosition3" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 19.0
-offset_top = 113.0
-offset_right = 119.0
-offset_bottom = 213.0
+offset_left = 184.0
+offset_top = 214.0
+offset_right = 284.0
+offset_bottom = 314.0
 mouse_filter = 2
 
 [node name="ShelfPosition4" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 154.0
-offset_top = 117.0
-offset_right = 254.0
-offset_bottom = 217.0
-mouse_filter = 2
-
-[node name="ShelfPosition6" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-anchors_preset = 0
-offset_left = 141.0
-offset_top = 4.0
-offset_right = 241.0
-offset_bottom = 104.0
+offset_left = 103.0
+offset_top = 225.0
+offset_right = 203.0
+offset_bottom = 325.0
 mouse_filter = 2
 
 [node name="ShelfPosition5" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 23.0
-offset_top = 4.0
-offset_right = 123.0
-offset_bottom = 104.0
+offset_left = 9.0
+offset_top = 226.0
+offset_right = 109.0
+offset_bottom = 326.0
+mouse_filter = 2
+
+[node name="ShelfPosition6" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 109.0
+offset_right = 113.0
+offset_bottom = 209.0
+mouse_filter = 2
+
+[node name="ShelfPosition7" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 111.0
+offset_right = 197.0
+offset_bottom = 211.0
+mouse_filter = 2
+
+[node name="ShelfPosition8" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 175.0
+offset_top = 108.0
+offset_right = 275.0
+offset_bottom = 208.0
+mouse_filter = 2
+
+[node name="ShelfPosition9" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 19.0
+offset_top = 7.0
+offset_right = 119.0
+offset_bottom = 107.0
+mouse_filter = 2
+
+[node name="ShelfPosition10" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 101.0
+offset_top = 6.0
+offset_right = 201.0
+offset_bottom = 106.0
+mouse_filter = 2
+
+[node name="ShelfPosition11" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 5.0
+offset_right = 284.0
+offset_bottom = 105.0
 mouse_filter = 2
 
 [node name="ColorButtons" type="Control" parent="UI Closet"]
