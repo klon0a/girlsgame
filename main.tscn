@@ -189,7 +189,6 @@ script = ExtResource("1_sn1fb")
 [node name="KittysClawsetSong1" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("2_ywjan")
 autoplay = true
-stream_paused = true
 
 [node name="KittysClawsetSong2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("3_m74q3")

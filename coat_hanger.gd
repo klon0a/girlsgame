@@ -2,10 +2,12 @@ extends Control
 class_name CoatHanger
 
 var garment : Node2D
+var saved_material : Material
 @export var attach_point : Node2D
 @export_range(0.0, 1.0) var item_scale : float
 
 func set_garment(new_garment : PackedScene, _material : Material):
+	saved_material = _material
 	if garment != null:
 		garment.queue_free()
 	
@@ -18,4 +20,3 @@ func set_garment(new_garment : PackedScene, _material : Material):
 	instantiated_garment.reset_move_reaction()
 	
 	garment = instantiated_garment
-	garment.material = _material

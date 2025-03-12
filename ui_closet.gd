@@ -76,6 +76,7 @@ var current_category : CATEGORY :
 func _ready() -> void:
 	inside_rect = $ClosetInside.get_global_rect()
 	_on_tops_category_pressed()
+	_on_toggle_music_pressed() # cycle it by 1 (sideeffect) and update the stream paused parameters
 
 @onready var drummy: AudioStreamPlayer = $"UI Sounds/Drummy"
 func play_drummy():
@@ -152,7 +153,7 @@ func _on_cycle_eye_color_pressed() -> void:
 
 @onready var kittys_clawset_song_1: AudioStreamPlayer = $"../Music/KittysClawsetSong1"
 @onready var kittys_clawset_song_2: AudioStreamPlayer = $"../Music/KittysClawsetSong2"
-var music_setting : int = 1
+var music_setting : int = 0 
 func _on_toggle_music_pressed() -> void:
 	music_setting = (music_setting + 1)%3
 	kittys_clawset_song_1.stream_paused = music_setting != 2

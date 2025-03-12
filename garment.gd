@@ -63,6 +63,8 @@ func reset_move_reaction():
 	move_reaction_speed = Vector2.ZERO
 
 func pick_up():
+	if (get_parent() == _personal_coathanger):
+		material = material.duplicate()
 	z_index = 15
 	on_kitty = false
 	Cursor.instance.held_garment = self
@@ -99,6 +101,7 @@ func drop():
 func place_on_hanger():
 	z_index = 0
 	if (is_instance_valid(_personal_coathanger)):
+		material = _personal_coathanger.saved_material
 		reparent(_personal_coathanger)
 		position = _personal_coathanger.attach_point.position
 		base_scale = _personal_coathanger.item_scale
