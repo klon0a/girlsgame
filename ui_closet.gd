@@ -36,6 +36,13 @@ var current_category : CATEGORY :
 		$ClosetTitle/Bottoms.visible = false
 		$ClosetTitle/Tops.visible = false
 		$ClosetTitle/Shoes.visible = false
+		
+		const deselected_target_scale = Vector2.ONE * 0.85
+		const selected_target_scale = Vector2.ONE * 1.1
+		shoes.target_scale = deselected_target_scale
+		bottoms.target_scale = deselected_target_scale
+		tops.target_scale = deselected_target_scale
+		accessories.target_scale = deselected_target_scale
 
 		# make the right ones visible
 		match _category:
@@ -56,6 +63,7 @@ var current_category : CATEGORY :
 				closet_scroll.populate_coathangers(combined_tops_and_fulls, top_material)
 				
 				$ClosetTitle/Tops.visible = true
+				tops.target_scale = selected_target_scale
 				
 			Closet.CATEGORY.BOTTOMS:
 				var combined_bottoms_and_fulls = bottoms_list.duplicate() 
@@ -63,15 +71,17 @@ var current_category : CATEGORY :
 				closet_scroll.populate_coathangers(combined_bottoms_and_fulls, bottom_material)
 				
 				$ClosetTitle/Bottoms.visible = true
+				bottoms.target_scale = selected_target_scale
 			
 			Closet.CATEGORY.SHOES:
 				closet_shelves.populate_shelves(shoes_list, shoe_material)
 				$ClosetTitle/Shoes.visible = true
+				shoes.target_scale = selected_target_scale
 				
 			Closet.CATEGORY.ACCESSORIES:
 				closet_shelves.populate_shelves(accessories_list, accessory_material)
 				$ClosetTitle/Accessories.visible = true
-
+				accessories.target_scale = selected_target_scale
 
 func _ready() -> void:
 	inside_rect = $ClosetInside.get_global_rect()
@@ -83,10 +93,22 @@ func play_drummy():
 	drummy.pitch_scale = randf_range(0.85, 1.15)
 	drummy.play()
 
+@onready var music: ScaleTargeter = $ButtonScalers/Music
+@onready var eyes: ScaleTargeter = $ButtonScalers/Eyes
+@onready var eye_color: ScaleTargeter = $ButtonScalers/EyeColor
+@onready var tops: ScaleTargeter = $ButtonScalers/Tops
+@onready var shoes: ScaleTargeter = $ButtonScalers/Shoes
+@onready var accessories: ScaleTargeter = $ButtonScalers/Accessories
+@onready var coat: ScaleTargeter = $ButtonScalers/Coat
+@onready var bottoms: ScaleTargeter = $ButtonScalers/Bottoms
+
+
 func _on_tops_category_pressed() -> void:
 	play_drummy()
 	current_category = CATEGORY.TOPS
 	color_buttons.chosen_option = tops_color
+	
+	tops.scale_speed += Vector2.ONE * 3.0
 	pass # Replace with function body.
 
 
@@ -94,6 +116,8 @@ func _on_bottoms_category_pressed() -> void:
 	play_drummy()
 	current_category = CATEGORY.BOTTOMS
 	color_buttons.chosen_option = bottoms_color
+	
+	bottoms.scale_speed += Vector2.ONE * 3.0
 	pass # Replace with function body.
 
 
@@ -101,6 +125,8 @@ func _on_shoes_category_pressed() -> void:
 	play_drummy()
 	current_category = CATEGORY.SHOES
 	color_buttons.chosen_option = shoes_color
+	
+	shoes.scale_speed += Vector2.ONE * 3.0
 	pass # Replace with function body.
 
 
@@ -108,6 +134,8 @@ func _on_accessories_category_pressed() -> void:
 	play_drummy()
 	current_category = CATEGORY.ACCESSORIES
 	color_buttons.chosen_option = accessories_color
+	
+	accessories.scale_speed += Vector2.ONE * 3.0
 	pass # Replace with function body.
 
 
@@ -139,12 +167,16 @@ func _on_color_buttons_new_color_chosen() -> void:
 func _on_cycle_coat_pressed() -> void:
 	rising.play()
 	%Kitty.cycle_kitty_color()
+	coat.scale_speed += Vector2.ONE * 4.0
+	coat.scale *= 0.9
 	pass # Replace with function body.
 
 
 func _on_cycle_eyes_pressed() -> void:
 	rising.play()
 	%Kitty.cycle_eyes()
+	eyes.scale_speed += Vector2.ONE * 4.0
+	eyes.scale *= 0.9
 	pass # Replace with function body.
 
 
@@ -158,4 +190,12 @@ func _on_toggle_music_pressed() -> void:
 	music_setting = (music_setting + 1)%3
 	kittys_clawset_song_1.stream_paused = music_setting != 2
 	kittys_clawset_song_2.stream_paused = music_setting != 1
+	music.scale_speed += Vector2(sign(music.scale.x), sign(music.scale.y)) * 2.0
+	match music_setting:
+		0:
+			music.target_scale = Vector2.ONE * 0.5
+		1:
+			music.target_scale = Vector2(1.0, 1.0)
+		2: 
+			music.target_scale = Vector2(-1.0, 1.0)
 	pass # Replace with function body.

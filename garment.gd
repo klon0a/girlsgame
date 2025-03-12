@@ -36,9 +36,13 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	move_reaction += (global_position - last_frame_pos) * dangle_mult
-	move_reaction_speed += (global_position - last_frame_pos) * dangle_mult * 20.0
+	if !reset_move_next_frame:
+		move_reaction += (global_position - last_frame_pos) * dangle_mult
+		move_reaction_speed += (global_position - last_frame_pos) * dangle_mult * 20.0
 	last_frame_pos = global_position
+	if reset_move_next_frame:
+		reset_move_next_frame = false
+		#reset_move_reaction()
 	if !on_kitty:
 		move_reaction_speed = Interpolator.spring_speed_vector(
 				move_reaction_speed, 
@@ -57,6 +61,10 @@ func _process(delta: float) -> void:
 		pass
 	
 	pass
+
+var reset_move_next_frame = false
+func reset_move_reaction_next_frame():
+	reset_move_next_frame = true
 
 func reset_move_reaction():
 	move_reaction = Vector2.ZERO

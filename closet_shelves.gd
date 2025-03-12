@@ -14,8 +14,8 @@ func _ready() -> void:
 func create_items(count : int):
 	for i in range(count):
 		var item_duplicate = original_shelf_item.duplicate()
-		shelf_items.append(item_duplicate)
 		shelf_positions[shelf_items.size()].add_child(item_duplicate)
+		shelf_items.append(item_duplicate)
 		item_duplicate.position = Vector2.ZERO
 		pass
 	pass

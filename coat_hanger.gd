@@ -17,6 +17,8 @@ func set_garment(new_garment : PackedScene, _material : Material):
 	#instantiated_garment.scale = Vector2.ONE * item_scale
 	instantiated_garment._personal_coathanger = self
 	instantiated_garment.place_on_hanger()
-	instantiated_garment.reset_move_reaction()
+	instantiated_garment.reset_move_reaction_next_frame()
+	instantiated_garment.move_reaction_speed = Vector2.RIGHT.rotated(randf() * TAU) * 1.0
+	instantiated_garment.move_reaction = Vector2.RIGHT.rotated(randf() * TAU) * 1.0
 	
 	garment = instantiated_garment

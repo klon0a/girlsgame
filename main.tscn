@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=170 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
@@ -150,6 +150,7 @@
 [ext_resource type="Texture2D" uid="uid://da7q8cvyreai5" path="res://Assets + Clothes/kitty variation/IMG_2953.PNG" id="85_d5iia"]
 [ext_resource type="Texture2D" uid="uid://2gwtfjqoynm4" path="res://Assets + Clothes/kitty variation/IMG_2960.PNG" id="86_asu84"]
 [ext_resource type="Texture2D" uid="uid://d0bnoibe20rdg" path="res://Assets + Clothes/kitty variation/IMG_2974.PNG" id="87_qwt6e"]
+[ext_resource type="Script" uid="uid://dn1r62ctgjodn" path="res://scaleTargeter.gd" id="89_nycv6"]
 [ext_resource type="Texture2D" uid="uid://ce7gaiqg70ayr" path="res://Assets + Clothes/kitty variation/IMG_2937.PNG" id="89_off2o"]
 [ext_resource type="Texture2D" uid="uid://k15mxu7ksi6s" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-1.png" id="89_rt5wr"]
 [ext_resource type="Texture2D" uid="uid://deuegaksumv2f" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-2.png" id="90_mnw77"]
@@ -569,6 +570,104 @@ fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
 accessories_list = Array[PackedScene]([ExtResource("31_rm4vd"), ExtResource("20_kq58d"), ExtResource("19_qsp4k"), ExtResource("21_seu75"), ExtResource("43_am8a1"), ExtResource("18_xuqvo"), ExtResource("30_ruth0")])
 
+[node name="ButtonScalers" type="Node2D" parent="UI Closet"]
+
+[node name="Coat" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/CoatWibbler/StickerCoat")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.01
+damping = 0.2
+
+[node name="Eyes" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/EyeWibbler/StickerEye")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.01
+damping = 0.2
+
+[node name="EyeColor" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/EyeColorWibbler/StickerEyecolor")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.01
+damping = 0.2
+
+[node name="Music" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/MusicWibbler/StickerMusic")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.005
+damping = 0.05
+
+[node name="Tops" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/TopWibbler/StickerTops")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 30.0
+enthusiasm = 0.01
+damping = 0.005
+
+[node name="Bottoms" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/BottomWibbler/StickerBottoms")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.005
+damping = 0.005
+
+[node name="Shoes" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/ShoeWibbler/StickerShoes")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.005
+damping = 0.005
+
+[node name="Accessories" type="RemoteTransform2D" parent="UI Closet/ButtonScalers"]
+scale = Vector2(0.997255, 0.990044)
+remote_path = NodePath("../../../Backdrop/Closet/AccessoryWibbler/StickerAcc")
+use_global_coordinates = false
+update_position = false
+update_rotation = false
+update_scale = false
+script = ExtResource("89_nycv6")
+stiffness = 20.0
+enthusiasm = 0.005
+damping = 0.005
+
 [node name="UI Sounds" type="Node" parent="UI Closet"]
 
 [node name="Rising" type="AudioStreamPlayer" parent="UI Closet/UI Sounds"]
@@ -656,7 +755,7 @@ custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
-item_scale = 0.5
+item_scale = 0.4
 
 [node name="Icon" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer/CoatHanger"]
 visible = false
@@ -696,7 +795,7 @@ offset_bottom = 100.0
 mouse_filter = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
-item_scale = 0.3
+item_scale = 0.25
 
 [node name="Icon" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetShelves/Shelf CoatHanger"]
 visible = false
@@ -712,20 +811,20 @@ position = Vector2(50, 50)
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 18.0
-offset_top = 307.0
-offset_right = 118.0
-offset_bottom = 407.0
+offset_left = 17.0
+offset_top = 280.0
+offset_right = 117.0
+offset_bottom = 380.0
 mouse_filter = 2
 
 [node name="ShelfPosition7" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 154.0
-offset_top = 308.0
-offset_right = 254.0
-offset_bottom = 408.0
+offset_left = 153.0
+offset_top = 281.0
+offset_right = 253.0
+offset_bottom = 381.0
 mouse_filter = 2
 
 [node name="ShelfPosition2" type="Control" parent="UI Closet/ClosetInside/ClosetShelves"]
