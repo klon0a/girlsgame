@@ -150,6 +150,11 @@ func _on_cycle_eyes_pressed() -> void:
 func _on_cycle_eye_color_pressed() -> void:
 	pass # Replace with function body.
 
-
+@onready var kittys_clawset_song_1: AudioStreamPlayer = $"../Music/KittysClawsetSong1"
+@onready var kittys_clawset_song_2: AudioStreamPlayer = $"../Music/KittysClawsetSong2"
+var music_setting : int = 1
 func _on_toggle_music_pressed() -> void:
+	music_setting = (music_setting + 1)%3
+	kittys_clawset_song_1.stream_paused = music_setting != 2
+	kittys_clawset_song_2.stream_paused = music_setting != 1
 	pass # Replace with function body.

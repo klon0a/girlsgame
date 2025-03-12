@@ -186,8 +186,10 @@ script = ExtResource("1_sn1fb")
 
 [node name="Music" type="Node" parent="."]
 
-[node name="KittysClawsetSong1BetterMix" type="AudioStreamPlayer" parent="Music"]
+[node name="KittysClawsetSong1" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("2_ywjan")
+autoplay = true
+stream_paused = true
 
 [node name="KittysClawsetSong2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("3_m74q3")
@@ -412,7 +414,6 @@ position = Vector2(-2, 6)
 texture = ExtResource("46_ft875")
 
 [node name="MusicWibbler" type="Node2D" parent="Backdrop/Closet"]
-visible = false
 z_as_relative = false
 position = Vector2(-191, 110)
 scale = Vector2(0.5, 0.5)
@@ -949,7 +950,6 @@ text = "EYES
 "
 
 [node name="ToggleMusic" type="Button" parent="UI Closet/TypeButtons"]
-visible = false
 layout_mode = 0
 offset_left = -391.0
 offset_top = 250.0
