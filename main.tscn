@@ -179,7 +179,7 @@ shader_parameter/greyscale = false
 [sub_resource type="ButtonGroup" id="ButtonGroup_ok6jj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
-size = Vector2(615.288, 978.988)
+size = Vector2(758.79, 978.988)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_sn1fb")
@@ -958,153 +958,143 @@ text = "MUSIC"
 
 [node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes")]
 unique_name_in_owner = true
-position = Vector2(293, 424)
+position = Vector2(239, 417)
 scale = Vector2(0.508705, 0.507667)
 script = ExtResource("2_0xm2m")
 garment_parent = NodePath("BodyPlaceholder")
-kitty_parts = [NodePath("Body/Kitty-body"), NodePath("Body/ArmL/Kitty-arm-l"), NodePath("Body/ArmR/Kitty-arm-r"), NodePath("Body/Head/Kitty-head"), NodePath("Body/Tail/Kitty-tail"), NodePath("Body/LegL/Kitty-leg-l"), NodePath("Body/LegR/Kitty-leg-r")]
-eyes = NodePath("Body/Head/Eyes/Eyes")
-blink_eyes = NodePath("Body/Head/Eyes/EyesBlink")
+kitty_parts = [NodePath("Kitty-body"), NodePath("Kitty-arm-l"), NodePath("Kitty-arm-r"), NodePath("Kitty-head"), NodePath("Kitty-tail"), NodePath("Kitty-leg-l"), NodePath("Kitty-leg-r")]
+eyes = NodePath("Eyes")
+blink_eyes = NodePath("EyesBlink")
+
+[node name="BodyPlaceholder" type="Sprite2D" parent="Kitty"]
+self_modulate = Color(1, 1, 1, 0)
 
 [node name="WearSound" type="AudioStreamPlayer" parent="Kitty"]
 stream = ExtResource("58_htgcl")
 
-[node name="Body" type="Node2D" parent="Kitty"]
-position = Vector2(-29.4866, 216.677)
-
-[node name="Kitty-body" type="Sprite2D" parent="Kitty/Body"]
+[node name="Kitty-body" type="Sprite2D" parent="Kitty"]
 z_index = 8
 z_as_relative = false
-position = Vector2(-64.8706, -238.345)
 texture = ExtResource("43_qnost")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("43_qnost"), ExtResource("49_pjyto"), ExtResource("50_sm6fg"), ExtResource("51_b17eg"), ExtResource("52_ntx8l"), ExtResource("53_uatky"), ExtResource("54_rqtf5")])
 
-[node name="Shadow" parent="Kitty/Body/Kitty-body" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Kitty/Kitty-body" instance=ExtResource("3_gngh3")]
 
-[node name="ArmL" type="Node2D" parent="Kitty/Body"]
-position = Vector2(-209.683, -302.035)
-
-[node name="Kitty-arm-l" type="Sprite2D" parent="Kitty/Body/ArmL"]
+[node name="Kitty-arm-l" type="Sprite2D" parent="Kitty"]
 z_index = 11
 z_as_relative = false
-position = Vector2(144.157, 62.3769)
 texture = ExtResource("44_wnkbs")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("44_wnkbs"), ExtResource("56_jbvwl"), ExtResource("57_sn1fb"), ExtResource("58_yvsr8"), ExtResource("59_vieuh"), ExtResource("60_yjja3"), ExtResource("61_l0gw7")])
 
-[node name="Shadow" parent="Kitty/Body/ArmL/Kitty-arm-l" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Kitty/Kitty-arm-l" instance=ExtResource("3_gngh3")]
+
+[node name="Kitty-arm-r" type="Sprite2D" parent="Kitty"]
+z_index = 6
+z_as_relative = false
+texture = ExtResource("45_f6a44")
+script = ExtResource("48_e71vb")
+sprites = Array[Texture2D]([ExtResource("45_f6a44"), ExtResource("63_inymm"), ExtResource("64_jcxqu"), ExtResource("65_0arob"), ExtResource("78_tko6h"), ExtResource("66_dij0e"), ExtResource("67_k1udn")])
+
+[node name="Shadow" parent="Kitty/Kitty-arm-r" instance=ExtResource("3_gngh3")]
+
+[node name="Kitty-head" type="Sprite2D" parent="Kitty"]
+z_index = 13
+z_as_relative = false
+texture = ExtResource("46_hrvbo")
+script = ExtResource("48_e71vb")
+sprites = Array[Texture2D]([ExtResource("46_hrvbo"), ExtResource("69_wat4s"), ExtResource("70_ywjan"), ExtResource("71_m74q3"), ExtResource("72_tko6h"), ExtResource("73_am8a1"), ExtResource("74_8dc3g")])
+
+[node name="Shadow" parent="Kitty/Kitty-head" instance=ExtResource("3_gngh3")]
+position = Vector2(6.55255, -180.565)
+
+[node name="EyesBlink" type="Sprite2D" parent="Kitty"]
+visible = false
+z_index = 13
+z_as_relative = false
+material = ExtResource("12_rt5wr")
+texture = ExtResource("95_off2o")
+
+[node name="Shadow" parent="Kitty/EyesBlink" instance=ExtResource("3_gngh3")]
+modulate = Color(1, 1, 1, 0.466667)
+show_behind_parent = true
+position = Vector2(0.000450134, 16.4146)
+
+[node name="Eyes" type="Sprite2D" parent="Kitty"]
+z_index = 13
+z_as_relative = false
+texture = ExtResource("89_rt5wr")
+script = ExtResource("48_e71vb")
+sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), ExtResource("91_vjgyh"), ExtResource("92_d5iia"), ExtResource("93_asu84"), ExtResource("94_qwt6e"), ExtResource("95_off2o")])
+
+[node name="Shadow" parent="Kitty/Eyes" instance=ExtResource("3_gngh3")]
+modulate = Color(1, 1, 1, 0.466667)
+show_behind_parent = true
+position = Vector2(0.000450134, 16.4146)
+
+[node name="Kitty-tail" type="Sprite2D" parent="Kitty"]
+z_index = 1
+z_as_relative = false
+texture = ExtResource("47_uypp3")
+script = ExtResource("48_e71vb")
+sprites = Array[Texture2D]([ExtResource("47_uypp3"), ExtResource("76_htgcl"), ExtResource("77_smeu8"), ExtResource("78_f3y11"), ExtResource("79_cpm2s"), ExtResource("80_u81y6"), ExtResource("81_rt5wr")])
+
+[node name="Shadow" parent="Kitty/Kitty-tail" instance=ExtResource("3_gngh3")]
+
+[node name="Kitty-leg-l" type="Sprite2D" parent="Kitty"]
+z_index = 4
+z_as_relative = false
+texture = ExtResource("48_blkrb")
+script = ExtResource("48_e71vb")
+sprites = Array[Texture2D]([ExtResource("48_blkrb"), ExtResource("83_mnw77"), ExtResource("84_vjgyh"), ExtResource("85_d5iia"), ExtResource("86_asu84"), ExtResource("100_am8a1"), ExtResource("87_qwt6e")])
+
+[node name="Shadow" parent="Kitty/Kitty-leg-l" instance=ExtResource("3_gngh3")]
+
+[node name="Kitty-leg-r" type="Sprite2D" parent="Kitty"]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("49_abqjc")
+script = ExtResource("48_e71vb")
+sprites = Array[Texture2D]([ExtResource("49_abqjc"), ExtResource("89_off2o"), ExtResource("90_tttfs"), ExtResource("91_1iygd"), ExtResource("92_g5xqc"), ExtResource("93_s4o1y"), ExtResource("94_7mmqq")])
+
+[node name="Shadow" parent="Kitty/Kitty-leg-r" instance=ExtResource("3_gngh3")]
+
+[node name="Body" type="Node2D" parent="Kitty"]
+position = Vector2(-29.4866, 216.677)
+
+[node name="ArmL" type="Node2D" parent="Kitty/Body"]
+position = Vector2(-209.683, -302.035)
 
 [node name="ArmR" type="Node2D" parent="Kitty/Body"]
 show_behind_parent = true
 position = Vector2(65.5258, -344.714)
 
-[node name="Kitty-arm-r" type="Sprite2D" parent="Kitty/Body/ArmR"]
-z_index = 6
-z_as_relative = false
-position = Vector2(-150.709, 101.773)
-texture = ExtResource("45_f6a44")
-script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("45_f6a44"), ExtResource("63_inymm"), ExtResource("64_jcxqu"), ExtResource("65_0arob"), ExtResource("78_tko6h"), ExtResource("66_dij0e"), ExtResource("67_k1udn")])
-
-[node name="Shadow" parent="Kitty/Body/ArmR/Kitty-arm-r" instance=ExtResource("3_gngh3")]
-
 [node name="Head" type="Node2D" parent="Kitty/Body"]
 position = Vector2(-62.2496, -407.091)
 
-[node name="Kitty-head" type="Sprite2D" parent="Kitty/Body/Head"]
-z_index = 13
-z_as_relative = false
-position = Vector2(-6.55261, 180.565)
-texture = ExtResource("46_hrvbo")
-script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("46_hrvbo"), ExtResource("69_wat4s"), ExtResource("70_ywjan"), ExtResource("71_m74q3"), ExtResource("72_tko6h"), ExtResource("73_am8a1"), ExtResource("74_8dc3g")])
-
-[node name="Shadow" parent="Kitty/Body/Head/Kitty-head" instance=ExtResource("3_gngh3")]
-position = Vector2(6.55255, -180.565)
-
 [node name="Eyes" type="Node2D" parent="Kitty/Body/Head"]
 position = Vector2(16.3815, -226.526)
-
-[node name="EyesBlink" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
-visible = false
-z_index = 13
-z_as_relative = false
-material = ExtResource("12_rt5wr")
-position = Vector2(-22.9341, 407.091)
-texture = ExtResource("95_off2o")
-
-[node name="Shadow" parent="Kitty/Body/Head/Eyes/EyesBlink" instance=ExtResource("3_gngh3")]
-modulate = Color(1, 1, 1, 0.466667)
-show_behind_parent = true
-position = Vector2(0.000450134, 16.4146)
-
-[node name="Eyes" type="Sprite2D" parent="Kitty/Body/Head/Eyes"]
-z_index = 13
-z_as_relative = false
-position = Vector2(-22.9341, 407.091)
-texture = ExtResource("89_rt5wr")
-script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), ExtResource("91_vjgyh"), ExtResource("92_d5iia"), ExtResource("93_asu84"), ExtResource("94_qwt6e"), ExtResource("95_off2o")])
-
-[node name="Shadow" parent="Kitty/Body/Head/Eyes/Eyes" instance=ExtResource("3_gngh3")]
-modulate = Color(1, 1, 1, 0.466667)
-show_behind_parent = true
-position = Vector2(0.000450134, 16.4146)
 
 [node name="Tail" type="Node2D" parent="Kitty/Body"]
 show_behind_parent = true
 position = Vector2(-137.604, 82.0748)
 
-[node name="Kitty-tail" type="Sprite2D" parent="Kitty/Body/Tail"]
-z_index = 1
-z_as_relative = false
-position = Vector2(75.3545, -318.45)
-texture = ExtResource("47_uypp3")
-script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("47_uypp3"), ExtResource("76_htgcl"), ExtResource("77_smeu8"), ExtResource("78_f3y11"), ExtResource("79_cpm2s"), ExtResource("80_u81y6"), ExtResource("81_rt5wr")])
-
-[node name="Shadow" parent="Kitty/Body/Tail/Kitty-tail" instance=ExtResource("3_gngh3")]
-
 [node name="LegL" type="Node2D" parent="Kitty/Body"]
 show_behind_parent = true
 position = Vector2(-95.0125, 49.2449)
-
-[node name="Kitty-leg-l" type="Sprite2D" parent="Kitty/Body/LegL"]
-z_index = 4
-z_as_relative = false
-position = Vector2(26.2103, -288.903)
-texture = ExtResource("48_blkrb")
-script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("48_blkrb"), ExtResource("83_mnw77"), ExtResource("84_vjgyh"), ExtResource("85_d5iia"), ExtResource("86_asu84"), ExtResource("100_am8a1"), ExtResource("87_qwt6e")])
-
-[node name="Shadow" parent="Kitty/Body/LegL/Kitty-leg-l" instance=ExtResource("3_gngh3")]
 
 [node name="LegR" type="Node2D" parent="Kitty/Body"]
 show_behind_parent = true
 position = Vector2(117.947, 52.5279)
 
-[node name="Kitty-leg-r" type="Sprite2D" parent="Kitty/Body/LegR"]
-z_index = 2
-z_as_relative = false
-position = Vector2(-180.196, -285.62)
-texture = ExtResource("49_abqjc")
-script = ExtResource("48_e71vb")
-sprites = Array[Texture2D]([ExtResource("49_abqjc"), ExtResource("89_off2o"), ExtResource("90_tttfs"), ExtResource("91_1iygd"), ExtResource("92_g5xqc"), ExtResource("93_s4o1y"), ExtResource("94_7mmqq")])
-
-[node name="Shadow" parent="Kitty/Body/LegR/Kitty-leg-r" instance=ExtResource("3_gngh3")]
-
-[node name="BodyPlaceholder" type="Sprite2D" parent="Kitty"]
-self_modulate = Color(1, 1, 1, 0)
-position = Vector2(-94.357, -21.668)
-scale = Vector2(0.609, 0.609)
-
 [node name="Area2D" type="Area2D" parent="Kitty"]
+position = Vector2(47.1786, 68.9428)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kitty/Area2D"]
-visible = false
-position = Vector2(-73.7167, -67.958)
+position = Vector2(-9.82892, -51.2147)
 shape = SubResource("RectangleShape2D_272bh")
+debug_color = Color(0, 0.595, 0.7, 0.137255)
 
 [node name="BlinkTimer" type="Timer" parent="Kitty"]
 wait_time = 5.0
