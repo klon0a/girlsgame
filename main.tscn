@@ -656,7 +656,7 @@ custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
-item_scale = 0.25
+item_scale = 0.5
 
 [node name="Icon" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetScroll/HBoxContainer/CoatHanger"]
 visible = false
@@ -696,7 +696,7 @@ offset_bottom = 100.0
 mouse_filter = 2
 script = ExtResource("3_7mycd")
 attach_point = NodePath("AttachPoint")
-item_scale = 0.1
+item_scale = 0.3
 
 [node name="Icon" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetShelves/Shelf CoatHanger"]
 visible = false

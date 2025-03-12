@@ -6,7 +6,7 @@ enum GARMENT_TYPE {SHOE, BOTTOM, TOP, ACCESSORY, FULL}
 @onready var grab_sound: AudioStreamPlayer = $GrabSound
 
 @export var hang_point : Marker2D
-@onready var hang_position : Vector2 = hang_point.position
+@onready var hang_position : Vector2 = hang_point.position * 0.609
 @export var type : GARMENT_TYPE
 var _cursor : Cursor
 var _personal_coathanger : CoatHanger
