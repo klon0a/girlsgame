@@ -1198,7 +1198,7 @@ position = Vector2(0.000450134, 16.4146)
 z_index = 13
 z_as_relative = false
 material = ExtResource("12_rt5wr")
-texture = ExtResource("94_qwt6e")
+texture = ExtResource("89_rt5wr")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), ExtResource("91_vjgyh"), ExtResource("92_d5iia"), ExtResource("93_asu84"), ExtResource("94_qwt6e"), ExtResource("95_off2o")])
 
