@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=176 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
@@ -170,6 +170,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrh16j6jq3r2" path="res://Assets + Clothes/assets/eyes/Untitled_Artwork-6.png" id="94_qwt6e"]
 [ext_resource type="Texture2D" uid="uid://dcsxg67m0w5pk" path="res://Assets + Clothes/assets/eyes/closed eyes.png" id="95_off2o"]
 [ext_resource type="Texture2D" uid="uid://bgm6hb77wqd58" path="res://Assets + Clothes/kitty variation/IMG_2967.PNG" id="100_am8a1"]
+[ext_resource type="Texture2D" uid="uid://bhcjec0nf6ux3" path="res://Assets + Clothes/assets/room/scroll.png" id="102_ryg4g"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -746,6 +747,16 @@ horizontal_scroll_mode = 3
 vertical_scroll_mode = 0
 script = ExtResource("2_h2yge")
 original_coathanger = NodePath("HBoxContainer/CoatHanger")
+
+[node name="Scroll" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetScroll"]
+position = Vector2(135, 366)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("102_ryg4g")
+
+[node name="Scroll2" type="Sprite2D" parent="UI Closet/ClosetInside/ClosetScroll"]
+position = Vector2(135, 366)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("102_ryg4g")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI Closet/ClosetInside/ClosetScroll"]
 layout_mode = 2
