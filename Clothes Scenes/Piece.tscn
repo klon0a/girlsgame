@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bumqcvnvt37wm"]
+[gd_scene load_steps=10 format=3 uid="uid://bumqcvnvt37wm"]
 
 [ext_resource type="Script" uid="uid://bea5cqpdpm5bf" path="res://garment.gd" id="1_4r1vn"]
 [ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="2_8sh02"]
+[ext_resource type="Script" uid="uid://bp1qfs03mlaq1" path="res://garment_piece.gd" id="2_vorh7"]
 [ext_resource type="AudioStream" uid="uid://ckuhfivli4i88" path="res://Sounds/kittys clawset sfx pop.wav" id="3_ky07n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ky07n"]
@@ -32,6 +33,7 @@ hang_point = NodePath("HangPoint")
 visible = false
 z_index = 14
 use_parent_material = true
+script = ExtResource("2_vorh7")
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="AccessoryFront" instance=ExtResource("2_8sh02")]
@@ -39,6 +41,7 @@ metadata/_edit_lock_ = true
 [node name="AccessoryBack" type="Sprite2D" parent="."]
 visible = false
 use_parent_material = true
+script = ExtResource("2_vorh7")
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="AccessoryBack" instance=ExtResource("2_8sh02")]
@@ -47,6 +50,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 10
 use_parent_material = true
+script = ExtResource("2_vorh7")
+target_parent = 4
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="TopBody" instance=ExtResource("2_8sh02")]
@@ -55,6 +60,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 12
 use_parent_material = true
+script = ExtResource("2_vorh7")
+target_parent = 2
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="TopL" instance=ExtResource("2_8sh02")]
@@ -63,6 +70,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 7
 use_parent_material = true
+script = ExtResource("2_vorh7")
+target_parent = 3
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="TopR" instance=ExtResource("2_8sh02")]
@@ -71,6 +80,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 9
 use_parent_material = true
+script = ExtResource("2_vorh7")
+target_parent = 5
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="Bottom" instance=ExtResource("2_8sh02")]
@@ -79,6 +90,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 5
 use_parent_material = true
+script = ExtResource("2_vorh7")
+target_parent = 5
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="ShoeL" instance=ExtResource("2_8sh02")]
@@ -87,6 +100,8 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 3
 use_parent_material = true
+script = ExtResource("2_vorh7")
+target_parent = 5
 metadata/_edit_lock_ = true
 
 [node name="Shadow" parent="ShoeR" instance=ExtResource("2_8sh02")]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://pbfuehivb0cb"]
+[gd_scene load_steps=7 format=3 uid="uid://pbfuehivb0cb"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_ngh7e"]
 [ext_resource type="Texture2D" uid="uid://kuqq0okdo36t" path="res://Assets + Clothes/assets/final/top-shirt-body.png" id="2_8ngga"]
 [ext_resource type="Texture2D" uid="uid://cm4lww1d3lxbe" path="res://Assets + Clothes/assets/final/top-shirt-l.png" id="3_2t63w"]
+[ext_resource type="Script" uid="uid://bp1qfs03mlaq1" path="res://garment_piece.gd" id="4_2t63w"]
 [ext_resource type="PackedScene" uid="uid://cbfrj4qsp7l7" path="res://shadow.tscn" id="4_um2yg"]
 [ext_resource type="Texture2D" uid="uid://cuo2rxhfpj8k2" path="res://Assets + Clothes/assets/final/top-shirt-r.png" id="5_ypvyd"]
 
@@ -19,6 +20,8 @@ texture = ExtResource("3_2t63w")
 
 [node name="ShirtDesign" type="Sprite2D" parent="." index="4"]
 z_index = 10
+script = ExtResource("4_2t63w")
+target_parent = 4
 
 [node name="Shadow" parent="ShirtDesign" index="0" instance=ExtResource("4_um2yg")]
 

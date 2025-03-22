@@ -122,21 +122,25 @@ func remove_picked_up_garment(removed_garment : Garment):
 
 func parent_clothes(garment : Garment):
 	for part in garment.garment_parts:
-		var part_z = part.z_index
-		print(part.name + " " + str(part_z))
-		match part_z:
-			15: # glasses
-				part.reparent(parent_eyes)
-			14, 13, 0: # accessory, head
+		match part.target_parent:
+			GarmentPiece.PARENT_TO.HEAD:
 				part.reparent(parent_head)
-			12, 11: # left sleeve
+
+			GarmentPiece.PARENT_TO.EYES:
+				part.reparent(parent_eyes)
+
+			GarmentPiece.PARENT_TO.L:
 				part.reparent(parent_arm_l)
-			10, 8: # body
-				part.reparent(parent_body)
-			7, 6, 16: # right sleeve
+
+			GarmentPiece.PARENT_TO.R:
 				part.reparent(parent_arm_r)
-			9, 5, 4, 3, 2, 1: # bottoms
+
+			GarmentPiece.PARENT_TO.BODY:
+				part.reparent(parent_body)
+
+			GarmentPiece.PARENT_TO.LEGS:
 				part.reparent(parent_legs)
+
 		part.position = Vector2.ZERO
 		part.rotation = 0.0
 		part.scale = Vector2.ONE

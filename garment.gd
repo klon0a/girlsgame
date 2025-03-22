@@ -28,7 +28,7 @@ var angle_mult = 0.2
 var scale_power = 1.03
 var move_damping = 0.05
 
-var garment_parts : Array[Sprite2D]
+var garment_parts : Array[GarmentPiece]
 func _ready() -> void:
 	dangle_stiffness 	*= randf_range(0.85, 1.15)
 	dangle_enthusiasm	*= randf_range(0.85, 1.15)
@@ -37,7 +37,7 @@ func _ready() -> void:
 	move_damping		*= randf_range(0.85, 1.15)
 	
 	for child in get_children():
-		if child is Sprite2D:
+		if child is GarmentPiece:
 			if child.visible:
 				garment_parts.append(child)
 	
