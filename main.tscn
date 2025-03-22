@@ -1129,7 +1129,7 @@ offset_right = -271.0
 offset_bottom = 351.0
 text = "MUSIC"
 
-[node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes")]
+[node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes", "parent_head", "parent_body", "parent_arm_l", "parent_arm_r", "parent_legs")]
 unique_name_in_owner = true
 position = Vector2(239, 417)
 scale = Vector2(0.508705, 0.507667)
@@ -1138,6 +1138,11 @@ garment_parent = NodePath("BodyPlaceholder")
 kitty_parts = [NodePath("Kitty-body"), NodePath("Kitty-arm-l"), NodePath("Kitty-arm-r"), NodePath("Kitty-head"), NodePath("Kitty-tail"), NodePath("Kitty-leg-l"), NodePath("Kitty-leg-r")]
 eyes = NodePath("Eyes")
 blink_eyes = NodePath("EyesBlink")
+parent_head = NodePath("Kitty-head/HeadClothes")
+parent_body = NodePath("Kitty-body/BodyClothes")
+parent_arm_l = NodePath("Kitty-arm-l/LArmClothes")
+parent_arm_r = NodePath("Kitty-arm-r/RArmClothes")
+parent_legs = NodePath("LLegClothes")
 
 [node name="BodyPlaceholder" type="Sprite2D" parent="Kitty"]
 self_modulate = Color(1, 1, 1, 0)
@@ -1154,6 +1159,8 @@ sprites = Array[Texture2D]([ExtResource("43_qnost"), ExtResource("49_pjyto"), Ex
 
 [node name="Shadow" parent="Kitty/Kitty-body" instance=ExtResource("3_gngh3")]
 
+[node name="BodyClothes" type="Node2D" parent="Kitty/Kitty-body"]
+
 [node name="Kitty-arm-l" type="Sprite2D" parent="Kitty"]
 z_index = 11
 z_as_relative = false
@@ -1162,6 +1169,8 @@ script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("44_wnkbs"), ExtResource("56_jbvwl"), ExtResource("57_sn1fb"), ExtResource("58_yvsr8"), ExtResource("59_vieuh"), ExtResource("60_yjja3"), ExtResource("61_l0gw7")])
 
 [node name="Shadow" parent="Kitty/Kitty-arm-l" instance=ExtResource("3_gngh3")]
+
+[node name="LArmClothes" type="Node2D" parent="Kitty/Kitty-arm-l"]
 
 [node name="Kitty-arm-r" type="Sprite2D" parent="Kitty"]
 z_index = 6
@@ -1172,6 +1181,8 @@ sprites = Array[Texture2D]([ExtResource("45_f6a44"), ExtResource("63_inymm"), Ex
 
 [node name="Shadow" parent="Kitty/Kitty-arm-r" instance=ExtResource("3_gngh3")]
 
+[node name="RArmClothes" type="Node2D" parent="Kitty/Kitty-arm-r"]
+
 [node name="Kitty-head" type="Sprite2D" parent="Kitty"]
 z_index = 13
 z_as_relative = false
@@ -1181,6 +1192,8 @@ sprites = Array[Texture2D]([ExtResource("46_hrvbo"), ExtResource("69_wat4s"), Ex
 
 [node name="Shadow" parent="Kitty/Kitty-head" instance=ExtResource("3_gngh3")]
 position = Vector2(6.55255, -180.565)
+
+[node name="HeadClothes" type="Node2D" parent="Kitty/Kitty-head"]
 
 [node name="EyesBlink" type="Sprite2D" parent="Kitty"]
 visible = false
@@ -1207,6 +1220,8 @@ modulate = Color(1, 1, 1, 0.466667)
 show_behind_parent = true
 position = Vector2(0.000450134, 16.4146)
 
+[node name="EyeClothes" type="Node2D" parent="Kitty/Eyes"]
+
 [node name="Kitty-tail" type="Sprite2D" parent="Kitty"]
 z_index = 1
 z_as_relative = false
@@ -1215,6 +1230,8 @@ script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("47_uypp3"), ExtResource("76_htgcl"), ExtResource("77_smeu8"), ExtResource("78_f3y11"), ExtResource("79_cpm2s"), ExtResource("80_u81y6"), ExtResource("81_rt5wr")])
 
 [node name="Shadow" parent="Kitty/Kitty-tail" instance=ExtResource("3_gngh3")]
+
+[node name="LLegClothes" type="Node2D" parent="Kitty"]
 
 [node name="Kitty-leg-l" type="Sprite2D" parent="Kitty"]
 z_index = 4
@@ -1233,6 +1250,8 @@ script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("49_abqjc"), ExtResource("89_off2o"), ExtResource("90_tttfs"), ExtResource("91_1iygd"), ExtResource("92_g5xqc"), ExtResource("93_s4o1y"), ExtResource("94_7mmqq")])
 
 [node name="Shadow" parent="Kitty/Kitty-leg-r" instance=ExtResource("3_gngh3")]
+
+[node name="RLegClothes" type="Node2D" parent="Kitty/Kitty-leg-r"]
 
 [node name="Body" type="Node2D" parent="Kitty"]
 position = Vector2(-29.4866, 216.677)

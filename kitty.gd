@@ -11,6 +11,13 @@ class_name Kitty
 
 @export var color_count : int = 7
 @export var eye_count : int = 7
+
+@export var parent_head : Node2D
+@export var parent_body : Node2D
+@export var parent_arm_l : Node2D
+@export var parent_arm_r : Node2D
+@export var parent_legs : Node2D
+
 var current_kitty_color = 0
 var current_eyeset = 0
 var current_top : Garment 
@@ -57,6 +64,7 @@ func put_on(new_garment : Garment):
 	new_garment.position = Vector2.ZERO
 	new_garment.rotation = 0.0
 	new_garment.scale = Vector2.ONE
+	parent_clothes(new_garment)
 	
 	match new_garment.type:
 		Garment.GARMENT_TYPE.SHOE:
@@ -105,8 +113,32 @@ func remove_picked_up_garment(removed_garment : Garment):
 		current_bottom = null
 	if current_fullbody == removed_garment:
 		current_fullbody = null
-	
+	unparent_clothes(removed_garment)
 
+
+func parent_clothes(garment : Garment):
+	for part in garment.garment_parts:
+		var part_z = part.z_index
+		print(part.name + " " + str(part_z))
+		match part_z:
+			14, 13, 0: # accessory, head
+				part.reparent(parent_head)
+			12, 11: # left sleeve
+				part.reparent(parent_arm_l)
+			10, 8: # body
+				part.reparent(parent_body)
+			7, 6: # right sleeve
+				part.reparent(parent_arm_r)
+			9, 5, 4, 3, 2, 1: # bottoms
+				part.reparent(parent_legs)
+		part.position = Vector2.ZERO
+		part.rotation = 0.0
+	pass
+
+func unparent_clothes(garment : Garment):
+	for part in garment.garment_parts:
+		part.reparent(garment)
+	pass
 
 func _on_blink_timer_timeout() -> void:
 	$BlinkTimer.wait_time = randf_range(4.0, 8.0)
