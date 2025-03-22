@@ -13,6 +13,7 @@ class_name Kitty
 @export var eye_count : int = 7
 
 @export var parent_head : Node2D
+@export var parent_eyes : Node2D
 @export var parent_body : Node2D
 @export var parent_arm_l : Node2D
 @export var parent_arm_r : Node2D
@@ -123,6 +124,8 @@ func parent_clothes(garment : Garment):
 		var part_z = part.z_index
 		print(part.name + " " + str(part_z))
 		match part_z:
+			15: # glasses
+				part.reparent(parent_eyes)
 			14, 13, 0: # accessory, head
 				part.reparent(parent_head)
 			12, 11: # left sleeve

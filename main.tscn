@@ -1129,7 +1129,7 @@ offset_right = -271.0
 offset_bottom = 351.0
 text = "MUSIC"
 
-[node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes", "parent_head", "parent_body", "parent_arm_l", "parent_arm_r", "parent_legs")]
+[node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes", "parent_head", "parent_eyes", "parent_body", "parent_arm_l", "parent_arm_r", "parent_legs")]
 unique_name_in_owner = true
 position = Vector2(239, 417)
 scale = Vector2(0.508705, 0.507667)
@@ -1139,6 +1139,7 @@ kitty_parts = [NodePath("Body/Kitty-body"), NodePath("Body/ArmL/Kitty-arm-l"), N
 eyes = NodePath("Body/Head/Eyes/Eyes")
 blink_eyes = NodePath("Body/Head/Eyes/EyesBlink")
 parent_head = NodePath("Body/Head/HeadClothes")
+parent_eyes = NodePath("Body/Head/Eyes/EyeClothes")
 parent_body = NodePath("Body/BodyClothes")
 parent_arm_l = NodePath("Body/ArmL/LArmClothes")
 parent_arm_r = NodePath("Body/ArmR/RArmClothes")

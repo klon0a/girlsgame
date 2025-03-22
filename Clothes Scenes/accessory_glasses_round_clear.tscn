@@ -8,6 +8,7 @@ type = 3
 
 [node name="AccessoryFront" parent="." index="0"]
 visible = true
+z_index = 15
 texture = ExtResource("2_bqc5r")
 
 [node name="HangPoint" parent="." index="8"]
