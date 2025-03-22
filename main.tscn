@@ -1,4 +1,4 @@
-[gd_scene load_steps=177 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=179 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
@@ -171,6 +171,8 @@
 [ext_resource type="Texture2D" uid="uid://bgm6hb77wqd58" path="res://Assets + Clothes/kitty variation/IMG_2967.PNG" id="100_am8a1"]
 [ext_resource type="Texture2D" uid="uid://bhcjec0nf6ux3" path="res://Assets + Clothes/assets/room/scroll.png" id="102_ryg4g"]
 [ext_resource type="Script" uid="uid://cvnbcdlalmuuc" path="res://body_animator.gd" id="113_ryg4g"]
+[ext_resource type="Script" uid="uid://dq0ua8d4sr7dj" path="res://springy_scale.gd" id="114_oy6td"]
+[ext_resource type="Script" uid="uid://bd4j7y7b7fhmg" path="res://springy_rotate.gd" id="123_fe76k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4qxq8"]
 shader = ExtResource("4_lquwl")
@@ -1136,13 +1138,13 @@ position = Vector2(239, 417)
 scale = Vector2(0.508705, 0.507667)
 script = ExtResource("2_0xm2m")
 garment_parent = NodePath("BodyPlaceholder")
-kitty_parts = [NodePath("BodyAnimator/Body/Kitty-body"), NodePath("BodyAnimator/ArmL/LArmClothes/Kitty-arm-l"), NodePath("BodyAnimator/ArmR/IdleArmWiggle/Kitty-arm-r"), NodePath("BodyAnimator/Head/Kitty-head"), NodePath("BodyAnimator/Tail/Kitty-tail"), NodePath("BodyAnimator/Legs/Kitty-leg-l"), NodePath("BodyAnimator/Legs/Kitty-leg-r")]
-eyes = NodePath("BodyAnimator/Eyes/Eyes")
-blink_eyes = NodePath("BodyAnimator/Eyes/EyesBlink")
-parent_head = NodePath("BodyAnimator/Head/HeadClothes")
-parent_eyes = NodePath("BodyAnimator/Eyes/EyeClothes")
+kitty_parts = [NodePath("BodyAnimator/Body/Kitty-body"), NodePath("BodyAnimator/ArmL/IdleArmWiggle/Kitty-arm-l"), NodePath("BodyAnimator/ArmR/IdleArmWiggle/Kitty-arm-r"), NodePath("BodyAnimator/Head/HeadIdleRotate/Kitty-head"), NodePath("BodyAnimator/Tail/Kitty-tail"), NodePath("BodyAnimator/Legs/Kitty-leg-l"), NodePath("BodyAnimator/Legs/Kitty-leg-r")]
+eyes = NodePath("BodyAnimator/Eyes/RotationEffects/Eyes")
+blink_eyes = NodePath("BodyAnimator/Eyes/RotationEffects/EyesBlink")
+parent_head = NodePath("BodyAnimator/Head/HeadIdleRotate/HeadClothes")
+parent_eyes = NodePath("BodyAnimator/Eyes/RotationEffects/EyeClothes")
 parent_body = NodePath("BodyAnimator/Body/BodyClothes")
-parent_arm_l = NodePath("BodyAnimator/ArmL/LArmClothes")
+parent_arm_l = NodePath("BodyAnimator/ArmL/IdleArmWiggle/LArmClothes")
 parent_arm_r = NodePath("BodyAnimator/ArmR/IdleArmWiggle/RArmClothes")
 parent_legs = NodePath("BodyAnimator/Legs/LegClothes")
 
@@ -1155,15 +1157,25 @@ stream = ExtResource("58_htgcl")
 [node name="Floor" type="Node2D" parent="Kitty"]
 position = Vector2(21.6235, 460.932)
 
-[node name="BodyAnimator" type="Node2D" parent="Kitty" node_paths=PackedStringArray("floor", "body", "legs", "tail")]
+[node name="BodyAnimator" type="Node2D" parent="Kitty" node_paths=PackedStringArray("floor", "body", "arm_l", "arm_r", "legs", "tail", "eyes", "eyes_rotation", "head")]
 position = Vector2(37.3497, 189.1)
 script = ExtResource("113_ryg4g")
 floor = NodePath("../Floor")
 body = NodePath("Body")
+arm_l = NodePath("ArmL")
+arm_r = NodePath("ArmR")
 legs = NodePath("Legs")
 tail = NodePath("Tail")
+eyes = NodePath("Eyes")
+eyes_rotation = NodePath("Eyes/RotationEffects")
+head = NodePath("Head")
 
 [node name="Body" type="Node2D" parent="Kitty/BodyAnimator"]
+script = ExtResource("114_oy6td")
+scale_power = 1.03
+stiffness = 20.0
+enthusiasm = 0.01
+damping = 0.2
 
 [node name="Kitty-body" type="Sprite2D" parent="Kitty/BodyAnimator/Body"]
 z_index = 8
@@ -1209,12 +1221,10 @@ update_scale = false
 
 [node name="ArmL" type="Node2D" parent="Kitty/BodyAnimator"]
 position = Vector2(-137.604, -244.255)
+script = ExtResource("123_fe76k")
+rotation_multiplier = -1.0
 
-[node name="LArmClothes" type="Node2D" parent="Kitty/BodyAnimator/ArmL"]
-position = Vector2(100.255, 55.1542)
-
-[node name="IdleArmWiggle" type="Node2D" parent="Kitty/BodyAnimator/ArmL/LArmClothes"]
-position = Vector2(-100.255, -55.1542)
+[node name="IdleArmWiggle" type="Node2D" parent="Kitty/BodyAnimator/ArmL"]
 script = ExtResource("30_kq58d")
 scale_wobble = Vector2(0, 0)
 scale_speed = 0.0
@@ -1223,25 +1233,23 @@ pos_speed = 0.0
 rot_wobble = 0.2
 rot_speed = 2.0
 
-[node name="Kitty-arm-l" type="Sprite2D" parent="Kitty/BodyAnimator/ArmL/LArmClothes"]
+[node name="Kitty-arm-l" type="Sprite2D" parent="Kitty/BodyAnimator/ArmL/IdleArmWiggle"]
 z_index = 11
 z_as_relative = false
+position = Vector2(100.255, 55.1542)
 texture = ExtResource("44_wnkbs")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("44_wnkbs"), ExtResource("56_jbvwl"), ExtResource("57_sn1fb"), ExtResource("58_yvsr8"), ExtResource("59_vieuh"), ExtResource("60_yjja3"), ExtResource("61_l0gw7")])
 
-[node name="Shadow" parent="Kitty/BodyAnimator/ArmL/LArmClothes/Kitty-arm-l" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Kitty/BodyAnimator/ArmL/IdleArmWiggle/Kitty-arm-l" instance=ExtResource("3_gngh3")]
+
+[node name="LArmClothes" type="Node2D" parent="Kitty/BodyAnimator/ArmL/IdleArmWiggle"]
+position = Vector2(100.255, 55.1542)
 
 [node name="ArmR" type="Node2D" parent="Kitty/BodyAnimator"]
 show_behind_parent = true
 position = Vector2(64.8706, -256.073)
-script = ExtResource("30_kq58d")
-scale_wobble = Vector2(0, 0)
-scale_speed = 1.0
-pos_wobble = Vector2(0, 0)
-pos_speed = 1.0
-rot_wobble = 0.2
-rot_speed = 2.0
+script = ExtResource("123_fe76k")
 
 [node name="IdleArmWiggle" type="Node2D" parent="Kitty/BodyAnimator/ArmR"]
 script = ExtResource("30_kq58d")
@@ -1267,6 +1275,12 @@ position = Vector2(-102.22, 66.973)
 
 [node name="Head" type="Node2D" parent="Kitty/BodyAnimator"]
 position = Vector2(-17.692, -299.409)
+script = ExtResource("114_oy6td")
+stiffness = 30.0
+enthusiasm = 0.01
+damping = 0.1
+
+[node name="HeadIdleRotate" type="Node2D" parent="Kitty/BodyAnimator/Head"]
 script = ExtResource("30_kq58d")
 scale_wobble = Vector2(0.05, 0.05)
 scale_speed = 1.0
@@ -1275,10 +1289,10 @@ pos_speed = 1.0
 rot_wobble = 0.2
 rot_speed = 2.0
 
-[node name="HeadClothes" type="Node2D" parent="Kitty/BodyAnimator/Head"]
+[node name="HeadClothes" type="Node2D" parent="Kitty/BodyAnimator/Head/HeadIdleRotate"]
 position = Vector2(-19.6577, 110.308)
 
-[node name="Kitty-head" type="Sprite2D" parent="Kitty/BodyAnimator/Head"]
+[node name="Kitty-head" type="Sprite2D" parent="Kitty/BodyAnimator/Head/HeadIdleRotate"]
 z_index = 13
 z_as_relative = false
 position = Vector2(-19.6577, 110.308)
@@ -1286,25 +1300,24 @@ texture = ExtResource("46_hrvbo")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("46_hrvbo"), ExtResource("69_wat4s"), ExtResource("70_ywjan"), ExtResource("71_m74q3"), ExtResource("72_tko6h"), ExtResource("73_am8a1"), ExtResource("74_8dc3g")])
 
-[node name="Shadow" parent="Kitty/BodyAnimator/Head/Kitty-head" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Kitty/BodyAnimator/Head/HeadIdleRotate/Kitty-head" instance=ExtResource("3_gngh3")]
 position = Vector2(6.55255, -180.565)
 
-[node name="EyesRemote" type="RemoteTransform2D" parent="Kitty/BodyAnimator/Head"]
+[node name="EyesRemote" type="RemoteTransform2D" parent="Kitty/BodyAnimator/Head/HeadIdleRotate"]
 position = Vector2(1.96579, -104.399)
-remote_path = NodePath("../../Eyes")
+remote_path = NodePath("../../../Eyes")
 update_scale = false
 
 [node name="Eyes" type="Node2D" parent="Kitty/BodyAnimator"]
 position = Vector2(-15.7262, -403.808)
-script = ExtResource("30_kq58d")
-scale_wobble = Vector2(0.05, 0.05)
-scale_speed = 1.0
-pos_wobble = Vector2(20, 20)
-pos_speed = 1.0
-rot_wobble = 0.2
-rot_speed = 2.0
+script = ExtResource("114_oy6td")
+stiffness = 20.0
+enthusiasm = 0.01
+damping = 0.1
 
-[node name="EyesBlink" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes"]
+[node name="RotationEffects" type="Node2D" parent="Kitty/BodyAnimator/Eyes"]
+
+[node name="EyesBlink" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects"]
 visible = false
 z_index = 13
 z_as_relative = false
@@ -1312,12 +1325,12 @@ material = ExtResource("12_rt5wr")
 position = Vector2(-21.6235, 214.708)
 texture = ExtResource("95_off2o")
 
-[node name="Shadow" parent="Kitty/BodyAnimator/Eyes/EyesBlink" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Kitty/BodyAnimator/Eyes/RotationEffects/EyesBlink" instance=ExtResource("3_gngh3")]
 modulate = Color(1, 1, 1, 0.466667)
 show_behind_parent = true
 position = Vector2(0.000450134, 16.4146)
 
-[node name="Eyes" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes"]
+[node name="Eyes" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects"]
 z_index = 13
 z_as_relative = false
 material = ExtResource("12_rt5wr")
@@ -1326,20 +1339,26 @@ texture = ExtResource("89_rt5wr")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), ExtResource("91_vjgyh"), ExtResource("92_d5iia"), ExtResource("93_asu84"), ExtResource("94_qwt6e"), ExtResource("95_off2o")])
 
-[node name="Shadow" parent="Kitty/BodyAnimator/Eyes/Eyes" instance=ExtResource("3_gngh3")]
+[node name="Shadow" parent="Kitty/BodyAnimator/Eyes/RotationEffects/Eyes" instance=ExtResource("3_gngh3")]
 modulate = Color(1, 1, 1, 0.466667)
 show_behind_parent = true
 position = Vector2(0.000450134, 16.4146)
 
-[node name="EyeClothes" type="Node2D" parent="Kitty/BodyAnimator/Eyes"]
+[node name="EyeClothes" type="Node2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects"]
 position = Vector2(-21.6235, 214.708)
 
 [node name="Tail" type="Node2D" parent="Kitty/BodyAnimator"]
 show_behind_parent = true
 position = Vector2(-60.9391, 1.96979)
+script = ExtResource("123_fe76k")
+stiffness = 10.0
+enthusiasm = 0.03
+damping = 0.4
+
+[node name="IdleTailRotation" type="Node2D" parent="Kitty/BodyAnimator/Tail"]
 script = ExtResource("30_kq58d")
-scale_wobble = Vector2(0.2, 0.2)
-scale_speed = 1.0
+scale_wobble = Vector2(0, 0)
+scale_speed = 0.0
 pos_wobble = Vector2(0, 0)
 pos_speed = 0.0
 rot_wobble = 0.3

@@ -186,6 +186,7 @@ func _on_cycle_eye_color_pressed() -> void:
 	cycle_eye_color()
 	eye_color.scale_speed += Vector2.ONE * 4.0
 	eye_color.scale *= 0.9
+	BodyAnimator.instance.bop_eyes()
 	pass # Replace with function body.
 
 

@@ -43,11 +43,18 @@ func cycle_kitty_color():
 	current_kitty_color = (current_kitty_color + 1) % color_count
 	for part : KittyPart in kitty_parts:
 		part.set_sprite_id(current_kitty_color)
+	BodyAnimator.instance.bop_body()
+	BodyAnimator.instance.bop_l()
+	BodyAnimator.instance.bop_r()
+	BodyAnimator.instance.bop_legs() # legs include tail
+	#BodyAnimator.instance.bop_tail()
+	BodyAnimator.instance.bop_head()
 	pass
 
 func cycle_eyes():
 	current_eyeset = (current_eyeset + 1) % eye_count
 	eyes.set_sprite_id(current_eyeset)
+	BodyAnimator.instance.bop_eyes()
 	pass
 
 func _on_area_2d_mouse_entered() -> void:
@@ -93,6 +100,8 @@ func put_on(new_garment : Garment):
 			pass
 			
 		Garment.GARMENT_TYPE.FULL:
+			# ADDITIONALLY BOP LEGS
+			BodyAnimator.instance.bop_legs()
 			#if (current_fullbody != null):
 				#current_fullbody.take_off()
 			#if (current_top != null):
@@ -121,25 +130,38 @@ func remove_picked_up_garment(removed_garment : Garment):
 
 
 func parent_clothes(garment : Garment):
+	var bop_head = false
+	var bop_body = false
+	var bop_eyes = false
+	var bop_l = false
+	var bop_r = false
+	var bop_legs = false
+	
 	for part in garment.garment_parts:
 		match part.target_parent:
 			GarmentPiece.PARENT_TO.HEAD:
 				part.reparent(parent_head)
+				bop_head = true
 
 			GarmentPiece.PARENT_TO.EYES:
 				part.reparent(parent_eyes)
+				bop_eyes = true
 
 			GarmentPiece.PARENT_TO.L:
 				part.reparent(parent_arm_l)
+				bop_l = true
 
 			GarmentPiece.PARENT_TO.R:
 				part.reparent(parent_arm_r)
+				bop_r = true
 
 			GarmentPiece.PARENT_TO.BODY:
 				part.reparent(parent_body)
+				bop_body = true
 
 			GarmentPiece.PARENT_TO.LEGS:
 				part.reparent(parent_legs)
+				bop_legs = true
 
 		part.position = Vector2.ZERO
 		part.rotation = 0.0
@@ -147,6 +169,19 @@ func parent_clothes(garment : Garment):
 		if part.use_parent_material:
 			part.use_parent_material = false
 			part.material = garment.material
+	
+	if bop_body:
+		BodyAnimator.instance.bop_body()
+	if bop_head:
+		BodyAnimator.instance.bop_head()
+	if bop_eyes:
+		BodyAnimator.instance.bop_eyes()
+	if bop_l:
+		BodyAnimator.instance.bop_l()
+	if bop_r:
+		BodyAnimator.instance.bop_r()
+	if bop_legs:
+		BodyAnimator.instance.bop_legs()
 	pass
 
 func unparent_clothes(garment : Garment):
