@@ -34,6 +34,8 @@ func _ready() -> void:
 	%Cursor.position = self.position
 	global_garment_scale = garment_parent.global_scale.x
 	instance = self
+	for part in kitty_parts:
+		part.global_position = global_position
 	pass
 
 func cycle_kitty_color():
@@ -133,11 +135,17 @@ func parent_clothes(garment : Garment):
 				part.reparent(parent_legs)
 		part.position = Vector2.ZERO
 		part.rotation = 0.0
+		if part.use_parent_material:
+			part.use_parent_material = false
+			part.material = garment.material
 	pass
 
 func unparent_clothes(garment : Garment):
 	for part in garment.garment_parts:
 		part.reparent(garment)
+		if part.material != null:
+			part.material = null
+			part.use_parent_material = true
 	pass
 
 func _on_blink_timer_timeout() -> void:
