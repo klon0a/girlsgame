@@ -72,6 +72,7 @@ func put_on(new_garment : Garment):
 	match new_garment.type:
 		Garment.GARMENT_TYPE.SHOE:
 			if (current_shoe != null):
+				unparent_clothes(current_shoe)
 				current_shoe.take_off()
 			current_shoe = new_garment
 			
@@ -132,12 +133,13 @@ func parent_clothes(garment : Garment):
 				part.reparent(parent_arm_l)
 			10, 8: # body
 				part.reparent(parent_body)
-			7, 6: # right sleeve
+			7, 6, 16: # right sleeve
 				part.reparent(parent_arm_r)
 			9, 5, 4, 3, 2, 1: # bottoms
 				part.reparent(parent_legs)
 		part.position = Vector2.ZERO
 		part.rotation = 0.0
+		part.scale = Vector2.ONE
 		if part.use_parent_material:
 			part.use_parent_material = false
 			part.material = garment.material
