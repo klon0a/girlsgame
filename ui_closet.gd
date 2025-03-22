@@ -14,6 +14,7 @@ var accessories_color : ColorSelector.COLOR_OPTIONS = ColorSelector.COLOR_OPTION
 @export var bottom_material : Material
 @export var accessory_material : Material
 @export var shoe_material : Material
+@export var eye_material : Material
 
 @export var tops_list : Array[PackedScene]
 @export var bottoms_list : Array[PackedScene]
@@ -181,7 +182,19 @@ func _on_cycle_eyes_pressed() -> void:
 
 
 func _on_cycle_eye_color_pressed() -> void:
+	rising.play()
+	cycle_eye_color()
+	eye_color.scale_speed += Vector2.ONE * 4.0
+	eye_color.scale *= 0.9
 	pass # Replace with function body.
+
+
+var current_eye_color : int = 0
+@export var eye_colors : Array[Color] 
+func cycle_eye_color():
+	current_eye_color = (current_eye_color + 1) % eye_colors.size()
+	eye_material.set_shader_parameter("to", eye_colors[current_eye_color])
+	pass
 
 @onready var kittys_clawset_song_1: AudioStreamPlayer = $"../Music/KittysClawsetSong1"
 @onready var kittys_clawset_song_2: AudioStreamPlayer = $"../Music/KittysClawsetSong2"

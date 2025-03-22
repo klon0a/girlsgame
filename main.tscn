@@ -12,7 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://fhpcapat6rra" path="res://Sounds/kittys clawset song 2.ogg" id="3_m74q3"]
 [ext_resource type="PackedScene" uid="uid://dgicmg7dxudql" path="res://Clothes Scenes/bottom_keypants.tscn" id="3_vivmo"]
 [ext_resource type="PackedScene" uid="uid://de780hne3m2i" path="res://Clothes Scenes/bottom_longskirt.tscn" id="4_2cqfq"]
-[ext_resource type="Material" uid="uid://cebh1e87bjhys" path="res://bottom_material.tres" id="4_4lmeg"]
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="4_lquwl"]
 [ext_resource type="AudioStream" uid="uid://c6oo1h7iykplk" path="res://Sounds/kittys clawset sfx startrup.wav" id="4_nycv6"]
 [ext_resource type="Material" uid="uid://b4s1smylcbcwo" path="res://accessory_material.tres" id="5_0cp0l"]
@@ -171,6 +170,15 @@
 [ext_resource type="Texture2D" uid="uid://dcsxg67m0w5pk" path="res://Assets + Clothes/assets/eyes/closed eyes.png" id="95_off2o"]
 [ext_resource type="Texture2D" uid="uid://bgm6hb77wqd58" path="res://Assets + Clothes/kitty variation/IMG_2967.PNG" id="100_am8a1"]
 [ext_resource type="Texture2D" uid="uid://bhcjec0nf6ux3" path="res://Assets + Clothes/assets/room/scroll.png" id="102_ryg4g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4qxq8"]
+shader = ExtResource("4_lquwl")
+shader_parameter/from = Color(0.988235, 0.168627, 0.435294, 1)
+shader_parameter/to = Color(0, 0, 0, 1)
+shader_parameter/tolerance_hue = 0.5
+shader_parameter/tolerance_feather = 0.25
+shader_parameter/greyscale_amount = 0.3
+shader_parameter/greyscale = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
 shader = ExtResource("4_lquwl")
@@ -382,7 +390,7 @@ texture = ExtResource("42_31js7")
 
 [node name="EyeWibbler" type="Node2D" parent="Backdrop/Closet"]
 z_as_relative = false
-position = Vector2(-195, -60)
+position = Vector2(-197, 18)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("30_kq58d")
 scale_speed = 1.5
@@ -400,9 +408,8 @@ position = Vector2(-4, 2)
 texture = ExtResource("44_i0xsp")
 
 [node name="EyeColorWibbler" type="Node2D" parent="Backdrop/Closet"]
-visible = false
 z_as_relative = false
-position = Vector2(-183, -69)
+position = Vector2(-194, -66)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("30_kq58d")
 scale_speed = 1.5
@@ -567,14 +574,16 @@ offset_right = 949.0
 offset_bottom = 628.0
 script = ExtResource("2_vivmo")
 top_material = ExtResource("3_b1qrp")
-bottom_material = ExtResource("4_4lmeg")
+bottom_material = SubResource("ShaderMaterial_4qxq8")
 accessory_material = ExtResource("5_0cp0l")
 shoe_material = ExtResource("6_d2t1y")
+eye_material = ExtResource("12_rt5wr")
 tops_list = Array[PackedScene]([ExtResource("11_4w656"), ExtResource("13_rnkwl"), ExtResource("6_1u8w0"), ExtResource("7_0odxb"), ExtResource("18_vke2r"), ExtResource("10_ryguw"), ExtResource("18_5yh34"), ExtResource("19_pjuso"), ExtResource("20_23xmf"), ExtResource("21_swlj1"), ExtResource("22_yysqy"), ExtResource("23_n5t1e"), ExtResource("24_h6isl")])
 bottoms_list = Array[PackedScene]([ExtResource("19_uit24"), ExtResource("3_vivmo"), ExtResource("4_2cqfq"), ExtResource("5_yaehf"), ExtResource("6_074og")])
 fulls_list = Array[PackedScene]([ExtResource("29_inymm"), ExtResource("14_getpj"), ExtResource("15_ryguw")])
 shoes_list = Array[PackedScene]([ExtResource("16_d13ii"), ExtResource("8_82xsv"), ExtResource("7_cegan")])
 accessories_list = Array[PackedScene]([ExtResource("31_rm4vd"), ExtResource("20_kq58d"), ExtResource("19_qsp4k"), ExtResource("21_seu75"), ExtResource("43_am8a1"), ExtResource("18_xuqvo"), ExtResource("30_ruth0"), ExtResource("89_4qxq8"), ExtResource("90_ryg4g"), ExtResource("91_oy6td"), ExtResource("92_fe76k"), ExtResource("93_p5pln")])
+eye_colors = Array[Color]([Color(0.992157, 0.254902, 0.717647, 1), Color(0.466667, 0.258824, 0.988235, 1), Color(0.258824, 0.380392, 0.988235, 1), Color(0.294118, 0.74902, 0.74902, 1), Color(0.196078, 0.760784, 0.243137, 1), Color(0.678431, 0.529412, 0.176471, 1), Color(0.901961, 0.435294, 0.145098, 1), Color(0.901961, 0.25098, 0.0901961, 1), Color(0.901961, 0.0901961, 0.372549, 1), Color(0.219608, 0.219608, 0.219608, 1), Color(0.82606, 0.82606, 0.82606, 1)])
 
 [node name="ButtonScalers" type="Node2D" parent="UI Closet"]
 
@@ -1096,7 +1105,6 @@ offset_bottom = 71.0
 text = "COAT"
 
 [node name="CycleEyeColor" type="Button" parent="UI Closet/TypeButtons"]
-visible = false
 layout_mode = 0
 offset_left = -396.0
 offset_top = 77.0
@@ -1106,10 +1114,10 @@ text = "eyecolor"
 
 [node name="CycleEyes" type="Button" parent="UI Closet/TypeButtons"]
 layout_mode = 0
-offset_left = -393.0
-offset_top = 76.0
-offset_right = -268.0
-offset_bottom = 174.0
+offset_left = -396.0
+offset_top = 159.0
+offset_right = -271.0
+offset_bottom = 246.0
 text = "EYES
 "
 
@@ -1189,7 +1197,8 @@ position = Vector2(0.000450134, 16.4146)
 [node name="Eyes" type="Sprite2D" parent="Kitty"]
 z_index = 13
 z_as_relative = false
-texture = ExtResource("89_rt5wr")
+material = ExtResource("12_rt5wr")
+texture = ExtResource("94_qwt6e")
 script = ExtResource("48_e71vb")
 sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), ExtResource("91_vjgyh"), ExtResource("92_d5iia"), ExtResource("93_asu84"), ExtResource("94_qwt6e"), ExtResource("95_off2o")])
 
