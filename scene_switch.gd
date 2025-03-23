@@ -12,8 +12,8 @@ class_name SceneSwitcher
 #@export var kitty_credits : Marker2D
 
 func _ready() -> void:
-	#set_gameplay_scene()
-	set_credits_scene()
+	set_gameplay_scene()
+	#set_credits_scene()
 
 func set_gameplay_scene():
 	gameplay_background.visible = true
