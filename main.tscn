@@ -180,8 +180,8 @@ shader = ExtResource("4_lquwl")
 shader_parameter/from = Color(0.988235, 0.168627, 0.435294, 1)
 shader_parameter/to = Color(0, 0, 0, 1)
 shader_parameter/tolerance_hue = 0.5
-shader_parameter/tolerance_feather = 0.25
-shader_parameter/greyscale_amount = 0.3
+shader_parameter/tolerance_feather = 0.5
+shader_parameter/greyscale_amount = 0.5
 shader_parameter/greyscale = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
@@ -240,7 +240,8 @@ texture = ExtResource("7_arf1h")
 texture = ExtResource("10_4qxq8")
 
 [node name="CreditsBackground" type="Node2D" parent="Backdrop"]
-position = Vector2(512, 384)
+visible = false
+position = Vector2(514, 384)
 
 [node name="Bg" type="Sprite2D" parent="Backdrop/CreditsBackground"]
 texture = ExtResource("9_gkfde")
@@ -345,7 +346,6 @@ position = Vector2(512, 384)
 texture = ExtResource("33_6ff2c")
 
 [node name="KittysClawsetTitle" type="Sprite2D" parent="Backdrop"]
-visible = false
 z_index = 15
 position = Vector2(241, 79)
 scale = Vector2(0.308079, 0.308079)
@@ -362,7 +362,6 @@ position = Vector2(486.889, -51.9348)
 scale = Vector2(3.24592, 3.24592)
 
 [node name="Closet" type="Node2D" parent="Backdrop"]
-visible = false
 position = Vector2(700, 345)
 
 [node name="Closetinside" type="Sprite2D" parent="Backdrop/Closet"]
@@ -602,7 +601,6 @@ texture = ExtResource("53_le5wj")
 [node name="Shadow" parent="Confirmation/DialogueBox/Yay" instance=ExtResource("3_gngh3")]
 
 [node name="UI Closet" type="Control" parent="."]
-visible = false
 z_index = -15
 layout_mode = 3
 anchors_preset = 0
@@ -992,6 +990,7 @@ mouse_filter = 2
 
 [node name="ColorButtons" type="Control" parent="UI Closet"]
 z_as_relative = false
+material = ExtResource("3_b1qrp")
 anchors_preset = 0
 offset_left = 158.0
 offset_top = 505.0
@@ -1000,7 +999,19 @@ offset_bottom = 581.0
 scale = Vector2(0.829482, 0.829482)
 script = ExtResource("30_0rl1p")
 button_group = SubResource("ButtonGroup_facbu")
-colors = Array[Color]([Color(1, 0.5, 0, 1), Color(0.8, 0, 1, 1), Color(0.664, 1, 0.04, 1), Color(0, 0.916667, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 0.7, 1), Color(1, 0.983333, 0, 1)])
+colors = Array[Color]([Color(1, 0.54902, 0.101961, 1), Color(0.701961, 0.176471, 0.768627, 1), Color(0.341176, 0.870588, 0.164706, 1), Color(0.286275, 0.839216, 0.890196, 1), Color(0.862745, 0.917647, 0.94902, 1), Color(0.988235, 0.168627, 0.435294, 1), Color(0.94902, 0.854902, 0, 1)])
+
+[node name="Shoe" parent="UI Closet/ColorButtons" instance=ExtResource("5_yaehf")]
+visible = false
+use_parent_material = true
+position = Vector2(-245.937, -180.836)
+scale = Vector2(1.20557, 1.20557)
+
+[node name="Garment" parent="UI Closet/ColorButtons" instance=ExtResource("6_1u8w0")]
+visible = false
+use_parent_material = true
+position = Vector2(-207.358, -383.372)
+scale = Vector2(1.20557, 1.20557)
 
 [node name="SelectionScale" type="RemoteTransform2D" parent="UI Closet/ColorButtons"]
 remote_path = NodePath("../Selection/Button")
@@ -1385,6 +1396,21 @@ sprites = Array[Texture2D]([ExtResource("89_rt5wr"), ExtResource("90_mnw77"), Ex
 modulate = Color(1, 1, 1, 0.466667)
 show_behind_parent = true
 position = Vector2(0.000450134, 16.4146)
+
+[node name="UntitledArtwork-2" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects/Eyes"]
+use_parent_material = true
+position = Vector2(-837.421, 41.3657)
+texture = ExtResource("90_mnw77")
+
+[node name="UntitledArtwork-5" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects/Eyes"]
+use_parent_material = true
+position = Vector2(-829.557, 181.221)
+texture = ExtResource("93_asu84")
+
+[node name="UntitledArtwork-6" type="Sprite2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects/Eyes"]
+use_parent_material = true
+position = Vector2(-835.455, 352.593)
+texture = ExtResource("94_qwt6e")
 
 [node name="EyeClothes" type="Node2D" parent="Kitty/BodyAnimator/Eyes/RotationEffects"]
 position = Vector2(-21.6235, 214.708)

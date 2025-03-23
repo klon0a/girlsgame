@@ -6,7 +6,7 @@
 shader = ExtResource("1_cjwaw")
 shader_parameter/from = Color(0.992157, 0.254902, 0.717647, 1)
 shader_parameter/to = Color(0.992157, 0.254902, 0.717647, 1)
-shader_parameter/tolerance_hue = 0.5
-shader_parameter/tolerance_feather = 0.25
-shader_parameter/greyscale_amount = 0.3
+shader_parameter/tolerance_hue = 1.0
+shader_parameter/tolerance_feather = 0.5
+shader_parameter/greyscale_amount = 0.5
 shader_parameter/greyscale = false

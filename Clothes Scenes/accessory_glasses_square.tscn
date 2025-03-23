@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlsub87j3mma7"]
 
 [ext_resource type="PackedScene" uid="uid://bumqcvnvt37wm" path="res://Clothes Scenes/Piece.tscn" id="1_ot2mi"]
-[ext_resource type="Texture2D" uid="uid://bg8yw2ksn7dpm" path="res://Assets + Clothes/assets/final/accessory-glasses-square-lense.png" id="2_ot2mi"]
+[ext_resource type="Texture2D" uid="uid://bxswjakpr12wi" path="res://Assets + Clothes/assets/final/accessory-glasses-square.png" id="2_ot2mi"]
 
 [node name="Garment" instance=ExtResource("1_ot2mi")]
 type = 3
