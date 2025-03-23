@@ -1,4 +1,4 @@
-[gd_scene load_steps=179 format=3 uid="uid://dl6klrmnq36k7"]
+[gd_scene load_steps=180 format=3 uid="uid://dl6klrmnq36k7"]
 
 [ext_resource type="Texture2D" uid="uid://42xjj7d7aqtj" path="res://UI + Sprites/texties/kittys clawset 2.png" id="1_d2t1y"]
 [ext_resource type="Script" uid="uid://dj4p7i4hm4yfc" path="res://helper.gd" id="1_sn1fb"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://c6oo1h7iykplk" path="res://Sounds/kittys clawset sfx startrup.wav" id="4_nycv6"]
 [ext_resource type="Material" uid="uid://b4s1smylcbcwo" path="res://accessory_material.tres" id="5_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://56eis13n6i4a" path="res://icon.svg" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://bnlsliocdum27" path="res://scene_switch.gd" id="5_p5pln"]
 [ext_resource type="PackedScene" uid="uid://bk0x6pgx0glx3" path="res://Clothes Scenes/bottom_miniskirt.tscn" id="5_yaehf"]
 [ext_resource type="PackedScene" uid="uid://twh7e8iih2ys" path="res://Clothes Scenes/top_openjacket.tscn" id="6_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://0ox40hvunk23" path="res://Clothes Scenes/bottom_pants.tscn" id="6_074og"]
@@ -216,7 +217,13 @@ autoplay = true
 stream = ExtResource("4_nycv6")
 autoplay = true
 
-[node name="Backdrop" type="Node2D" parent="."]
+[node name="Backdrop" type="Node2D" parent="." node_paths=PackedStringArray("gameplay_background", "credits_background", "closet", "confirmation", "UI")]
+script = ExtResource("5_p5pln")
+gameplay_background = NodePath("GameplayBackground")
+credits_background = NodePath("CreditsBackground")
+closet = NodePath("Closet")
+confirmation = NodePath("../Confirmation")
+UI = NodePath("../UI Closet")
 
 [node name="GameplayBackground" type="Node2D" parent="Backdrop"]
 z_index = -15
@@ -233,86 +240,112 @@ texture = ExtResource("7_arf1h")
 texture = ExtResource("10_4qxq8")
 
 [node name="CreditsBackground" type="Node2D" parent="Backdrop"]
-visible = false
 position = Vector2(512, 384)
 
 [node name="Bg" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_gkfde")
 
 [node name="BgCredits" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(-1, 1)
 texture = ExtResource("8_s0om5")
 
 [node name="Bgfloor" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_4qxq8")
 
-[node name="CreditsArt" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("19_wghq8")
-
 [node name="CreditsAshk" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
+position = Vector2(164.5, -239.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_k08w7")
+script = ExtResource("30_kq58d")
+scale_wobble = Vector2(0.05, 0.05)
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.1
+
+[node name="CreditsCode" type="Sprite2D" parent="Backdrop/CreditsBackground/CreditsAshk"]
+position = Vector2(-44, -92)
+texture = ExtResource("22_suf1q")
+script = ExtResource("30_kq58d")
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_speed = 1.0
 
 [node name="CreditsCmykeyz" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
+position = Vector2(208.5, -127.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("21_hp4ct")
+script = ExtResource("30_kq58d")
+scale_wobble = Vector2(0.05, 0.05)
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.1
 
-[node name="CreditsCode" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("22_suf1q")
-
-[node name="CreditsDesign" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
-scale = Vector2(0.5, 0.5)
+[node name="CreditsDesign" type="Sprite2D" parent="Backdrop/CreditsBackground/CreditsCmykeyz"]
+position = Vector2(-62, -84)
 texture = ExtResource("23_lxb2r")
+script = ExtResource("30_kq58d")
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_speed = 1.0
 
 [node name="CreditsJuneauvert" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
+position = Vector2(268.5, 0.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("24_ceu5l")
+script = ExtResource("30_kq58d")
+scale_wobble = Vector2(0.05, 0.05)
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.1
+
+[node name="CreditsSound" type="Sprite2D" parent="Backdrop/CreditsBackground/CreditsJuneauvert"]
+position = Vector2(-186, -104)
+texture = ExtResource("27_6kttw")
+script = ExtResource("30_kq58d")
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_speed = 1.0
+
+[node name="CreditsToadtype" type="Sprite2D" parent="Backdrop/CreditsBackground"]
+position = Vector2(226.5, 113.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("28_oqmj5")
+script = ExtResource("30_kq58d")
+scale_wobble = Vector2(0.05, 0.05)
+scale_speed = 1.0
+pos_speed = 1.0
+rot_wobble = 0.1
+
+[node name="CreditsArt" type="Sprite2D" parent="Backdrop/CreditsBackground/CreditsToadtype"]
+position = Vector2(-178, -86)
+texture = ExtResource("19_wghq8")
+script = ExtResource("30_kq58d")
+scale_speed = 0.5
+pos_wobble = Vector2(5, 5)
+pos_speed = 1.0
+rot_speed = 1.0
 
 [node name="CreditsReplayplaceholder" type="Sprite2D" parent="Backdrop/CreditsBackground"]
 visible = false
-position = Vector2(-1013, -35)
+position = Vector2(-148, -56)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("25_lv1ug")
 
 [node name="CreditsSaveplaceholder" type="Sprite2D" parent="Backdrop/CreditsBackground"]
 visible = false
-position = Vector2(-1013, -35)
+position = Vector2(-24, 77)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("26_mofpq")
-
-[node name="CreditsSound" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("27_6kttw")
-
-[node name="CreditsToadtype" type="Sprite2D" parent="Backdrop/CreditsBackground"]
-visible = false
-position = Vector2(-1013, -35)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("28_oqmj5")
 
 [node name="Frame" type="Sprite2D" parent="Backdrop"]
 position = Vector2(512, 384)
 texture = ExtResource("33_6ff2c")
 
 [node name="KittysClawsetTitle" type="Sprite2D" parent="Backdrop"]
+visible = false
 z_index = 15
 position = Vector2(241, 79)
 scale = Vector2(0.308079, 0.308079)
@@ -329,6 +362,7 @@ position = Vector2(486.889, -51.9348)
 scale = Vector2(3.24592, 3.24592)
 
 [node name="Closet" type="Node2D" parent="Backdrop"]
+visible = false
 position = Vector2(700, 345)
 
 [node name="Closetinside" type="Sprite2D" parent="Backdrop/Closet"]
@@ -568,6 +602,7 @@ texture = ExtResource("53_le5wj")
 [node name="Shadow" parent="Confirmation/DialogueBox/Yay" instance=ExtResource("3_gngh3")]
 
 [node name="UI Closet" type="Control" parent="."]
+visible = false
 z_index = -15
 layout_mode = 3
 anchors_preset = 0
@@ -1132,9 +1167,17 @@ offset_right = -271.0
 offset_bottom = 351.0
 text = "MUSIC"
 
+[node name="KittyGameplay" type="Marker2D" parent="."]
+position = Vector2(239, 417)
+scale = Vector2(0.508705, 0.507667)
+
+[node name="KittyCredits" type="Marker2D" parent="."]
+position = Vector2(735, 384)
+scale = Vector2(0.508705, 0.507667)
+
 [node name="Kitty" type="Node2D" parent="." node_paths=PackedStringArray("garment_parent", "kitty_parts", "eyes", "blink_eyes", "parent_head", "parent_eyes", "parent_body", "parent_arm_l", "parent_arm_r", "parent_legs")]
 unique_name_in_owner = true
-position = Vector2(239, 417)
+position = Vector2(239, 415)
 scale = Vector2(0.508705, 0.507667)
 script = ExtResource("2_0xm2m")
 garment_parent = NodePath("BodyPlaceholder")
@@ -1284,7 +1327,6 @@ damping = 0.1
 script = ExtResource("30_kq58d")
 scale_wobble = Vector2(0.05, 0.05)
 scale_speed = 1.0
-pos_wobble = Vector2(20, 20)
 pos_speed = 1.0
 rot_wobble = 0.2
 rot_speed = 2.0
