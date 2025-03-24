@@ -11,6 +11,8 @@ uniform vec4 to : source_color;
 uniform float tolerance_hue: hint_range(0.0, 1.0);
 uniform float tolerance_feather : hint_range(0.0, 1.0);
 
+uniform sampler2D v_to_v_shift;
+uniform sampler2D s_to_v_shift;
 //uniform float contrast = 1.0;
 //uniform float balance = 0.0;
 uniform float greyscale_amount = 0.3;
@@ -58,14 +60,22 @@ void fragment()
 	hue_distance = 1.0 - abs(2.0 * hue_distance - 1.0); // this is a formula for /\ 
 	float mix_by = invLerp(_tol - _feath, _tol + _feath, hue_distance);
 	mix_by = clamp(mix_by, 0.0, 1.0);
+	mix_by = mix(mix_by, 0.0, float(greyscale));
+	
+	//hsv_shift.b = hsv_shift.b * (1.0 - abs(1.0 - (source_hsv.b * 2.0)) );
+	hsv_shift.b = hsv_shift.b * texture(v_to_v_shift, vec2(source_hsv.b * 0.5)).r * texture(s_to_v_shift, vec2(source_hsv.g)).r;
 	//COLOR.rgb = vec3(abs(hue_distance));
 	//if (hue - source_hsv.r >= -_tol && hue - source_hsv.r <= +_tol)
 	//{
 		vec3 final_hsv = source_hsv + hsv_shift;
+		final_hsv.g = clamp(final_hsv.g, 0.0, 1.0);
+		final_hsv.b = clamp(final_hsv.b, 0.0, 1.0);
 		tex.rgb = mix(hsv2rgb(final_hsv), tex.rgb, mix_by);
 	//}
 	
 	//tex.rgb = mix(vec3(0.5), tex.rgb + vec3(balance), contrast);
-	tex.rgb = mix(tex.rgb, vec3(tex.r * 0.3 + tex.g * 0.6 + tex.b * 0.1),  step(0.5, float(greyscale))* greyscale_amount);
+	float grey = tex.r * 0.3 + tex.g * 0.59 + tex.b * 0.11;
+	tex.rgb = mix(tex.rgb, vec3(grey),  step(0.5, float(greyscale))* greyscale_amount);
 	COLOR = tex;
+	//COLOR.rgb = vec3(source_hsv.b * (1.0 - source_hsv.g));
 }

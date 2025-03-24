@@ -146,22 +146,22 @@ func _on_color_buttons_new_color_chosen() -> void:
 		Closet.CATEGORY.TOPS:
 			tops_color = new_color
 			top_material.set_shader_parameter("to", color_buttons.chosen_color)
-			top_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE)
+			top_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE or color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.BLACK)
 		
 		Closet.CATEGORY.BOTTOMS:
 			bottoms_color = new_color
 			bottom_material.set_shader_parameter("to", color_buttons.chosen_color)
-			bottom_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE)
+			bottom_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE or color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.BLACK)
 		
 		Closet.CATEGORY.SHOES:
 			shoes_color = new_color
 			shoe_material.set_shader_parameter("to", color_buttons.chosen_color)
-			shoe_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE)
+			shoe_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE or color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.BLACK)
 		
 		Closet.CATEGORY.ACCESSORIES:
 			accessories_color = new_color
 			accessory_material.set_shader_parameter("to", color_buttons.chosen_color)
-			accessory_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE)
+			accessory_material.set_shader_parameter("greyscale", color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.WHITE or color_buttons.chosen_option == ColorSelector.COLOR_OPTIONS.BLACK)
 	pass # Replace with function body.
 
 @onready var rising: AudioStreamPlayer = $"UI Sounds/Rising"

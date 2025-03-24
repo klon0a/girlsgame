@@ -1,12 +1,28 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://di4p345kviou1"]
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://di4p345kviou1"]
 
 [ext_resource type="Shader" uid="uid://da1p57i6u6pl5" path="res://recolor.gdshader" id="1_cjwaw"]
+
+[sub_resource type="Gradient" id="Gradient_y642q"]
+offsets = PackedFloat32Array(0, 0.167969, 0.472656)
+colors = PackedColorArray(0.190762, 0.190762, 0.190762, 1, 0.41598, 0.41598, 0.41598, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cjwaw"]
+gradient = SubResource("Gradient_y642q")
+
+[sub_resource type="Gradient" id="Gradient_m2iha"]
+offsets = PackedFloat32Array(0, 0.269531, 0.671875, 0.914063)
+colors = PackedColorArray(0, 0, 0, 1, 0.961786, 0.961786, 0.961786, 1, 0.82606, 0.82606, 0.82606, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j0r5n"]
+gradient = SubResource("Gradient_m2iha")
 
 [resource]
 shader = ExtResource("1_cjwaw")
 shader_parameter/from = Color(0.992157, 0.254902, 0.717647, 1)
-shader_parameter/to = Color(0.992157, 0.254902, 0.717647, 1)
+shader_parameter/to = Color(0.99, 0.2574, 0.78243, 1)
 shader_parameter/tolerance_hue = 1.0
 shader_parameter/tolerance_feather = 0.5
+shader_parameter/v_to_v_shift = SubResource("GradientTexture1D_j0r5n")
+shader_parameter/s_to_v_shift = SubResource("GradientTexture1D_cjwaw")
 shader_parameter/greyscale_amount = 0.5
 shader_parameter/greyscale = false
