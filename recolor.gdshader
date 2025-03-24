@@ -60,7 +60,7 @@ void fragment()
 	hue_distance = 1.0 - abs(2.0 * hue_distance - 1.0); // this is a formula for /\ 
 	float mix_by = invLerp(_tol - _feath, _tol + _feath, hue_distance);
 	mix_by = clamp(mix_by, 0.0, 1.0);
-	mix_by = mix(mix_by, 0.0, float(greyscale));
+	
 	
 	//hsv_shift.b = hsv_shift.b * (1.0 - abs(1.0 - (source_hsv.b * 2.0)) );
 	hsv_shift.b = hsv_shift.b * texture(v_to_v_shift, vec2(source_hsv.b * 0.5)).r * texture(s_to_v_shift, vec2(source_hsv.g)).r;

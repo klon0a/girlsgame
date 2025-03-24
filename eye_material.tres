@@ -19,10 +19,10 @@ gradient = SubResource("Gradient_m2iha")
 [resource]
 shader = ExtResource("1_cjwaw")
 shader_parameter/from = Color(0.992157, 0.254902, 0.717647, 1)
-shader_parameter/to = Color(0.99, 0.2574, 0.78243, 1)
-shader_parameter/tolerance_hue = 1.0
-shader_parameter/tolerance_feather = 0.5
+shader_parameter/to = Color(0.73, 0.71832, 0.7008, 1)
+shader_parameter/tolerance_hue = 0.5
+shader_parameter/tolerance_feather = 0.3
 shader_parameter/v_to_v_shift = SubResource("GradientTexture1D_j0r5n")
 shader_parameter/s_to_v_shift = SubResource("GradientTexture1D_cjwaw")
-shader_parameter/greyscale_amount = 0.5
+shader_parameter/greyscale_amount = 0.42
 shader_parameter/greyscale = false
